@@ -1,3 +1,7 @@
+### TO-DO Application###
+todo_list.txt
+todos.db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
