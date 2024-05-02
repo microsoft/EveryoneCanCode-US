@@ -1,14 +1,32 @@
-# Project
+# Everyon can Code! – Light Your Fire for Coding (U.S. Edition)
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+![FemaleTechGenLogo](./content-images/MSFT_EveryoneCanCode_Banner.png)
 
-As the maintainer of this project, please make a few updates:
+  <p>
+    <sub>Built with ❤ by everybody who wants to make the Microsoft App Dev Innovation world a little bit more diverse! </sub>
+  </p>
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+</div>
+
+<hr>
+
+
+
+# Welcome to our coding journey!
+
+It's great to have you here! 🎉
+
+“With barely 25% of employees in the technology industry being women and only 11% in leadership positions, these figures continue to highlight the challenges of gender equality in the tech world. Over the past nine years, the underrepresentation of women, especially those with diverse cultural backgrounds, persists across the corporate landscape” (McKinsey & Company, [_Women in the Workplace 2023_](https://www.mckinsey.com/featured-insights/diversity-and-inclusion/women-in-the-workplace)).
+
+
+This is why we want to encourage everyone to bring their skills and passions to the world of technology, to explore new horizons together, and to shape the future of the industry together. **Anyone who is creative and curious, regardless of age, gender, or profession, can participate in “Everyone Can Code.”**
+
+**Join us for a groundbreaking online coding event** specifically designed to empower individuals and help you learn how to start writing your own coding stories with us.  You may have heard that code can seem complex, but it is really nothing more than a language and technology that provides a magic pen in which we can paint the world around us. There's no such thing as “I can’t do it”.
+
+This event is perfect for anyone who has ever been curious about coding but wasn't sure where to start. With expert instructors, hands-on activities, and a supportive community, you will be amazed at how much you can accomplish in just a few hours. **No previous code or other technical experience is required.**
+
+**To get started click [here](./Track_1_ToDo_App/README.md)**
+
 
 ## Contributing
 
