@@ -9,4 +9,4 @@ This sprint is designed to help students add additional details to the To-Do app
 
 <br/>
 
-[🔼 Hackathon Home Page ](/Track_1_ToDo_App/README.md) | [◀ Previous Sprint](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/README.md) | [Next sprint ▶](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/README.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [◀ Previous Sprint](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/README.md) | [Next sprint ▶](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/README.md)

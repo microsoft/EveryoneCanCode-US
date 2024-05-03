@@ -111,7 +111,7 @@ Run the app by running ```python app.py``` in the terminal and browse to the loc
 
 <br/>
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 2 ](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/README.md) | [**◀ Previous user story**](User%20Story%201%20-%20Convert%20To%20Web%20App.md) | [**Next user story** ▶](User%20Story%203%20-%20Remove%20Item%20through%20Web%20Form.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story**](User%20Story%201%20-%20Convert%20To%20Web%20App.md) | [**Next user story** ▶](User%20Story%203%20-%20Remove%20Item%20through%20Web%20Form.md)
 
 
 

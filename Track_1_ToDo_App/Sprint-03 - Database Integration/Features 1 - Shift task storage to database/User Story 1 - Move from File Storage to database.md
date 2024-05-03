@@ -283,7 +283,7 @@ Run the app by running ```python app.py``` in the terminal and browse to the loc
 
 <br/>
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 3 ](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/README.md) | [**◀ Previous user story** (in previous sprint)](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%202%20-%20Basic%20Styling/User%20Story%202%20-%20Personalize%20Website.md) | [**Next user story** (in next sprint) ▶](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/Feature%201%20-%20Add%20Voice/User%20Story%201%20-%20Add%20Voice.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story** (in previous sprint)](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%202%20-%20Basic%20Styling/User%20Story%202%20-%20Personalize%20Website.md) | [**Next user story** (in next sprint) ▶](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/Feature%201%20-%20Add%20Voice/User%20Story%201%20-%20Add%20Voice.md)
 
 
 

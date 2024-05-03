@@ -64,4 +64,4 @@ Now let's see this application in action. Open the terminal and navigate to the 
 
 <br/>
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 1 ](../README.md#📖user-story-1---add-item-to-list) | [**◀ Previous user story**](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/Feature%201%20-%20Manage%20Todo%20List/User%20Story%202%20-%20Remove%20Item%20from%20List.md) | [**Next user story ▶**](User%20Story%202%20-%20Load%20To-Do%20List%20from%20File.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story**](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/Feature%201%20-%20Manage%20Todo%20List/User%20Story%202%20-%20Remove%20Item%20from%20List.md) | [**Next user story ▶**](User%20Story%202%20-%20Load%20To-Do%20List%20from%20File.md)

@@ -263,4 +263,4 @@ If you run the application now you will see that the Details, Edit, and Recommen
 
 <br/>
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 7 ](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/README.md) | [**◀ Previous user story** ](User%20Story%201%20-%20Add%20Completed%20Checkbox.md) | [**Next user story**  ▶](User%20Story%203%20-%20Prevent%20User%20from%20adding%20blank%20task.md)
+[🔼 **Home** ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story** ](User%20Story%201%20-%20Add%20Completed%20Checkbox.md) | [**Next user story**  ▶](User%20Story%203%20-%20Prevent%20User%20from%20adding%20blank%20task.md)

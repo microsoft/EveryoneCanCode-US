@@ -208,4 +208,4 @@ Click on the _Browse_ or _Default domain name_ in the App Service overview page.
 
 <br/>
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 8 ](/Track_1_ToDo_App/Sprint-08%20-%20Deploy%20to%20the%20Cloud/README.md) | [**◀ Previous user story** (in previous sprint) ](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/Feature%201%20-%20Advanced%20Styling/User%20Story%205%20-%20Show%20Spinner.md)
+[🔼 **Home** ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story** (in previous sprint) ](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/Feature%201%20-%20Advanced%20Styling/User%20Story%205%20-%20Show%20Spinner.md)

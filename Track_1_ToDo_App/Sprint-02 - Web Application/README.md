@@ -17,5 +17,5 @@ This sprint is designed to help students build a web application by evolving the
 2. [**📖 Personalize Website**](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%202%20-%20Basic%20Styling/User%20Story%202%20-%20Personalize%20Website.md) 
 <br/>
 
-[🔼 Hackathon Home Page ](/Track_1_ToDo_App/README.md) | [◀ Previous Sprint](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/README.md) | [Next sprint ▶](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/README.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [◀ Previous Sprint](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/README.md) | [Next sprint ▶](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/README.md)
 

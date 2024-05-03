@@ -11,4 +11,4 @@ In this sprint you will be taking the web application from Sprint 2 and adding i
 <br/>
 
 
-[🔼 Hackathon Home Page ](/Track_1_ToDo_App/README.md) | [◀ Previous Sprint](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/README.md) | [Next sprint ▶](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/README.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [◀ Previous Sprint](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/README.md) | [Next sprint ▶](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/README.md)

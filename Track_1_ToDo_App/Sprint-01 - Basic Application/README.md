@@ -26,6 +26,6 @@ This sprint is designed to help students build a basic To-Do application that ca
 
 <br/>
 
-[🔼 Workshop Home Page ](/Track_1_ToDo_App/Workshop-Format.md) | [◀ Previous Sprint](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/readme.md) | [Next sprint ▶](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/README.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [◀ Previous Sprint](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/readme.md) | [Next sprint ▶](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/README.md)
 
 

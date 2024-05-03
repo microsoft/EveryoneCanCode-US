@@ -193,7 +193,7 @@ Save the changes to the `index.html` file and refresh the web app in your browse
 > 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/).
 
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 2 ](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/README.md) | [**◀ Previous user story**](User%20Story%201%20-%20Add%20Basic%20Styling%20to%20the%20Web%20App.md) | [**Next user story** (in next sprint) ▶](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/Features%201%20-%20Shift%20task%20storage%20to%20database/User%20Story%201%20-%20Move%20from%20File%20Storage%20to%20database.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story**](User%20Story%201%20-%20Add%20Basic%20Styling%20to%20the%20Web%20App.md) | [**Next user story** (in next sprint) ▶](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/Features%201%20-%20Shift%20task%20storage%20to%20database/User%20Story%201%20-%20Move%20from%20File%20Storage%20to%20database.md)
 
 
 

@@ -12,4 +12,4 @@ This sprint is designed to help students add advanced styling to the To-Do appli
 
 <br/>
 
-[🔼 Hackathon Home Page ](/Track_1_ToDo_App/README.md) | [◀ Previous Sprint](/Track_1_ToDo_App/Sprint-06%20-%20Advanced%20To-Do%20Details/README.md) | [Next sprint ▶](/Track_1_ToDo_App/Sprint-08%20-%20Deploy%20to%20the%20Cloud/README.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [◀ Previous Sprint](/Track_1_ToDo_App/Sprint-06%20-%20Advanced%20To-Do%20Details/README.md) | [Next sprint ▶](/Track_1_ToDo_App/Sprint-08%20-%20Deploy%20to%20the%20Cloud/README.md)

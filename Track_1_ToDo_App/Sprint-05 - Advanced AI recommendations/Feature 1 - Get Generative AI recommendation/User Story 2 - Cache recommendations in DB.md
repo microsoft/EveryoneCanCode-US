@@ -101,4 +101,4 @@ python app.py
 
 <br/>
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 5 ](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/README.md) | [**◀ Previous user story**](User%20Story%201%20-%20Get%20Gen%20AI%20recommendation.md) | [**Next user story** ▶](User%20Story%203%20-%20Refresh%20Recommendations.md)
+[🔼 **Home** ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story**](User%20Story%201%20-%20Get%20Gen%20AI%20recommendation.md) | [**Next user story** ▶](User%20Story%203%20-%20Refresh%20Recommendations.md)

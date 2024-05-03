@@ -98,7 +98,7 @@ Run the app by running ```python app.py``` in the terminal and browse to the loc
 > 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us01/).
 
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 2 ](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/README.md) | [**◀ Previous user story**](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%201%20-%20Web%20App%20Conversion/User%20Story%203%20-%20Remove%20Item%20through%20Web%20Form.md) | [**Next user story** ▶](User%20Story%202%20-%20Personalize%20Website.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story**](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%201%20-%20Web%20App%20Conversion/User%20Story%203%20-%20Remove%20Item%20through%20Web%20Form.md) | [**Next user story** ▶](User%20Story%202%20-%20Personalize%20Website.md)
 
 
 

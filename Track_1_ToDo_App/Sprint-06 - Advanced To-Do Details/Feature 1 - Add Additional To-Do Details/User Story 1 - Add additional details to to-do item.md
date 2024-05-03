@@ -449,4 +449,4 @@ Recommendations Page:
 
 <br/>
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 6 ](/Track_1_ToDo_App/Sprint-06%20-%20Advanced%20To-Do%20Details/README.md) | [**◀ Previous user story** (in previous sprint)](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/Feature%201%20-%20Get%20Generative%20AI%20recommendation/User%20Story%203%20-%20Refresh%20Recommendations.md) | [**Next user story** (in next sprint) ▶](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/Feature%201%20-%20Advanced%20Styling/User%20Story%201%20-%20Add%20Completed%20Checkbox.md)
+[🔼 **Home** ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story** (in previous sprint)](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/Feature%201%20-%20Get%20Generative%20AI%20recommendation/User%20Story%203%20-%20Refresh%20Recommendations.md) | [**Next user story** (in next sprint) ▶](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/Feature%201%20-%20Advanced%20Styling/User%20Story%201%20-%20Add%20Completed%20Checkbox.md)

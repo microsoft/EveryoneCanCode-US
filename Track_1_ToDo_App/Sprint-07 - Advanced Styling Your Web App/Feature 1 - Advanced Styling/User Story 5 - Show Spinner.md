@@ -103,5 +103,5 @@ Save all the changes and run the application. Click on the recommendations tab. 
 
 <br/>
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 7 ](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/README.md) | [**◀ Previous user story** ](User%20Story%204%20-%20Confirm%20Delete.md) | [**Next user story** (in next sprint) ▶](/Track_1_ToDo_App/Sprint-08%20-%20Deploy%20to%20the%20Cloud/Feature%201%20-%20Deploy%20to%20Azure.md/User%20Story%201%20-%20Deploy%20to%20Azure.md)
+[🔼 **Home** ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story** ](User%20Story%204%20-%20Confirm%20Delete.md) | [**Next user story** (in next sprint) ▶](/Track_1_ToDo_App/Sprint-08%20-%20Deploy%20to%20the%20Cloud/Feature%201%20-%20Deploy%20to%20Azure.md/User%20Story%201%20-%20Deploy%20to%20Azure.md)
 

@@ -17,4 +17,4 @@ The objective of this sprint is to setup the development environment for the pro
 
 <br/>
 
-[🔼 Track 2 - Home Page](../README.md) | [Next Sprint ▶](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/README.md)
+[🔼 Home Page](../README.md) | [Next Sprint ▶](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/README.md)

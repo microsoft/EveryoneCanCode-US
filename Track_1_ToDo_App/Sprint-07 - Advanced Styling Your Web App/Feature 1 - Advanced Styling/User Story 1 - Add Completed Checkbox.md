@@ -218,4 +218,4 @@ You should now see a checkbox next to each task in the task list. When you click
 
 <br/>
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 7 ](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/README.md) | [**◀ Previous user story** (in previous sprint)](/Track_1_ToDo_App/Sprint-06%20-%20Advanced%20To-Do%20Details/Feature%201%20-%20Add%20Additional%20To-Do%20Details/User%20Story%201%20-%20Add%20additional%20details%20to%20to-do%20item.md) | [**Next user story**  ▶](User%20Story%202%20-%20Add%20Tabbed%20Interface.md)
+[🔼 **Home** ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story** (in previous sprint)](/Track_1_ToDo_App/Sprint-06%20-%20Advanced%20To-Do%20Details/Feature%201%20-%20Add%20Additional%20To-Do%20Details/User%20Story%201%20-%20Add%20additional%20details%20to%20to-do%20item.md) | [**Next user story**  ▶](User%20Story%202%20-%20Add%20Tabbed%20Interface.md)

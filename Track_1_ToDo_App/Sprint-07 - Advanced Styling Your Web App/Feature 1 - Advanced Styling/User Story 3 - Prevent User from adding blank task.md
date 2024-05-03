@@ -115,4 +115,4 @@ The initial interface should look like this:
 
 <br/>
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 7 ](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/README.md) | [**◀ Previous user story** ](User%20Story%202%20-%20Add%20Tabbed%20Interface.md) | [**Next user story**  ▶](User%20Story%204%20-%20Confirm%20Delete.md)
+[🔼 **Home** ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story** ](User%20Story%202%20-%20Add%20Tabbed%20Interface.md) | [**Next user story**  ▶](User%20Story%204%20-%20Confirm%20Delete.md)

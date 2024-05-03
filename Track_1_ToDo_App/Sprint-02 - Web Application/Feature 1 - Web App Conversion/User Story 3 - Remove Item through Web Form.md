@@ -100,6 +100,6 @@ Your application should look something like this:
 > 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us03/).
 
 
-[🔼 Back **Workshop** Instructions ](/Track_1_ToDo_App/Workshop-Format.md) | [🔼 Back to **Hackathon** Sprint 2 ](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/README.md) | [**◀ Previous user story**](User%20Story%202%20-%20Add%20Item%20through%20Web%20Form.md) | [**Next user story** ▶](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%202%20-%20Basic%20Styling/User%20Story%201%20-%20Add%20Basic%20Styling%20to%20the%20Web%20App.md)
+[🔼 Home ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story**](User%20Story%202%20-%20Add%20Item%20through%20Web%20Form.md) | [**Next user story** ▶](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%202%20-%20Basic%20Styling/User%20Story%201%20-%20Add%20Basic%20Styling%20to%20the%20Web%20App.md)
 
 
