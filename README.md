@@ -1,4 +1,4 @@
-# Everyon can Code! – Light Your Fire for Coding (U.S. Edition)
+# Everyone can Code! – Light Your Fire for Coding (U.S. Edition)
 
 ![FemaleTechGenLogo](./content-images/MSFT_EveryoneCanCode_Banner.png)
 
