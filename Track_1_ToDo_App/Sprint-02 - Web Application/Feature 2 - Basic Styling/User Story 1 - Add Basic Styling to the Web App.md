@@ -15,15 +15,18 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us03/) 
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+
 ### Updating the Web Application Frontend
 
 #### 1. Add Bootstrap to the Application
-When it come to creating a modern web application using modern styling, the bootstrap framework has become one of the most popular choices. We are going to use bootstrap for some basic styling. Go to https://getbootstrap.com/ and get the Include via CDN link. Add this link in between the `<head>` tags in your `index.html` as so:
+When it comes to creating a modern web application using modern styling, the bootstrap framework has become one of the most popular choices. We are going to use bootstrap in this project for some basic styling. Go to https://getbootstrap.com/ and get the Include via CDN link. Add this link in between the `<head>` tags in your `index.html` as so:
 
 ```html
 <head>
@@ -84,7 +87,9 @@ The code above uses Bootstrap classes to style the elements on the page. The con
 <br/>
 
 #### 3 Run the Application
-Run the app by running ```python app.py``` in the terminal and browse to the local site. It should now look something like this:
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000). 
+
+It should now look something like this:
     
 ![outcome](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/outcome-S02-f02-US01.png)
 
