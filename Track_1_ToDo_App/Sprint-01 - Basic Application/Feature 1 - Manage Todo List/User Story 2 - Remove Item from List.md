@@ -27,6 +27,9 @@ The following resources/videos will help you get a better understanding of some 
 
 - Open the `app.py` file in the root of your project folder.
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+
 <br/>
 
 #### 2. Add a new menu option to remove an item from the list
