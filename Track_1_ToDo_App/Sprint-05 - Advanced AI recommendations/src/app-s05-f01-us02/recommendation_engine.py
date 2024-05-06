@@ -15,7 +15,8 @@ deployment, api_key, endpoint = sk.azure_openai_settings_from_dot_env()
 
 class RecommendationEngine:
     def __init__(self):
-       
+        deployment, api_key, endpoint = sk.azure_openai_settings_from_dot_env()
+
         if selectedService == Service.AzureOpenAI:
             self.client = AzureOpenAI(azure_endpoint = endpoint, 
                         api_key=api_key,  
