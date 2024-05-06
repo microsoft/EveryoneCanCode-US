@@ -170,9 +170,16 @@ This code will create a basic HTML page that will display the to-do list items i
 <br/>
 
 #### 9. Run the Application
-Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000). You can add tasks to a to-do_list.txt file to see them display on the page.
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000). 
+
+You can add tasks to a to-do_list.txt file to see them display on the page.
 
 > [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
+> [!IMPORTANT]
 > If you are using Codespaces, you will need to copy the `todo_list.txt` file from the root of the repository to the `/myApplication/` as flask will be using this directory as the root of the web server.
 
 ![WebApp01](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/outcome-S02-f01-US01.png)

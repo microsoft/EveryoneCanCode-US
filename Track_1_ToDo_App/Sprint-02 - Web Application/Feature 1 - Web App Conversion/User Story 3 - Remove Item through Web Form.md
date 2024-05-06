@@ -97,6 +97,11 @@ Your application should look something like this:
 
 <br/>
 
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
 🎉 Congratulations! You have now updated your basic web application to include a form to allow both adding AND removing tasks.
 
 <br/>

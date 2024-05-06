@@ -98,6 +98,13 @@ Save all the changes and run the application. Click on the recommendations tab. 
 ![outcome](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/images/outcome-S07-F01-US05.png)
 
 <br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
+<br/>
 🎉 Congratulations! You have now updated the user interface to visually show the user when recommendations are loading
 
 <br/>

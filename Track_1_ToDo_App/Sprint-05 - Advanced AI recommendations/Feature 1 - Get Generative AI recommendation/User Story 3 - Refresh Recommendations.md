@@ -167,6 +167,12 @@ Now let's see this functionality in action.  Open the terminal and navigate to t
 You should now see a "Refresh" button within the recommendations section of the task details page.  It should look something like this:
 ![Refresh Recommendations](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/images/outcome-S05-F01-US03.png)
 
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
     
 <br/>
 🎉 Congratulations! You have now have the ability to refresh your AI recommendations.

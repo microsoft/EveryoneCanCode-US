@@ -207,6 +207,12 @@ You should now see a checkbox next to each task in the task list. When you click
 
 ![outcome-S07-F01-US01](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/images/outcome-S07-F01-US01.png)
 
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 🎉 Congratulations! You have now updated the user interface to include a checkbox to mark tasks as completed and visually differentiate completed tasks.

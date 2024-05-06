@@ -254,6 +254,14 @@ This code will add an `onclick` event to the Add button that will call the `clea
 #### 2. Run the Application
 If you run the application now you will see that the Details, Edit, and Recommendations buttons have been removed from the main list. You can select a task by clicking on it in the list and the selected task will be highlighted. The Details, Edit, and Recommendations tabs will be displayed in the right panel. You can click on the tabs to view the different sections of the task details, edit, and recommendations. If you add a new task, the highlighting will be removed from the previously selected task.
 
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
 <br/>
 
 🎉 Hooray! You have successfully added a tabbed interface to the main page of your application. This will help to reduce clutter and provide a cleaner interface for users to interact with.

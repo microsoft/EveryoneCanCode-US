@@ -90,6 +90,12 @@ Before we can test this change, we will need to delete the `todos.db` file in yo
 #### 3. Run the Application
 Now let's see this functionality in action.  Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
 
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
     
 <br/>
 🎉 Congratulations! You have now saved the AI recommendations to the database. This will allow users to quickly go back and see the recommendations that were last presented for a given to-do item.

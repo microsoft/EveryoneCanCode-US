@@ -113,6 +113,13 @@ Save the changes to the `app.js` and `index.html` files and run the application.
 
 <br/>
 
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
+<br/>
+
 🎉 Congratulations! You have now updated the user interface to confirm that a user really wants to delete a task before deleting it.
 
 <br/>

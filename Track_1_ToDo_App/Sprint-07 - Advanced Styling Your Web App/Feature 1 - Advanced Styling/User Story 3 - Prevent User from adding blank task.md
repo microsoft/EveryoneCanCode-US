@@ -109,6 +109,14 @@ The initial interface should look like this:
 
 ![outcome](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/images/outcome-S07-F01-US03.png)
 
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
 🎉 Congrats! You have successfully added logic to prevent a user from accidentally adding a blank to-do item.
 
 <br/>

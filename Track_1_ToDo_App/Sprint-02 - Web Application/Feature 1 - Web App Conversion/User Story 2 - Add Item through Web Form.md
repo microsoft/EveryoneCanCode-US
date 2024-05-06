@@ -104,6 +104,12 @@ Test it out by adding a tasks.
     
 ![RunApp-S2-F1-US02-01](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/outcome-S02-f01-US02.png)
 
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 🎉 Congratulations! You have now updated your basic web application to include a form that allows a user to add tasks and persist them a file.

@@ -446,6 +446,14 @@ Recommendations Page:
     
 ![recommendations](/Track_1_ToDo_App/Sprint-06%20-%20Advanced%20To-Do%20Details/images/outcome-S06-F01-US01-RECOMMENDATIONS.png)
 
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
 <br/>
 🎉 Congratulations! You have now added additional fields to your application allowing users to get have more details about their to-do items.
    

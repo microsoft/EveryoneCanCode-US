@@ -95,6 +95,13 @@ It should now look something like this:
 
 
 <br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
+<br/>
 🎉 Congratulations! You have now updated your web application to have some basic styling. This will serve as a foundation for the rest of the workshops.
 
 <br/>

@@ -279,6 +279,13 @@ Test it out by adding a task and then removing a task.
 
 <br/>
 
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
+<br/>
+
 🎉 Congratulations! You have now updated your web application to store and retrieve the todo items from a databaase. 
 
 <br/>

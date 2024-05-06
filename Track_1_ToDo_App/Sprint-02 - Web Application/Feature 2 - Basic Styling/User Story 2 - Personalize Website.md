@@ -196,6 +196,12 @@ Save the changes to the `index.html` file and refresh the web app in your browse
 
 ![Custom Favicon](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/RunApp-S2-F2-US2-03.png)
 
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 🎉 Congratulations! You have now updated your web application to have a more personalized look and feel with a custom title, color scheme, background picture, and favicon. This will provide a more engaging and visually appealing experience for the user. 

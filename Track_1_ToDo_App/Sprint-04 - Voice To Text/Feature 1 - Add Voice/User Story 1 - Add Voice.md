@@ -25,6 +25,14 @@ Open Visual Studio Code and open the source code the folder with your completed 
 
 > [!NOTE]
 > If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
 <br/>
 
 
