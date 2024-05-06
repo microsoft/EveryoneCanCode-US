@@ -27,7 +27,7 @@ In order to complete this user story you will need to complete the following tas
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-06%20-%20Advanced%20To-Do%20Details/src/app-s06-f01-us01/)
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
 
@@ -207,6 +207,12 @@ You should now see a checkbox next to each task in the task list. When you click
 
 ![outcome-S07-F01-US01](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/images/outcome-S07-F01-US01.png)
 
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 🎉 Congratulations! You have now updated the user interface to include a checkbox to mark tasks as completed and visually differentiate completed tasks.

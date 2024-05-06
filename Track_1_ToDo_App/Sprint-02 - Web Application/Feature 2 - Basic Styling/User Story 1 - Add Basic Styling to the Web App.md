@@ -21,7 +21,7 @@ In order to complete this user story you will need to complete the following tas
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us03/) 
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 
 ### Updating the Web Application Frontend
 
@@ -93,6 +93,13 @@ It should now look something like this:
     
 ![outcome](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/outcome-S02-f02-US01.png)
 
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 🎉 Congratulations! You have now updated your web application to have some basic styling. This will serve as a foundation for the rest of the workshops.

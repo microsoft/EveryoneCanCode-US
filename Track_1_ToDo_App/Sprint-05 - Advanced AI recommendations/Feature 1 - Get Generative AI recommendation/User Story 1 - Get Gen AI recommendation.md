@@ -28,7 +28,7 @@ In order to complete this user story you will need to complete the following tas
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/src/app-s04-f01-us01/) 
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
 ### Setup the AI SDK
@@ -385,7 +385,15 @@ Open the `index.html` file in the `templates` folder of your application. Replac
 Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
 
 The application should start and you should be able to see the AI recommendations when you click on the 'Recommendations' button for a task. The recommendations should be displayed in a separate tab on the right side of the task list and look something like this:
+
 ![outcome](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/images/outcome-S05-F01-US01.png)
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 🎉 Congratulations! You have now added AI recommendations to your web app, allowing users to get additional information on how to complete their tasks. 

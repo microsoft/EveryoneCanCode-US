@@ -24,7 +24,7 @@ In order to complete this user story you will need to complete the following tas
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/src/app-s07-f01-us01/)
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
 ### Updating the Web Application Frontend
@@ -253,6 +253,14 @@ This code will add an `onclick` event to the Add button that will call the `clea
 
 #### 2. Run the Application
 If you run the application now you will see that the Details, Edit, and Recommendations buttons have been removed from the main list. You can select a task by clicking on it in the list and the selected task will be highlighted. The Details, Edit, and Recommendations tabs will be displayed in the right panel. You can click on the tabs to view the different sections of the task details, edit, and recommendations. If you add a new task, the highlighting will be removed from the previously selected task.
+
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 

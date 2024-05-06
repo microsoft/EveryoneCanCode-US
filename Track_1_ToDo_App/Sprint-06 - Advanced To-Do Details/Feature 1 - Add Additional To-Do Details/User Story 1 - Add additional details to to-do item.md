@@ -41,7 +41,7 @@ In order to complete this user story you will need to complete the following tas
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/src/app-s05-f01-us03/) 
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
 ### Updating the Database Model
@@ -445,6 +445,14 @@ Edit Page: (after making and saving edits to the task)
 Recommendations Page:
     
 ![recommendations](/Track_1_ToDo_App/Sprint-06%20-%20Advanced%20To-Do%20Details/images/outcome-S06-F01-US01-RECOMMENDATIONS.png)
+
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 🎉 Congratulations! You have now added additional fields to your application allowing users to get have more details about their to-do items.

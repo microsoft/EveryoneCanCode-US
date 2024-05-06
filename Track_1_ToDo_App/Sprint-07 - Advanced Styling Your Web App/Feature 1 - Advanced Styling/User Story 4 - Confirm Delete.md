@@ -24,7 +24,7 @@ In order to complete this user story you will need to complete the following tas
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/src/app-s07-f01-us03/)
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
 
@@ -110,6 +110,13 @@ This code will add an event listener to the delete button. When the delete butto
 Save the changes to the `app.js` and `index.html` files and run the application. Open the application in a browser and try to delete a task. A modal dialog should be displayed asking if you are sure you want to delete the task. If you click the delete button, the task should be deleted. If you click the cancel button, the modal dialog should be closed and the task should not be deleted.  The interface should look something like this:
 
 ![Index](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/images/outcome-S07-F01-US04.png)
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 

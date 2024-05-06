@@ -25,7 +25,7 @@ In order to complete this user story you will need to complete the following tas
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/src/app-s05-f01-us02/) 
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
 ### Update the recommendation engine to allow for refreshing recommendations
@@ -167,6 +167,12 @@ Now let's see this functionality in action.  Open the terminal and navigate to t
 You should now see a "Refresh" button within the recommendations section of the task details page.  It should look something like this:
 ![Refresh Recommendations](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/images/outcome-S05-F01-US03.png)
 
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
     
 <br/>
 🎉 Congratulations! You have now have the ability to refresh your AI recommendations.

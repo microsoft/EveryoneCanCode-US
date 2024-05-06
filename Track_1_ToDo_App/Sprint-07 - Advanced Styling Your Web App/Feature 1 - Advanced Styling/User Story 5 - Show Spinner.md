@@ -23,7 +23,7 @@ Open Visual Studio Code and open the source code the folder with your completed 
 
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
 
@@ -96,6 +96,13 @@ window.handleRefresh = function() {
 Save all the changes and run the application. Click on the recommendations tab. You should see a spinner displayed next to the Recommendations text. The spinner should be removed when the recommendations are loaded.  This should be true for both the initial click on the recommendations tab and the refresh button.  The change should look something like this:  The partial circle before the recommendations text in the picture should be a spinning circle when you actually run the application versus a partial circle for this screenshot
 
 ![outcome](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/images/outcome-S07-F01-US05.png)
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 🎉 Congratulations! You have now updated the user interface to visually show the user when recommendations are loading

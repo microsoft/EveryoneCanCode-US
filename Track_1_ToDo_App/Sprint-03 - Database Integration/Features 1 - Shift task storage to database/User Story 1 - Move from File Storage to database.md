@@ -19,7 +19,7 @@ In order to complete this user story you will need to complete the following tas
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/) 
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
 ### Setup SQL Alchemy tookit
@@ -276,6 +276,13 @@ Open the terminal and navigate to the folder where your `app.py` file is located
 Test it out by adding a task and then removing a task.
 
 ![Database Integration](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/images/DatabaseIntegration-S3-F1-US1-01.png)
+
+<br/>
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 
