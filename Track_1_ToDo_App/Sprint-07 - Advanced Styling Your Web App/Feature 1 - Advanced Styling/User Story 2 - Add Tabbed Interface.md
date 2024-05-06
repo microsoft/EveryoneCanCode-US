@@ -1,5 +1,5 @@
 # User Story: Add Tabbed Interface - Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 25 min._ ⏲️
 
 ## User Story 
 *As a user, I want to have a cleaner interface for my tasks and move the details, edit and recommendation buttons over to a tabbed interace to reduce clutter*
@@ -18,11 +18,13 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/src/app-s07-f01-us01/)
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 <br/>
 
 ### Updating the Web Application Frontend
@@ -55,12 +57,12 @@ with the following code:
 {% endif %}
 ```
 
-This code will add a tabbed interface to the right panel of the main page. The tabbed interface will have three tabs: Details, Edit, and Recommendations. The tabs will link to the appropriate routes in the application.
+This code will add a tabbed interface component on top of the right panel of the main page. The tabbed interface will have three tabs: Details, Edit, and Recommendations. The tabs will link to the appropriate routes in the application.
 
 <br/>
 
 #### 2. Update the styles for the tabbed interface
-You will then need to update the styles for the application . Open the `styles.css` file and add the following code:
+We will then need to update the styles for the application . Open the `style.css` file and add the following code:
 
 ```css
 .card {
@@ -99,13 +101,13 @@ We will address these in the next set of steps.
 
 ### Selecting a task by clicking on it in the list
 #### 1. Add a showDetails function to user interface
-Before we remove the buttons, we need to update the application so that you can select a task by clicking on it in the list otherwise there wouldn't be a way to view the Details, Edit, and Recommendations tabs. Open the `index.html` file and replace the `<li id="task-{{ todo.id }}"...>` with the following code:
+Before we remove the buttons, we need to update the application so that we can select a task by clicking on it in the list otherwise there wouldn't be a way to get to the Details, Edit, and Recommendations tabs. Open the `index.html` file and replace the `<li id="task-{{ todo.id }}"...>` with the following code:
 
 ```html
 <li id="task-{{ todo.id }}" data-id="{{ todo.id }}" class="list-group-item d-flex justify-content-between" onclick="showDetails(this)">
 ```
 
-This code adds a showDetails function to the task item in the list. The showDetails function will be used to select a task by clicking on it. 
+This code adds a showDetails function to the task item in the list. The showDetails function will be used to select a task by clicking on it and will be implemented in the next step. 
 
 <br/>
 
@@ -228,7 +230,7 @@ Next, we need to remove the Details, Edit, and Recommendations buttons from the 
 <button type="submit" class="btn btn-success" formaction="{{ url_for('recommend', id=todo.id) }}" formmethod="GET">Recommendations</button>
 ```
 
-This code will remove the Details, Edit, and Recommendations buttons from the main list. The tabs on the right panel will now be the only way to access the Details, Edit, and Recommendations sections of the task.
+This code will remove the Details, Edit, and Recommendations buttons from each task on the main list. The tabs on the right panel will now be the only way to access the Details, Edit, and Recommendations sections of the task.
 
 #### 2. Run the Application
 Run the application again and you will see that the Details, Edit, and Recommendations buttons have been removed from the main list.  This will help to reduce clutter and provide a cleaner interface for users to interact with. 

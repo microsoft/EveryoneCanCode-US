@@ -1,12 +1,12 @@
 # User Story: Prevent User from adding blank task and limit characters- Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 15 min._ ⏲️
 
 ## User Story 
 *As a user, I want to prevent someone from accidentally entering a task with no name and I want to limit the name to 75 characters*
 
 ## 🎯Acceptance Criteria:
-- Disable add button if the task name is blank
-- Enable add button if the task name is not blank
+- add button is disabled if the task name is blank
+- add button is enabled if the task name is not blank
 - Don't allow the user to add a task if the task name is blank
 - Limit the task name to 75 characters
 - The interface should look something like this:
@@ -20,10 +20,14 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/src/app-s07-f01-us02/)
+
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+<br/>
 
 
 ### Update the user interface to prevent adding a blank task
@@ -97,11 +101,10 @@ We need to update the `style.css` file to change the text-muted class to have a 
 <br/>
 
 #### 5. Run the application
-Now let's run the application to test the Add button is initially disabled and by either typing in the window or adding a name via the voice functionality that the Add button will become enabled and allow you to add a task. Open a terminal window in Visual Studio Code and run the following command:
+Now let's run the application to test the Add button is initially disabled and by either typing in the window or adding a name via the voice functionality that the Add button will become enabled and allow you to add a task. 
 
-```bash
-python app.py
-```
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
+
 The initial interface should look like this:
 
 ![outcome](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/images/outcome-S07-F01-US03.png)

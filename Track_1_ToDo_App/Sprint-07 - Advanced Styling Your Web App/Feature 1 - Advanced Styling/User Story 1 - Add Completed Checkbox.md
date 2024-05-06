@@ -1,11 +1,11 @@
 # User Story: Add Completed Checkbox and due date details to main list - Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 25 min._ ⏲️
 
 ## User Story 
 *As a user, I want to be able to mark a task as complete from the main list as well see the due date of a task if one is defined*
 
 ## 🎯Acceptance Criteria:
-- A checkbox should be added to the task list to allow users to mark a task as complete.
+- A checkbox should be added to the task list to allow users to mark a task as complete right from the main panel.
 - The task should be visually differentiated when marked as complete. i.e., by using strikethrough text on the task name.
 - The due date of the task should be displayed in a friendly format underneath the name of the task.
     - If a due date is past due, the due date should be displayed inside a red badge .  
@@ -21,12 +21,15 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-06%20-%20Advanced%20To-Do%20Details/src/app-s06-f01-us01/)
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 <br/>
+
 
 ### Updating the Web Application Backend
 
@@ -150,7 +153,7 @@ with the following code:
 ```
 
 This code will adds the following functionality:
-- **add a checkbox to the task list**. Upon loading of the web page, if the task is marked as completed, the checkbox will be checked. If the task is not completed, the checkbox will be unchecked. This is handled through the `checked` attribute in the `<input>` tag. There is also an `onclick` event that will call the `handleClick` function when the checkbox is clicked. This function will be created in the next step.
+- **adds a checkbox to each task in the list**. Upon loading of the web page, if the task is marked as completed, the checkbox will be checked. If the task is not completed, the checkbox will be unchecked. This is handled through the `checked` attribute in the `<input>` tag. There is also an `onclick` event that will call the `handleClick` function when the checkbox is clicked. This function will be created in the next step.
 - **due date** - If there is a due date assigned, the due date will be displayed in a friendly format underneath the name of the task. If the task is marked as completed, a "Completed" badge will be displayed. If the task is past due, a "Past Due" badge will be displayed in red text. If the task is not past due, a "Due Date" badge will be displayed in blue text.
 
 <br/>
@@ -168,7 +171,7 @@ window.handleClick = function(event, cb) {
 };
 ```
 
-This code will create a function called `handleClick` that will be called when the checkbox is clicked. The function will stop the event from propagating, get the id and checked status of the checkbox, and then redirect the user to the `/completed` route with the id and checked status as parameters.
+This code will create a function called `handleClick` that will be called when the checkbox is clicked. This function will stop the event from propagating, get the id and checked status of the checkbox, and then redirect the user to the `/completed` route with the id and checked status as parameters to update the state of the to-do item's status.
 
 <br/>
 
@@ -198,11 +201,7 @@ This code will add a strikethrough effect to the task name when the task is mark
 <br/>
 
 #### 4. Run the Application
-Now let's run the application to see the checkbox in action. Open a terminal window in Visual Studio Code and run the following command:
-
-```bash
-python app.py
-```
+Now let's run the application to see the checkbox in action. Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
 
 You should now see a checkbox next to each task in the task list. When you click on the checkbox, the task should be marked as completed and visually differentiated with a strikethrough effect. The web page should look something like this:
 
