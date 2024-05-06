@@ -1,5 +1,5 @@
 # User Story: Cache Recommendations in the Database - Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 15 min._ ⏲️
 
 ## User Story
 *As a user, I want to be able to quickly go back and see the recommendations that were last presented for a given to-do item*
@@ -18,16 +18,20 @@ In order to complete this user story you will need to complete the following tas
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/src/app-s05-f01-us01/) 
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+<br/>
+
 ### Update the database to store the recommendations in the database
 
-#### 1. Update the Database Model to Store recommendations
+#### 1. Update the database model to store recommendations
 The first thing we will need to do is add the recommendations to the database.  Open the `database.py` file and add the following code right under the `recommendations = []` instance variable to create the additional column
 
 ```python
 recommendations_json = db.Column(db.JSON)    
 ```
 
-This code adds a new column to the `Todo` model called `recommendations_json` that will store the AI recommendations in JSON format.  Note we will still keep the recommendations as a list in the `recommendations` instance variable so that it is easy for the UI to work with.
+This code adds a new column to the `Todo` model called `recommendations_json` that will store the AI recommendations in JSON format.  **Note we will still keep the `recommendations` instance variable so that it is easy for the UI to work with the collection**.
 
 <br/>
 
@@ -76,7 +80,7 @@ async def recommend(id):
 This code updates the `/recommend/<int:id>` route to check if the task has saved recommendations in the database. If the recommendations are found, they are loaded from the database and displayed. If the recommendations are not found, the AI recommendations are generated and saved to the database.
 
 #### 2. Delete the `todos.db` file
-Before we can test this change, we will need to delete the `todos.db` file in your directory. This is because we have added a column to the database and to keep things simple we will just start fresh versus trying to update the database schema.  This approach works fine when you are in development, but if this was a production system you would want to update the database schema and migrate the data.  When you do this any items saved in the database will be lost.
+Before we can test this change, we will need to delete the `todos.db` file in your directory which will cause all the data in the database to be lost. This is needed because the database schema has changed due to the new column being added to the database table and SQL cannot just add a column without some additional work to migrate data. This approach works fine when you are in development, but if this was a production system you would want to update the database schema and migrate the data when introducing changes. 
 
 > [!WARNING]
 > If you do not delete the `todos.db` file you will get an error when you run the app.  The error will be something like `sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: todos.recommendations_json`.  This error is because the database schema does not match the model.
@@ -84,10 +88,7 @@ Before we can test this change, we will need to delete the `todos.db` file in yo
 <br/>
 
 #### 3. Run the Application
-Now let's see this functionality in action.  Start the web app by running the following command in the terminal:
-
-```bash
-python app.py
+Now let's see this functionality in action.  Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
 ```
     
 <br/>
