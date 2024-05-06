@@ -3,30 +3,35 @@
 
 ## User Story
 
-As a user I want to create Azure SQL database to persist my todo items in the cloud, create Azure App Service and deploy my application in the Azure Cloud to access anytime.
+As a user I want to deploy my solution to the cloud so that I can access my application at any time.
 
 ## 🎯Acceptance Criteria:
-
 - Azure SQL Database named _todo_ is created and todo items are persisted by the application.
 - Azure App Service is with Python runtime environment is created and deployed application.
 - Created database connection string using the Azure SQL Database information to connect through my application to persist todo items.
 - Configured Azure OpenAI information to access as environment variables using Azure App Service settings in my application.
 
 ## 🎓Know Before You Start
-no resources at this time
+The following resources/videos will help you get a better understanding of some of the concepts that you will use to complete this user story.
+
+- [What is Cloud Computing](https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/3-what-cloud-compute) (~3 minutes) <br/>
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 #### 1. Open Visual Studio Code
 
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/src/app-s07-f01-us05/)
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
+<br/>
+
 ### Setting up an Azure SQL Database
+First, let's setup the cloud database to store our to-do items.
 
 #### 2. Login to Azure Resource Management
-
 In VS Code, open new terminal window and run the command below to login to Azure resource management. A browser window will be opened and redirected to Microsoft Entra ID to complete login to Azure resource management.
 
 ```powershell
