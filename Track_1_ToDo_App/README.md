@@ -117,7 +117,7 @@ This sprint is designed to help students add voice to text functionality to the 
 
 
 ### Sprint 5 - Advanced AI Recommendations
-⏲️ _Est. time to complete: 60 min._ ⏲️
+⏲️ _Est. time to complete: 1 hour 10 min._ ⏲️
 
 In this sprint you will be taking the application that you built in Sprint 4 and adding in AI recommendations to help users complete their tasks.  This will be done by leveraging the Azure OpenAI API to generate recommendations based on the task name.
 

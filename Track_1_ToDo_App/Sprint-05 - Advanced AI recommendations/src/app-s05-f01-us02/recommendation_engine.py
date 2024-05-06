@@ -15,11 +15,15 @@ deployment, api_key, endpoint = sk.azure_openai_settings_from_dot_env()
 
 class RecommendationEngine:
     def __init__(self):
-       
-        self.client = AzureOpenAI(azure_endpoint = endpoint, 
+        deployment, api_key, endpoint = sk.azure_openai_settings_from_dot_env()
+
+        if selectedService == Service.AzureOpenAI:
+            self.client = AzureOpenAI(azure_endpoint = endpoint, 
                         api_key=api_key,  
                         api_version="2024-02-15-preview"
-                        )        
+                        )
+        else:
+            raise Exception("OpenAI not implemented")  
 
 
     async def get_recommendations(self, keyword_phrase):

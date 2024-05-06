@@ -1,5 +1,5 @@
 # User Story: Get Generative AI recommendations - Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 40 min._ ⏲️
 
 ## User Story
 *As a user, I want to receive AI-generated recommendations on how to complete a task when I click on it.*
@@ -13,7 +13,12 @@
     ![Recommendations](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/images/outcome-S05-F01-US01.png)
 
 ## 🎓Know Before You Start
-no resources at this time
+The following resources/videos will help you get a better understanding of some of the concepts that you will use to complete this user story.
+
+- [Python Classes](https://youtu.be/uQ5BZht9L3A?si=kUWY6EL18arVgX80&t=1763) (~11-29 minutes of just the classes portion of this video) <br/>
+- [What is AI Anyway?](https://www.ted.com/talks/mustafa_suleyman_what_is_an_ai_anyway) (~18+ minutes) <br/>
+
+
 
 ## 📋Steps
 
@@ -22,6 +27,8 @@ In order to complete this user story you will need to complete the following tas
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/src/app-s04-f01-us01/) 
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 <br/>
 
 ### Setup the AI SDK
@@ -66,7 +73,11 @@ from openai import AzureOpenAI
 from dotenv import dotenv_values
 ```
 
-This code imports the necessary libraries and modules for the recommendation engine. The `semantic_kernel` module is used to calculate the semantic similarity between the task name and the recommendations. The `Service` class is used to interact with the Azure OpenAI API. The `AzureOpenAI` class is used to generate the AI recommendations. The `dotenv_values` function is used to load environment variables from a `.env` file.
+This code imports the necessary libraries and modules for the recommendation engine.
+- The `semantic_kernel` module is currently being used for the loading of environment variables in this class, but is a much bigger library that includes many useful functions when developing generative AI applications. 
+- The `Service` module is the enumeration module that we just created in the previous step.
+- The `AzureOpenAI` module is used to generate the AI recommendations. 
+- The `dotenv_values` function is used to load environment variables from a `.env` file.
 
 <br/>
 
@@ -96,10 +107,13 @@ class RecommendationEngine:
     
     def __init__(self):
         
-        self.client = AzureOpenAI(azure_endpoint = endpoint, 
+        if selectedService == Service.AzureOpenAI:
+            self.client = AzureOpenAI(azure_endpoint = endpoint, 
                         api_key=api_key,  
                         api_version="2024-02-15-preview"
-                        )    
+                        )
+        else:
+            raise Exception("OpenAI not implemented")    
 ```
 
 This code defines the `RecommendationEngine` class, which initializes the AI service based on the selected service in the configuration file. If the selected service is Azure OpenAI, an instance of the `AzureOpenAI` class is created with the Azure OpenAI key from the configuration file. If the selected service is OpenAI, an exception is raised since the OpenAI service is not implemented yet. 
@@ -179,7 +193,7 @@ supporting website. RETURN ONLY JSON AND NOTHING ELSE
 <br/>
 
 #### 5. Create configuration settings for Azure OpenAI
-We now need to add the `.env` file to our project.  This file will contain all of the keys and secrets needed to properly configure the Azure OpenAI service. Create a `.env` file in the same folder as your `app.py` file.  This file will be used to store the configuration settings for the Azure OpenAI service and should look something like this: 
+We now need to add the `.env` file to our project.  This file will contain all of the keys and secrets needed to properly configure the Azure OpenAI service. Create a `.env` file in the root of your repo.  This file will be used to store the configuration settings for the Azure OpenAI service and should look something like this: 
 
 ```text
 USE_AZURE_OPENAI=True
@@ -188,7 +202,10 @@ AZURE_OPENAI_API_KEY=<api_key>
 AZURE_OPENAI_ENDPOINT=<endpoint>
 ```
 
-This code sets the `USE_AZURE_OPENAI` variable to `True` to use the Azure OpenAI service. The `AZURE_OPENAI_DEPLOYMENT_NAME`, `AZURE_OPENAI_API_KEY`, and `AZURE_OPENAI_ENDPOINT` variables are used to configure the Azure OpenAI service. Replace `<deployment_name>`, `<api_key>`, and `<endpoint>` with the appropriate values for your Azure OpenAI service (you will be given these by one of the coaches).  The rest of the keys you can ignore for now.
+This environment file sets the `USE_AZURE_OPENAI` variable to `True` to use the Azure OpenAI service. The `AZURE_OPENAI_DEPLOYMENT_NAME`, `AZURE_OPENAI_API_KEY`, and `AZURE_OPENAI_ENDPOINT` variables are used to configure the Azure OpenAI service. Replace `<deployment_name>`, `<api_key>`, and `<endpoint>` with the appropriate values for your Azure OpenAI service (you will be given these by one of the coaches during this event or if you are running through these excersises outside of the event, you can pull these values from the Azure portal after you setup the service). 
+
+> [!IMPORTANT]
+> The .env file has to be in the root of your repository or the `sk.azure_openai_settings_from_dot_env()` will not find it
 
 <br/>
 
@@ -213,11 +230,8 @@ This code defines a test function `test_recommendation_engine` that creates an i
 <br/>
 
 #### 7. Test the Recommendation Engine
-Go to the terminal window in Visual Studio Code and run the following command to test the recommendation engine:
+Open the terminal and navigate to the folder where your `recommendation_engine.py` file is located. Run the application by typing `python recommendation_engine.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window when in the `recommendation_engine.py` file.  For Codespaces, the easiest path is to just click the play button.   This will run the test function within the terminal window.
 
-```bash
-python recommendation_engine.py
-```
 You should see results that are similar to this:
 ![Recommendation Engine Test](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/images/recommendation_engine_test-S5-F1-US1-01.png)
 
@@ -260,7 +274,7 @@ from recommendation_engine import RecommendationEngine
 <br/>
 
 #### 4. Create Recommendation Route to handle recommendations
-Now that we have tested that our recommendation engine is working properly we will integrate the recommendation engine into the web application. Open the `app.py` file in the source folder of your application. Add the following code right after the `remove_todo()` function to the `app.py` file to create the backend functionality that the web app will use to get AI recommendations based on the task name:
+Now we will integrate the recommendation engine into the web application. Open the `app.py` file in the source folder of your application. Add the following code right after the `remove_todo()` function to the `app.py` file to create the backend functionality that the web app will use to get AI recommendations based on the task name:
 
 ```python
 # Show AI recommendations
@@ -286,7 +300,7 @@ To display the AI recommendations in the web application, we need to update the 
 - We will adjust the width of the task list to leave room on the right for the recommendations
 - We will display the recommendations in a separate tab to the right of the list
 
-For the sake of making these changes easier in this step-by-step, instead of walking through each change we will simply ask you to replace the code in the `index.html` file with the code provided below.  This will allow you to see the changes in the web application and understand how the changes were made.
+For the sake of making these changes easier in this step-by-step guide, instead of walking through each change we will simply ask you to replace the code in the `index.html` file with the code provided below.  This will allow you to see the changes in the web application and understand how the changes were made.
 
 Open the `index.html` file in the `templates` folder of your application. Replace the entire contents of the `index.html` file with the following code:
 
@@ -368,12 +382,9 @@ Open the `index.html` file in the `templates` folder of your application. Replac
 <br/>
 
 #### 2. Run the Application
-Now let's run the application to test the AI recommendations. Open a terminal window in Visual Studio Code and run the following command:
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
 
-```bash
-python app.py
-```
-the application should start and you should be able to see the AI recommendations when you click on the 'Recommendations' button for a task. The recommendations should be displayed in a separate tab on the right side of the task list and look something like this:
+The application should start and you should be able to see the AI recommendations when you click on the 'Recommendations' button for a task. The recommendations should be displayed in a separate tab on the right side of the task list and look something like this:
 ![outcome](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/images/outcome-S05-F01-US01.png)
 
 <br/>
