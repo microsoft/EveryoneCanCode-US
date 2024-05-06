@@ -1,4 +1,4 @@
-# Everyone can Code! – Light Your Fire for Coding (U.S. Edition)
+# Everyone Can Code! – Light Your Fire for Coding (U.S. Edition)
 
 ![FemaleTechGenLogo](./content-images/MSFT_EveryoneCanCode_Banner.png)
 
@@ -21,7 +21,7 @@ It's great to have you here! 🎉
 
 This is why we want to encourage everyone to bring their skills and passions to the world of technology, to explore new horizons together, and to shape the future of the industry together. **Anyone who is creative and curious, regardless of age, gender, or profession, can participate in “Everyone Can Code.”**
 
-**Join us for a groundbreaking online coding event** specifically designed to empower individuals and help you learn how to start writing your own coding stories with us.  You may have heard that code can seem complex, but it is really nothing more than a language and technology that provides a magic pen in which we can paint the world around us. There's no such thing as “I can’t do it”.
+**Join us for a groundbreaking online coding event** specifically designed to empower individuals and help you learn how to start writing your own coding stories with us.  You may have heard that coding can seem complex, but it is really nothing more than a language and technology that provides a magic pen in which we can paint the world around us. There's no such thing as “I can’t do it”.
 
 This event is perfect for anyone who has ever been curious about coding but wasn't sure where to start. With expert instructors, hands-on activities, and a supportive community, you will be amazed at how much you can accomplish in just a few hours. **No previous code or other technical experience is required.**
 
