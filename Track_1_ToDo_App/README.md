@@ -40,7 +40,7 @@ This sprint is designed to help students get their environment setup and ready t
     </details> 
 
 ### Sprint 1 - Basic Application
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 45-60 min._ ⏲️
 
 This sprint is designed to help students build a basic To-Do application that can be used to store a local to-do list on your computer.  The sprint will walk students through building a simple console application that will allow users to add, delete, and list tasks.  
 
@@ -64,6 +64,8 @@ This sprint is designed to help students build a basic To-Do application that ca
 1. [**📖 Save List to File**](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/Feature%202%20-%20Save%20To-Do%20List/User%20Story%201%20-%20Save%20To-Do%20List%20to%20File.md
 )
 2. [**📖 Load List from File**](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/Feature%202%20-%20Save%20To-Do%20List/User%20Story%202%20-%20Load%20To-Do%20List%20from%20File.md)
+
+<br/>
 
 > [!NOTE]
 > This sprint is a reminder that not all code needs to be complex. Not every problem requires a web application or a mobile app. Sometimes a simple script will get the job done!
