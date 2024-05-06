@@ -1,5 +1,5 @@
 # User Story: Show spinner when loading recommendations Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 10 min._ ⏲️
 
 ## User Story 
 *Clicking on the recommendations tab can take some time so we need to let the user visually know that the system is working on loading the recommendations by showing a spinner graphic*
@@ -16,17 +16,21 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/src/app-s07-f01-us04/)
 
+
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 <br/>
+
 
 ### Update the user interface to show a spinner when clicking on the recommendation tab
 
 #### 1. Update the user interface to support the spinner
-In order to add a spinner, first we need to update the user interface to support this functionality. Open the `index.html` file and replace the `<li class="nav-item">...</li>` element for the recommendation tab with the following code:
+In order to add a spinner, we first need to update the user interface to support this functionality. Open the `index.html` file and replace the `<li class="nav-item"> <a id="recommendations-tab"...</li>` element for the recommendation tab with the following code:
 
 ```html
 <li class="nav-item">
@@ -41,7 +45,7 @@ This code will add a spinner to the recommendations tab. The spinner will be hid
 <br/>
 
 #### 2. Update Javascript to handle tab clicks
-Next, we need to update the `app.js` file to show the spinner when the recommendations tab is clicked.  To do this we are going to override the default "click" behavior so that we can enable the spinner user interface element before calling the server to load recommendations.  This will visually show the spinner while we wait for the server to respond.  Open the `app.js` file and add the following code within the `DOMContentLoaded` event listener:
+Next, we need to update the `app.js` file to show the spinner when the recommendations tab is clicked.  To do this we are going to override the default "click" behavior so that we can enable the spinner user interface element before the call to the server to load recommendations.  This will visually show the spinner while we wait for the server to respond.  Open the `app.js` file and add the following code within the `DOMContentLoaded` event listener:
 
 ```javascript
 //override the default behavior of the nav links so that we can 
@@ -85,7 +89,7 @@ window.handleRefresh = function() {
     if (recommend_pane) {
         recommend_pane.removeAttribute('hidden');
     } 
-}
+};
 ```
 
 #### 3. Run the Application
