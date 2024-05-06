@@ -21,7 +21,7 @@ In order to complete this user story you will need to complete the following tas
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us03/) 
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 
 ### Updating the Web Application Frontend
 

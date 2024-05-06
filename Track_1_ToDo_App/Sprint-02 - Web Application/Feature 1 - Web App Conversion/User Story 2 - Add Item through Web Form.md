@@ -27,7 +27,7 @@ The first set of changes that we will need to make is to update the web applicat
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us01/)
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 
 #### 2. Update the User interface to Add New To-Do Items
 To do this, we need to update the `index.html` to include a basic form that will allow a user to add tasks and then subsequently call the backend server to add it to the file. Your HTML should be updated to look like this:

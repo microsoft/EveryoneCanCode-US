@@ -24,7 +24,7 @@ In order to complete this user story you will need to complete the following tas
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story. If you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/src/app-s03-f01-us01/) 
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
 

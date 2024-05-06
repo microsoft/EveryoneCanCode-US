@@ -23,7 +23,7 @@ Open Visual Studio Code and open the source code the folder with your completed 
 
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
 

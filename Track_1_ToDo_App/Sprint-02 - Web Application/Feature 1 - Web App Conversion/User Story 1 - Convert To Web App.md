@@ -27,7 +27,7 @@ The first step in converting the application to a web application is to install 
 Open Visual Studio Code and open the source code the folder with your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/src/app-s01-f02-us02/). 
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 
 <br/>
 
@@ -173,7 +173,7 @@ This code will create a basic HTML page that will display the to-do list items i
 Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000). You can add tasks to a to-do_list.txt file to see them display on the page.
 
 > [!NOTE]
-> If you are using Codespaces, you will need to copy the `todo_list.txt` file from the root of the repository to the `/Track_1_ToDo_App/myApplication/` as flask will be using this directory as the root of the web server.
+> If you are using Codespaces, you will need to copy the `todo_list.txt` file from the root of the repository to the `/myApplication/` as flask will be using this directory as the root of the web server.
 
 ![WebApp01](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/outcome-S02-f01-US01.png)
 
