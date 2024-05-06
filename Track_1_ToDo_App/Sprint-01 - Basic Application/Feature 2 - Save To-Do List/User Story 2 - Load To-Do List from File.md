@@ -1,12 +1,12 @@
 # 📖 Load To-Do items from a file - Step-by-Step
-⏲️ _Est. time to complete: 10 min._ ⏲️
+⏲️ _Est. time to complete: 15 min._ ⏲️
 
 ## User Story
 
 *As a user, I want to be able to have my to-do list automatically loaded from a file when I start the program.*
 
 ## 🎯Acceptance Criteria:
-- Existing to-do list items from when I ran the program last are loaded into this program
+- Existing to-do list items from the last time I ran the program are loaded into this program
 - The existing to-do list items will be a ".txt" file
 - each line in the file will contain a single to-do item.
 - if there is no file, then the program should load an empty collection
@@ -26,6 +26,9 @@ In order to complete this user story you will need to complete the following tas
 - Go to your application directory and start visual studio code by typing `code .` in the terminal window and pressing enter.
 
 - Open the `app.py` file in the root of your project folder.
+
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 
 <br/>
 
