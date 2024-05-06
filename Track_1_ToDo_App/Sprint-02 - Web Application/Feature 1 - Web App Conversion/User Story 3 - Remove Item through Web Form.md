@@ -1,9 +1,9 @@
 # 📖 User Story: Remove Item through Web Form - User Story: Step-by-Step
-⏲️ _Est. time to complete: 10 min._ ⏲️
+⏲️ _Est. time to complete: 15 min._ ⏲️
 
 ## User Story
 
-*As a user, I want to input tasks through a web form, so I can interact with the application easily.*
+*As a user, I want to be able to remove items from my to-do list*
 
 ## 🎯Acceptance Criteria:
 - The web app should provide a form for users to input data.  
@@ -18,16 +18,19 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us02/)
+
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 
 ### Updating the Web Application Frontend
 First we need to update the web application's user interface to allow the user to remove items via the web page.
 
 #### 1. Update the user interface
-We now need to update the `index.html` to add a basic form to allow a user to remove tasks and call the backend server functionality that we defined in the previous step. Your HTML should be updated to look like this:
+We now need to update the `index.html` to add a basic form to allow a user to remove tasks.  This form will call the backend server functionality when the user hits the 'Remove' button . Your HTML should be updated to look like this:
 
 ```html
 <!DOCTYPE html>
@@ -56,11 +59,11 @@ We now need to update the `index.html` to add a basic form to allow a user to re
 </html>
 ```
 
-the code above creates a second form that allows users to input a task number to remove. When the form is submitted, a POST request is sent to the "/remove" URL, which triggers the remove_todo function in the Python code.
+The code above creates a second form that allows users to input a task number representing the to-do item that you would like to remove. When the form is submitted, a POST request is sent to the `/remove` URL, which triggers the remove_todo function in the Python code.
 
 
 ### Updating the Web Application Backend
-Similar to the steps in the last sprint to enable the server to handle new to-items, we need to update the python code to enable the backend server to handle the removal of to-do items.
+Similar to the steps in the last sprint to enable the server to handle new to-items, we need to update the python code to enable the backend server to handle the removal of to-do items via the `/remove` URL.
 
 #### 1. Add a Remove Route
 First, we need to add a remove route to enable a user to remove tasks. Add the following code just below the add route code:
@@ -78,13 +81,15 @@ def remove_todo():
     return redirect(url_for("index"))
 ```
 
-The code above creates a new route that listens for POST requests to the "/remove" URL. When a POST request is received, the function remove_todo is called. This function retrieves the value of the "item_number" form field from the request, converts it to an integer, and then removes the task at the specified index from the todo_list.  Note again, that python collections are zero-based while this list is one-based, so we need to subtract 1 from the item_number to get the correct index. The save_todo_list function is then called to save the updated list to the file, and the user is redirected back to the index page.
+The code above creates a new route that listens for POST requests from the `/remove` URL. When a POST request is received, the function remove_todo is called. This function retrieves the value of the "item_number" form field from the request, converts it to an integer, and then removes the task at the specified index from the todo_list.  Note again, that python collections are zero-based while this list is one-based, so we need to subtract 1 from the item_number to get the correct index. The save_todo_list function is then called to save the updated list to the file, and the user is redirected back to the index page.
 
 <br/>
 
 
 #### 2. Run the Application
-Run the app by running ```python app.py``` in the terminal and browse to the local site. Test it out by adding a task and then removing a task.
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000). 
+
+Test it out by adding a task and then removing a task.
 
 Your application should look something like this:
 
@@ -92,7 +97,7 @@ Your application should look something like this:
 
 <br/>
 
-🎉 Congratulations! You have now updated your basic web application to include a form to allow adding AND removing tasks.
+🎉 Congratulations! You have now updated your basic web application to include a form to allow both adding AND removing tasks.
 
 <br/>
 

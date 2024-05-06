@@ -1,5 +1,5 @@
 # 📖 User Story: Convert to Web App - Step-by-Step
-⏲️ _Est. time to complete: 15 min._ ⏲️
+⏲️ _Est. time to complete: 20 min._ ⏲️
 
 ## User Story
 
@@ -18,13 +18,16 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Install Web Framework
 The first step in converting the application to a web application is to install a web framework. We will be using **Flask** for this workshop. Flask is a lightweight web framework that is easy to use and perfect for small projects like this one.
 
 #### 1. Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/src/app-s01-f02-us02/). 
+
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 
 <br/>
 
@@ -44,13 +47,16 @@ pip install flask
 > You can ask GitHub Copilot to convert a basic python file to a web app. It will generally work well at converting to a starting point that you can adjust and work with. Try it out with a prompt such as: *Convert this app to a flask based web app*
 
 #### 1. Add Flask to the Application
-We now need to update our application to include the Flask framework. Open `app.py` and import some important packages from Flask by adding the following to the very top of the file:
+We now need to update our application to include the Flask framework. Open `app.py` and import some important packages from Flask by adding the following to the very top of the file (i.e., above the `todo_list = []` line):
 
 ```python
 from flask import Flask, render_template, request, redirect, url_for
 ```
 
-Flask is the package that will allow you to create a web application. render_template is a function that will allow you to render an HTML file. request is a package that will allow you to handle requests from the user. redirect and url_for are packages that will allow you to redirect the user to a different page.
+- `flask` is the package that will allow you to create a web application
+- `render_template` is a function that will allow you to render an HTML file
+- `request` is a package that will allow you to handle requests from the user
+- `redirect` and `url_for` are packages that will allow you to redirect the user to a different page and get the final URL for given the relative path.
 
 <br/>
 
@@ -61,7 +67,7 @@ Next, we want to import the os package to handle file operations. Add the follow
 import os
 ```
 
-os is a package that will allow you to interact with the operating system. In this case, you will use it to find the current directory of the application so that we know where to store the file.
+`os` is a package that will allow you to interact with the operating system. In this case, we will use it to find the current directory of the application so that we know where to store the file.
 
 <br/>
 
@@ -97,21 +103,21 @@ This code replaces the prevously hard-code file name with the variable `todo_fil
 <br/>
 
 #### 6. Create a route for the homepage
-Now that we are using the Flask Framework we will also need to define the entry point for the application on the back-end server.  You do this by creating "routes".  Routes are the URL paths that the user can access in the web application.  You will need to define a route for the homepage.  To do this, add the following code snippet below to replace ALL of the code starting with the `while True:` statement all the way to the end of the file.  This code is no longer needed for the web application.
+Now that we are using the Flask Framework we will also need to define the entry point for the application on the back-end server.  We do this by creating "routes".  Routes represent the URL paths that the browser will call to access that functionality.  We will need to define a route for the homepage.  To do this, add the following code snippet below to replace ALL of the code starting with the `while True:` statement all the way to the end of the file.  This code is no longer needed for the web application.
+
+Replace the code in the red box below:
 
 ![replacecode](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/ReplaceCode-S2-F1-US01-01.png)
 
-with the following code:
+with the this code:
 
 ```python
 @app.route("/")
 def index():
-    with open(todo_file, "r") as file:
-        todo_list = file.read().splitlines()
     return render_template("index.html", todo_list=todo_list)
 ```
 
-Routes are defined using the @app.route decorator. This decorator tells Flask that the function below it is a route. In this case, the route is the homepage ("/"). The function below the decorator is called index. This function will read the todo_list.txt file and pass the todo_list variable to the index.html file.
+Routes are defined using the `@app.route` decorator. This decorator tells Flask that the function below it is a route. In this case, the route is the homepage or root of the application ("/"). The function below the decorator is called index. This function will simply pass the todo_list variable to the index.html file to render the list of to-do items.
 
 <br/>
 
@@ -137,6 +143,9 @@ Create a ```index.html``` file in a subfolder called ```templates```.
 
 ![Directory01](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/Directory01.png)
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder. So you would want to create the templates directory underneath that folder.
+
 Add the following code to this index.html file:
 
 ```html
@@ -156,14 +165,18 @@ Add the following code to this index.html file:
 </html>
 ```
 
-This code will create a basic HTML page that will display the to-do list items in an ordered list. The `{% for todo in todo_list %}` loop will iterate through each item in the todo_list and display it as a list item. The `{{ todo }}` will display the item in the list.  The use of `{% ... %}` in the HTML are used to render dynamic content for a flash application and are called Jinja2 templates.
+This code will create a basic HTML page that will display the to-do list items in an ordered list. The `{% for todo in todo_list %}` loop will iterate through each item in the todo_list and display it as a list item. The `{{ todo }}` will display the item name in the list.  The use of `{% ... %}` in the HTML are used to render dynamic content for a flash application and are called Jinja2 templates.
 
 <br/>
 
 #### 9. Run the Application
-You can now test this out by running ```python app.py```. This will launch a browser and show the home page (or you can browse to http://localhost:5000). You can add tasks to a to-do_list.txt file to see them display on the page.
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000). You can add tasks to a to-do_list.txt file to see them display on the page.
+
+> [!NOTE]
+> If you are using Codespaces, you will need to copy the `todo_list.txt` file from the root of the repository to the `/Track_1_ToDo_App/myApplication/` as flask will be using this directory as the root of the web server.
 
 ![WebApp01](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/outcome-S02-f01-US01.png)
+
 
 🎉 Congratulations! You have now updated your basic application to the most basic web application.  In the next set of user stories we will add back in the functionality to add a to-do list item as well as delete one. 
 

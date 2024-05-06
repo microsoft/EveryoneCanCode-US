@@ -3,7 +3,7 @@
 
 ## User Story
 
-*As a user, I want to have a basic stylized interface to look and feel more like a proper web app*
+*As a user, I want to be able to customize the look and feel of my web application*
 
 ## 🎯Acceptance Criteria:
 - The web app should have a custom title that reflects the user's preferences.
@@ -19,15 +19,18 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us01/) 
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+
 ### Updating Titles
 
 #### 1. Customize the Title
-We first will customize the title of the web application. Go into your `index.html` file and update the title tag to reflect the a title that is unique to you. For example, you can change the title to "My To-Do List" or "Sarah's To-Do List" or whatever you like by updating the title tag as follows:  Please feel free to use any title you like that represents what you would like to call the application. 
+We first will customize the title of the web application. Go into your `index.html` file and update the title tag to reflect a title that is unique to you. For example, you can change the title to "My To-Do List" or "Sarah's To-Do List" or whatever you like by updating the title tag as follows:  Please feel free to use any title you like that represents what you would like to call the application. 
 
 ```html
 <head>
@@ -41,7 +44,7 @@ The title tag in the HTML document sets the title of the web page that appears i
 <br/>
 
 #### 2. Customize the Heading
-Let's also change the name of the web app that is displayed as part of the page. Replace the `<h1>...</h1>` tag with the following code:  Again, please feel free to use any title you like that represents what you would like to call the application. 
+Let's also change the name of the web app that is displayed as part of the home page. Replace the `<h1>...</h1>` tag with the following code:  Again, please feel free to use any title you like that represents what you would like to call the application. 
 
 ```html
 <br/>
@@ -59,9 +62,12 @@ This will change the heading of the web app to "My To-Do List" and provide a mor
 In this section, we will customize the color scheme of the web app to reflect the user's preferences.
 
 #### 1. Create a Custom CSS File
-To do this we will first need to add a custom CSS file. Create a new file called `style.css` in the `static/css` folder of your application.  If these folders do not exist you will need to create them first.  
+To do this we will need to add a custom CSS file. Create a new file called `style.css` in the `static/css` folder of your application.  If these folders do not exist you will need to create them first.  
 
 ![Create CSS File](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/NewFile-S2-F2-US2-01.png)
+
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder. So you will want to create the following folders `/Track_1_ToDo_App/myApplication/static/css`
 
 #### 2. Add Custom Color Scheme
 Add the following code to the `style.css` file to define a custom color scheme for the web app:
@@ -78,12 +84,12 @@ h1 {
 }
 ```
 
-This code sets the background color of the body to light blue and the font color to white. It also sets the font color of the heading to blue to ensure that it is visible against the container background color. You can experiment with different colors and styles to create a custom color scheme that reflects your preferences.
+This code sets the background color of the body to blue and the font color to white. It also sets the font color of the heading to blue to ensure that it is visible against the container background color. You can experiment with different colors and styles to create a custom color scheme that reflects your preferences.
 
 <br/>
 
 #### 3. Link Custom CSS File to the HTML Document
-Link the custom CSS file to the HTML document by adding the following code to the `<head>` tag in your index.html file right after the link to the bootstrap CSS file:
+Link the custom CSS file to the HTML document by adding the following code to the `<head>` tag in your `index.html` file right after the link to the bootstrap CSS file:
 
 ```html
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  
@@ -108,6 +114,8 @@ In this section, we will add a background picture to the web app to enhance the 
 #### 1. Create or Use a Background Picture
 Next, let's add a background picture to the web app. You can use the existing picture that we have pre-created using [Microsoft Designer](https://designer.microsoft.com/) (which has been generated by AI using DALL-E) and can be seen below or if you like you can create a picture of your own by also taking advantage of generative AI.   
 
+If you want to use the pre-created image you can find it in this [**directory**](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/static/images/)
+
 > [!NOTE] 
 > To create your own image using **Microsoft Designer** please follow the instructions [**here**](./Using%20Microsoft%20Designer.md)
 
@@ -117,6 +125,7 @@ Next, let's add a background picture to the web app. You can use the existing pi
 
 #### 2. Save the Background Picture
 Whether you created your own picture or are using the premade background picture, you will need to save the image to the `static/images` folder of your application. If the folder does not exist you will need to create it first.  Also make sure that you name the file correctly, in this case, the file is named `Designer02.jpeg` to match the name we will be using in the CSS file. 
+
 
 ![Copy Image](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/CopyImage-S2-F2-US2-01.png)
 
@@ -131,6 +140,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
+}
+
+label {
+    color: white
 }
 
 h1 {
@@ -161,7 +174,7 @@ Save the changes to the `styles.css` file and refresh the web app in your browse
 In this section, we will add a custom favicon to the web app to enhance the user experience.  The favicon is a small icon that appears in the browser tab next to the title of the web page.
 
 #### 1. Add a Custom Favicon to the application
-Finally, let's add a custom favicon to the web app. You can create a custom favicon using an online favicon generator or by using an image editing tool like Photoshop or GIMP.  For this exercise, you can use the favicon provided in the `images` folder of the source code.  Please copy the `favicon.ico` from [**here**](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/static/images) file to the `static/images` folder of your application. If the folder does not exist you will need to create it first. 
+Let's add a custom favicon to the web app. You can create a custom favicon using an online favicon generator or by using an image editing tool like Photoshop or GIMP.  For this exercise, you can use the favicon provided in the `images` folder of the source code.  Please copy the `favicon.ico` from [**here**](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/static/images) file to the `static/images` folder of your application. If the folder does not exist you will need to create it first. 
 
 ![Copy Favicon](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/static/images/favicon.ico)
 
@@ -185,13 +198,15 @@ Save the changes to the `index.html` file and refresh the web app in your browse
 
 
 <br/>
-🎉 Congratulations! You have now updated your web application to have some a personalized look and feel with a custom title, color scheme, background picture, and favicon. This will provide a more engaging and visually appealing experience for the user. 
+🎉 Congratulations! You have now updated your web application to have a more personalized look and feel with a custom title, color scheme, background picture, and favicon. This will provide a more engaging and visually appealing experience for the user. 
 
 <br/>
+
 
 > [!NOTE]
 > 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/).
 
+<br/>
 
 [🔼 Home ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story**](User%20Story%201%20-%20Add%20Basic%20Styling%20to%20the%20Web%20App.md) | [**Next user story** (in next sprint) ▶](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/Features%201%20-%20Shift%20task%20storage%20to%20database/User%20Story%201%20-%20Move%20from%20File%20Storage%20to%20database.md)
 
