@@ -8,6 +8,10 @@ body {
     background-size:cover;
 }
 
+label {
+    color: white
+}
+
 h1 {
     color: darkgray; /* font for the h1 header*/
 }
