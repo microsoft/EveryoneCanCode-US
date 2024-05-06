@@ -1,5 +1,5 @@
 # Sprint 3: Database Integration
-⏲️ _Est. time to complete: 60 min._ ⏲️
+⏲️ _Est. time to complete: 25 min._ ⏲️
 
 In this sprint we will be taking the web application from Sprint 2 and adding in the ability to store tasks in a database to persist any changes that are made. This will allow users to access their tasks from any device with internet connectivity and not have to worry about concurrent users competing to write to a local file.
 

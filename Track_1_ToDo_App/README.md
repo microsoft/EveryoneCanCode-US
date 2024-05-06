@@ -96,7 +96,7 @@ This sprint is designed to help students build a web application by evolving the
 2. [**📖 Personalize Website**](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%202%20-%20Basic%20Styling/User%20Story%202%20-%20Personalize%20Website.md) 
 
 ### Sprint 3 - Database Integration
-⏲️ _Est. time to complete: 60 min._ ⏲️
+⏲️ _Est. time to complete: 25 min._ ⏲️
 
 In this sprint we will be taking the web application from Sprint 2 and adding in the ability to store tasks in a database to persist any changes that are made. This will allow users to access their tasks from any device with internet connectivity and not have to worry about concurrent users competing to write to a local file.
 

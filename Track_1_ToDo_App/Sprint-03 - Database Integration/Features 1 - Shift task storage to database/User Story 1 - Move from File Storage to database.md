@@ -1,5 +1,5 @@
 # 📖 User Story: Move from File Storage to database - Step-by-Step
-⏲️ _Est. time to complete: 15 min._ ⏲️
+⏲️ _Est. time to complete: 25 min._ ⏲️
 
 ## User Story
 
