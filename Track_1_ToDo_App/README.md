@@ -105,7 +105,7 @@ In this sprint we will be taking the web application from Sprint 2 and adding in
 
 
 ### Sprint 4 - Voice To Text
-⏲️ _Est. time to complete: 60 min._ ⏲️
+⏲️ _Est. time to complete: 30 min._ ⏲️
 
 This sprint is designed to help students add voice to text functionality to the To-Do application.  The sprint will walk students through adding voice to text functionality to the To-Do application.
 
