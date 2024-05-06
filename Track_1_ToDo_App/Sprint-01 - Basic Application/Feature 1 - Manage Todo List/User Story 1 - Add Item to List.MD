@@ -1,5 +1,5 @@
 # 📖 User Story: Add Item to List - Step-by-Step
-⏲️ _Est. time to complete: 10 min._ ⏲️
+⏲️ _Est. time to complete: 15 min._ ⏲️
 
 ## User Story
 
