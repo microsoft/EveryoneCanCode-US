@@ -1,5 +1,5 @@
 # 📖 User Story: Convert to Web App - Step-by-Step
-⏲️ _Est. time to complete: 15 min._ ⏲️
+⏲️ _Est. time to complete: 20 min._ ⏲️
 
 ## User Story
 
@@ -18,7 +18,7 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Install Web Framework
 The first step in converting the application to a web application is to install a web framework. We will be using **Flask** for this workshop. Flask is a lightweight web framework that is easy to use and perfect for small projects like this one.

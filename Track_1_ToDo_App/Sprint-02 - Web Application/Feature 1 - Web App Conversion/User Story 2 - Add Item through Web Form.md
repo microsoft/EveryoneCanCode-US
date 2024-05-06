@@ -1,5 +1,5 @@
 # 📖 User Story: Add Item through Web Form - Step-by-Step
-⏲️ _Est. time to complete: 10 min._ ⏲️
+⏲️ _Est. time to complete: 15 min._ ⏲️
 
 ## User Story
 
@@ -18,17 +18,19 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Updating the Web Application Frontend
 The first set of changes that we will need to make is to update the web application's user interface to allow the user to add new items via the web page.
 
 #### 1. Open Visual Studio Code
-Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us01/)
+Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us01/)
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 
 #### 2. Update the User interface to Add New To-Do Items
-To do this, we need to update the `index.html` to add a basic form to allow a user to add tasks and call the backend server to add it to the file. Your HTML should be updated to look like this:
+To do this, we need to update the `index.html` to include a basic form that will allow a user to add tasks and then subsequently call the backend server to add it to the file. Your HTML should be updated to look like this:
 
 >[!TIP]
 >You can use GitHub Copilot with a prompt like *add form to add task with add route*
@@ -54,12 +56,12 @@ To do this, we need to update the `index.html` to add a basic form to allow a us
 </body>
 </html>
 ```
-The code above creates a simple form that allows users to input a to-do item. When the form is submitted, a POST request is sent to the "/add" URL, which will trigger functionality in the back-end to save the to-do item to a file.  A POST request sends all of the data in the form to the back-end server.
+The code above creates a simple form that allows users to input a to-do item. When the form is submitted, a POST request is sent to the `/add` URL which will trigger functionality in the back-end to save the to-do item to a file.  A POST request sends all of the data in the form to the back-end server.
 
 <br/>
 
 ### Update the Web Application Backend
-The next set of changes that we will need to make is to update the python code to enable the backend server to handle adding new to-do items and save them to the file.
+The next set of changes that we will need to make is to update the python code to enable the backend server to handle this `/add` functionality for adding a new to-do item to the collection.
 
 
 #### 1. Update Web Server to Handle New To-Do Items
@@ -74,21 +76,21 @@ def add_todo():
     return redirect(url_for("index"))
 ```
 
-The code above creates a new route that listens for POST requests to the "/add" URL. When a POST request is received, the function add_todo is called. This function retrieves the value of the "todo" form field from the request, appends it to the todo_list, saves it to the file and then redirects the user back to the index page.
+The code above creates a new route that listens for POST requests to the `/add` URL. When a POST request is received, the function add_todo is called. This function retrieves the value of the "todo" form field from the request, appends it to the todo_list, saves it to the file and then redirects the user back to the index page.
 
-Note that the save_todo_list() function is not yet implemented but we will add it in the next step.
+Note that the `save_todo_list()` function is not yet implemented but we will add it in the next step.
 
 <br/>
 
 #### 2. Add Function to Save To-Do List
-To complete the back-end server, we need the ability to save these tasks to our file so they persist between sessions (similar to the save functionlity we had in Sprint1). To do this we will implement a function that will write the tasks to the file right after the `add_todo()` function:
+To complete the back-end server, we need the ability to save these tasks to our file so they persist between sessions (similar to the save functionlity we had in Sprint1). To do this we will implement a function that will write the tasks to the file.  Please add the code below right after the `add_todo()` function:
 
 >[!TIP]
 >You can use GitHub Copilot to create this with a prompt such as *Add a route to save todo list items*
 
 ```python
 def save_todo_list():
-    with open("todo_list.txt", "w") as file:
+    with open(todo_file, "w") as file:
         for todo in todo_list:
             file.write(todo + "\n")
 ```
@@ -96,13 +98,15 @@ def save_todo_list():
 <br/>
 
 #### 3. Run the Application
-Run the app by running ```python app.py``` in the terminal and browse to the local site. Test it out by adding a tasks.
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
+
+Test it out by adding a tasks.
     
 ![RunApp-S2-F1-US02-01](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/outcome-S02-f01-US02.png)
 
 
 <br/>
-🎉 Congratulations! You have now updated your basic web application to include a form to allow adding tasks and persisting them a file.
+🎉 Congratulations! You have now updated your basic web application to include a form that allows a user to add tasks and persist them a file.
 
 <br/>
 
