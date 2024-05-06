@@ -1,5 +1,5 @@
 # Sprint 7: Advanced Styling For Your Web App
-⏲️ _Est. time to complete: 60 min._ ⏲️
+⏲️ _Est. time to complete: 1 hour 35 min._ ⏲️
 
 This sprint is designed to help students add advanced styling to the To-Do application.  The sprint will walk students through adding advanced styling features such as a tabbed interface, modal dialog, and advanced rules to ensure that a blank to-do is not added.
 
