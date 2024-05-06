@@ -1,18 +1,18 @@
 # Build a To-Do Application with AI Features
 
 ## Summary
-This training is designed to help students build a To-Do application with AI features that will be deployed to Azure.  The application will start as a simple console application and then evolve into a web application taking advantage of generative AI to help with task recommendations.  The application will be broken down into a series of sprints that will build on top of each other.  Each sprint will have a set of features and user stories that the students will implement.  The goal is to give students a hands-on experience building a real-world application that they can continue to evolve after the hackathon.
+This training is designed to help students build a To-Do application with AI features that will be deployed to Azure.  The application will start as a simple console/terminal application and then evolve into a web application taking advantage of generative AI to help with task recommendations.  The application will be broken down into a series of sprints that will build on top of each other.  Each sprint will have a set of features and user stories that the students will implement.  The goal is to give students a hands-on experience building a real-world application that they can continue to evolve after the hackathon.
 
 ## Key Concepts that Students will Learn:
-- **Everyone can code** – and coding can come in all forms and sizes; from a simple script/console application, to a website, to a fully commercial solution that scales to millions of users.  You do not have to be building the next Facebook or YouTube to be a developer.
+- **Everyone can code** – and coding can come in all shapes and sizes; from a simple script/console application, to a website, to a fully commercial solution that scales to millions of users.  You do not have to build the next Facebook or YouTube to be a developer.
 
-- **Start Small and iterate** – some problems can be daunting if you try to solve them all at once, break down a problem into smaller chunks that you can iterate over and incrementally make improvements to your application.  We have purposely broken down the problem into a series of sprints and user stories to help show how an application can evolve over many iterations. 
+- **Start Small and iterate** – some problems can be daunting if you try to solve them all at once. Break down a problem into smaller chunks that you can iterate over and incrementally make improvements to your application over time.  We have purposely broken down the problem into a series of sprints and user stories to help show how an application can evolve over many iterations. 
 
 - **Understand the tools that can help you on the journey**:  such as IDE’s (i.e., Visual Studio Code) and how AI can both help you build your application (i.e., GitHub Copilot) as well as help you create applications with amazing capabilities
 
 ## Track Structure
 - Students will be broken up into teams based on skill level and each team will be assigned a coach (i.e., CSA) to guide them through two days of learning.
-- The training will be centered around building a **To-Do Application**.  Taking the students from the most basic console application, to a web application, **adding AI features** along the way, and then eventually **hosting in Azure**.
+- The training will be centered around building a **To-Do Application**.  Taking the students from the most basic console/terminal application, to a web application, **adding AI features** along the way, and then eventually **hosting in Azure**.
 - The application will be broken down into a small set of manageable tasks (i.e., sprints and user stories) building up to the final application.  Each sprint will have some learning activities through recorded presentations to get the students up to speed on a topic, and then exercises broken up into features/user stories that they will implement.
 - Each sprint will build on top of the previous sprint and students will be very hands on with the code.
     - Since each sprint builds on the previous sprint a student can join at any point in the track and start coding as each user story has a fully functional code base that the user can start from. 

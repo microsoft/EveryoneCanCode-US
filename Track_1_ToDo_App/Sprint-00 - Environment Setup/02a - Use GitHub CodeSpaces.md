@@ -39,7 +39,7 @@ Now that you know what Codespaces is and why it's useful, let's dive into how to
 
 Creating a new Codespace is easy, when you know where to look:
 
-1. Navigate to the main page of the GitHub repository for which you want to create a Codespace.
+1. Navigate to the main page of the GitHub repository for which you want to create a Codespace.  For this exercise you will be using your forked repository from the previous setup step. 
 2. Click on the green "Code" button on the top right and switch from the local to the Codespaces tab.
 3. Click on the plus symbol. GitHub will now create a new Codespace and open it in a new browser window. It might take a few minutes to load but just like that you're done!
 
@@ -57,7 +57,7 @@ If you do not explicitly stop a codespace, it will continue to run until it time
 
 ## Understanding the `devcontainer.json` file
 
-In our project, you'll find a file named `devcontainer.json` which is located in the.devontainer folder. This file is automatically detected by GitHub and like a recipe for Codespaces. It tells Codespaces how to set up the environment for our project. Let's break down what each part means:
+In our project, you'll find a file named `devcontainer.json` which is located in the.devcontainer folder. This file is automatically detected by GitHub and like a recipe for Codespaces. It tells Codespaces how to set up the environment for our project. Let's break down what each part means:
 
 ```json
 {

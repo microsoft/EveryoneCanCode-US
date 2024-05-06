@@ -1,8 +1,8 @@
 # Setup GitHub Account
-⏲️ _Est. time to complete: 45 min._ ⏲️
+⏲️ _Est. time to complete: 25 min._ ⏲️
 
 ## 🎯Here is what you will learn 
-You wil learn the following:
+You will learn the following:
 - How to sign up at GitHub and create an account
 - How to edit your profile and upload a picture
 - How to fork a repository
@@ -67,4 +67,4 @@ Now, let's go ahead and fork this repository!
 
 Now that you have successfully created your GitHub account, we are ready to set up your coding environment next!
 
-[🔼 Sprint 0 - Home](readme.md) | [Next setup step ▶](02b%20-%20Setup%20Local%20Development%20Environment.md)
+[🔼 Home](../README.md) | [Next setup step ▶](./readme.md)
