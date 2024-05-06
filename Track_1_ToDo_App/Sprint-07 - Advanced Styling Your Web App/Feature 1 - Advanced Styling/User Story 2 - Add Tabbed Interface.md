@@ -1,5 +1,5 @@
 # User Story: Add Tabbed Interface - Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 25 min._ ⏲️
 
 ## User Story 
 *As a user, I want to have a cleaner interface for my tasks and move the details, edit and recommendation buttons over to a tabbed interace to reduce clutter*

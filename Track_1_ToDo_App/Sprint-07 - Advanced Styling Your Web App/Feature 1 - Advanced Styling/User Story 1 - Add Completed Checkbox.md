@@ -1,5 +1,5 @@
 # User Story: Add Completed Checkbox and due date details to main list - Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 25 min._ ⏲️
 
 ## User Story 
 *As a user, I want to be able to mark a task as complete from the main list as well see the due date of a task if one is defined*
