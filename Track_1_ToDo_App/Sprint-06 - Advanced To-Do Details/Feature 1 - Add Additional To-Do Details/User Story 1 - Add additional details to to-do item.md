@@ -1,15 +1,16 @@
 # User Story: Add traditional details to to-do item - Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 45 min._ ⏲️
 
 ## User Story
-*As a user, I want to be able to store the calendar date for when this task is due, set a priority for each task, provide more details about the task as well as the completion status*
+*As a user, I want to be able to store addtional details about the to-do item such as the calendar date for when this task is due, set a priority for each task, notes about the task as well as the completion status*
 
 ## 🎯Acceptance Criteria:
-- A due date field should be stored in the database for each task (as optional)
-- Add a priority field to the database for each task (as optional)
-- Add a notes field to the database for each task (as optional)
-- Add a completion status field to the database for each task (as optional)
-- The add task functionality should behave as it did in previous iterations. i.e. you will NOT need to supply any of the additional fields when adding a task.  The due date, priority and notes should simply default to None and the completion status should default to False. 
+- The following fields should be stored in the database for each task (as optional)
+    - due date field 
+    - priority field 
+    - notes field 
+    - completion status field 
+- The add functionality should behave as it did in previous iterations. i.e., user will NOT need to supply any of the additional fields when adding a to-do item.  The due date, priority and notes should simply default to None and the completion status should default to False. 
 - Additional UI should be created to both allow a user to see the details of a task as well as the ability to edit all of the new fields. 
 - The interface should look something like this:
 
@@ -39,12 +40,14 @@ In order to complete this user story you will need to complete the following tas
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/src/app-s05-f01-us03/) 
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 <br/>
 
 ### Updating the Database Model
 
 #### 1. Add the new fields to the database model
-The first step in completing this user story is to update the database model to include the new fields for the task details. Open the `database.py` file in the source folder of your application. Add the following code right under the `recommendations_json` instance variable to create the additional columns for the task details:
+The first step in completing this user story is to update the database model to include the new fields for the to-item details. Open the `database.py` file in the source folder of your application. Add the following code right under the `recommendations_json` instance variable to create the additional columns for the task details:
 
 ```python
 notes = db.Column(String(100))
@@ -144,7 +147,7 @@ def load_data_to_g():
     g.selectedTab = Tab.NONE
 ```
 
-By default at the beginning of every request we set the selecedTab to NONE.  Individual routes may alter this tab based on what they want to dispaly
+By default at the beginning of every request we set the `selecedTab` to NONE and then individual routes may alter this tab based on what they want to display.   The `TabEnum` simply passes along all the values of the enum so that they can be used in the jinga template. 
 <br/>
 
 #### 4. New Details, Edit, and Update Routes
@@ -211,7 +214,7 @@ def update_todo(id):
 This code adds three new routes to the web application:
 - `/details/<int:id>`: This route takes the task ID as a parameter and retrieves the task from the database based on the ID. The route sets the selected tab to `DETAILS` and renders the `index.html` template.
 - `/edit/<int:id>`: This route takes the task ID as a parameter and retrieves the task from the database based on the ID. The route sets the selected tab to `EDIT` and renders the `index.html` template.
-- `/update/<int:id>`: This route takes the task ID as a parameter and updates the task in the database based on the form data submitted by the user. The route sets the selected tab to `DETAILS` and redirects the user to the home page after updating the task.
+- `/update/<int:id>`: This route takes the task ID as a parameter and updates the task in the database based on the form data submitted by the user. The route sets the selected tab to back to `DETAILS` and redirects the user to the home page after updating the task.
 
 <br/>
 
@@ -225,11 +228,11 @@ g.selectedTab = Tab.RECOMMENDATIONS
 <br/>
 
 ### Updating the Web Application FrontEnd
-Now we need to update the user interface to display to handle two new panels, one for showing the details of a task and one for editing a task.  To do this we will make several changes to the `index.html` file in the `templates` folder of your application.
+Now we need to update the user interface to display the two new panels; one for showing the details of a task and one for editing a task.  To do this, we will make several changes to the `index.html` file in the `templates` folder of your application.
 - We will need to add two new buttons to the task list that will allow a user to view the details of a task and edit the details of a task.
 - We will need to update the recommendations tab to only show the recommendations when a user selects that functionality 
-- We will add a new tab to the right of the task list that will display the details of a task when a user clicks on a task.
-- We will add a new tab to the right of the task list that will allow a user to edit the details of a task when a user clicks on a task.
+- We will add a new tab to the right of the task list that will display the details of a task when a user clicks on a task (in the same place as the existing recommendations tab)
+- We will add a new tab to the right of the task list that will allow a user to edit the details of a task when a user clicks on a task (in the same place as the existing recommendations tab)
 - We will add a new form to the edit tab that will allow a user to update the details of a task.<br/><br/>
 
 #### 1. Update the user interface to include the new fields
@@ -241,7 +244,7 @@ For the sake of making these changes easier in this step-by-step, instead of wal
 <head>
     <title>My To-Do List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </head>
@@ -398,27 +401,32 @@ For the sake of making these changes easier in this step-by-step, instead of wal
 </html>
 ```
 
-This code adds three new sections to the `index.html` template:
-- The `recommendations-div` section is updated to only show the recommendations when a user selects that functionality.
-- The `details-div` section displays the details of a task when the user clicks on a task. The section includes the task name, priority, due date, notes, and completion status.
-- The `edit-div` section allows the user to edit the details of a task. The section includes form fields for the task name, priority, due date, notes, and completion status. The user can update the task by clicking the "Update" button or cancel the update by clicking the "Cancel" button.
-
-The code also adds two new buttons to the task list that allow the user to view the details of a task and edit the details of a task. The code also updates the recommendations button to include a refresh button that allows the user to refresh the recommendations.
+- This code adds three new sections to the `index.html` template:
+    - The `recommendations-div` section is updated to only show the recommendations when a user selects that functionality.
+    - The `details-div` section displays the details of a task when the user clicks on a task. This section includes the task name, priority, due date, notes, and completion status.
+    - The `edit-div` section allows the user to edit the details of a task. This section includes form fields for the task name, priority, due date, notes, and completion status. The user can update the task by clicking the "Update" button or cancel the update by clicking the "Cancel" button.
+- The code adds two new buttons to the task list that allow the user to view the details of a task and edit the details of a task. 
 
 <br/>
 
-#### 2. Delete the existing database file
-Before we can test this change, we will need to delete the `todos.db` file in your directory. This is because we have added columns to the database and to keep things simple we will just start fresh versus trying to update the database schema.  This approach works fine when you are in development, but if this was a production system you would want to update the database schema and migrate the data.  When you do this any items saved in the database will be lost.
+#### 2. Update the css file 
+In an earlier sprint we modified the css to make `<labels>` white as they were being displayed on a dark background on the main page.  But now these labels are being put on a panel with a white background, so we want the label font to default to its original behavior.   To do this simply delete the following lines from the `static/css/style.css` file  
+
+``` css
+label {
+    color: white
+}
+```
+
+#### 3. Delete the existing database file
+Before we can test this change, we will need to delete the `todos.db` file in your directory which will cause all the data in the database to be lost. This is needed because the database schema has changed due to the new columns being added to the database table and SQL cannot just add columns without some additional work to migrate data. This approach works fine when you are in development, but if this was a production system you would want to update the database schema and migrate the data when introducing changes. 
 
 > [!WARNING]
 > If you do not delete the `todos.db` file you will get an error when you run the app.  The error will be something like `sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: todos.notes`.  This error is because the database schema does not match the model.
 
-#### 3. Run the Application
-Now let's run the application to test the AI recommendations. Open a terminal window in Visual Studio Code and run the following command:
 
-```bash
-python app.py
-```
+#### 4. Run the Application
+Now let's see this functionality in action.  Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
 
 The application should start and you should now be able to select across all three tabs and should look something like this:
 
