@@ -1,5 +1,5 @@
 # 📖 User Story: Personalize Web Application - Step-by-Step
-⏲️ _Est. time to complete: 10 min._ ⏲️
+⏲️ _Est. time to complete: 20 min._ ⏲️
 
 ## User Story
 

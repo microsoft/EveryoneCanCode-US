@@ -73,7 +73,7 @@ This sprint is designed to help students build a basic To-Do application that ca
 
 
 ### Sprint 2 - Web Application
-⏲️ _Est. time to complete: 60 min._ ⏲️
+⏲️ _Est. time to complete: 80 min._ ⏲️
 
 This sprint is designed to help students build a web application by evolving the to-do application from sprint 1.  The sprint will walk students through building a simple web application that will allow users to add, delete, and list tasks.
 
