@@ -1,7 +1,7 @@
 # Sprint 3: Database Integration
 ⏲️ _Est. time to complete: 60 min._ ⏲️
 
-In this sprint you will be taking the web application from Sprint 2 and adding in the ability to store tasks into a database to persist any changes that are made. This will allow users to access their tasks from any device with internet connectivity and not have to worry about concurrent users.
+In this sprint we will be taking the web application from Sprint 2 and adding in the ability to store tasks in a database to persist any changes that are made. This will allow users to access their tasks from any device with internet connectivity and not have to worry about concurrent users competing to write to a local file.
 
 **📕Feature: Shift task storage to database**
 1. [**📖 Convert file storage to database storage**](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/Features%201%20-%20Shift%20task%20storage%20to%20database/User%20Story%201%20-%20Move%20from%20File%20Storage%20to%20database.md)
