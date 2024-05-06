@@ -1,5 +1,5 @@
 # 📖 User Story: Save To-Do List - Step-by-Step
-⏲️ _Est. time to complete: 10 min._ ⏲️
+⏲️ _Est. time to complete: 15 min._ ⏲️
 
 ## User Story
 
@@ -23,6 +23,9 @@ In order to complete this user story you will need to complete the following tas
 
 - Open the `app.py` file in the root of your project folder.
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+
 <br/>
 
 #### 2. Update code to save to file on exit
@@ -43,7 +46,7 @@ if choice == "X":
     break
 ```
 
-This code will open a file named `todo_list.txt` in the current application directory and write each item in the `todo_list` to the file.  The `w` parameter in the `open` function tells Python to open the file in write mode.  This will overwrite the file if it already exists.  The `for` loop will iterate through each item in the `todo_list` and write it to the file.  The `\n` character is used to add a new line to the file after each item is written.  This will make the file easier to read when you open it in a text editor.
+This code will open a file named `todo_list.txt` in the current application directory and write each item in the `todo_list` to the file.  The `w` parameter in the `open` function tells Python to open the file in write mode.  This will overwrite the file if it already exists.  The `for` loop will iterate through each item in the `todo_list` and write it to the file.  The `\n` character is used to add a new line to the file after each item is written.  This will make the file easier to read when you open it in a text  editor as each to-do item will be on its own line.
 
 <br/>
 

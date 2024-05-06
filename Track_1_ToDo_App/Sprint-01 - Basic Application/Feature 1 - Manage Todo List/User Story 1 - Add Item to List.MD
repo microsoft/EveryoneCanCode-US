@@ -1,5 +1,5 @@
 # 📖 User Story: Add Item to List - Step-by-Step
-⏲️ _Est. time to complete: 10 min._ ⏲️
+⏲️ _Est. time to complete: 15 min._ ⏲️
 
 ## User Story
 
@@ -93,9 +93,13 @@ This code will loop through the `todo_list` and print each item to the console. 
 <br/>
 
 #### 6. Run the application 
-Now let's see this application in action. Open a terminal window within visual studio code and run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
+Now let's see this application in action. Open a terminal window within visual studio code and run the application by typing `python app.py` and pressing the enter key or simply click the play button on the top right corner of the Visual Studio Code window.
 
 ![RunApplication01](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US01-01.png)
+
+> [!NOTE]
+> The picture above assumes a local setup.  If you are running in Codespaces it you should click the play button on the top right corner of the Visual Studio Code window
+
 
 🎉 Congratulations, you now have successfully added a to-do item to the list and created the initial code for this to-do list application.  Note however that this is **not a user-friendly** way to interact with the application as all of the to-do items are "hard-coded" meaning they are written directly in the code.  This also does not meet the acceptance criteria that we have outlined above. In the next step you will be adding a user-friendly command-line interface to the application.
 
@@ -152,6 +156,8 @@ Now let's see this application in action with the menu system in place. Open the
 
 ![RunApplication02](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US01-02.png)
 
+> [!NOTE]
+> The picture above assumes a local setup.  If you are running in Codespaces it you should click the play button on the top right corner of the Visual Studio Code window
 
 Now you should see a menu structure where you can interact with the system. Pressing 'a' or 'A' will allow you to add an item to the list. Please experiment by adding a few to-do list items.  Remember that you will need to press 'x' or 'X' to exit the program.
 

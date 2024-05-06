@@ -1,5 +1,5 @@
 ## Sprint 1 - Basic Application
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 45-60 min._ ⏲️
 
 This sprint is designed to help students build a basic To-Do application that can be used to store a local to-do list on your computer.  The sprint will walk students through building a simple console application that will allow users to add, delete, and list tasks.  
 

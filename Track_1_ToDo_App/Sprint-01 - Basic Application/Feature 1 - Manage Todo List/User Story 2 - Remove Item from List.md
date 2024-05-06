@@ -1,5 +1,5 @@
 # 📖 User Story: Remove Item from List - Step-by-Step
-⏲️ _Est. time to complete: 10 min._ ⏲️
+⏲️ _Est. time to complete: 15 min._ ⏲️
 
 ## User Story
 
@@ -26,6 +26,9 @@ The following resources/videos will help you get a better understanding of some 
 - Go to your application directory and start visual studio code by typing `code .` in the terminal window and pressing enter.
 
 - Open the `app.py` file in the root of your project folder.
+
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 
 <br/>
 
@@ -67,11 +70,11 @@ for todo in todo_list: # Loop through existing to-do items
     item_number += 1
 ```
 
-This code will print out the list of items in the list along with the line number of each item.  Note the use of the `item_number` variable to keep track of the line number of each item in the list. This will allow the user to select the item they would like to delete.  Also note the use of the `f-string` to customize what we are printing to the terminal. Using the `f-string` allows us to easily insert the `item_number` and `todo` variables into the string that we are printing by using `{}` around the variable names.  This is a very powerful feature of Python and allows you to easily create strings that are customized to the data that you are working with.
+This code will print out the list of items in the collection along with the line number of each item.  Note the use of the `item_number` variable to keep track of the line number of each item in the list. This will allow the user to select the item they would like to delete.  Also note the use of the `f-string` to customize what we are printing to the terminal. Using the `f-string` allows us to easily insert the `item_number` and `todo` variables into the string that we are printing by using `{}` around the variable names.  This is a very powerful feature of Python and allows you to easily create strings that are customized to the data that you are working with.
 
 <br/>
 
-#### 4. Add the code to remove an item from the list
+#### 4. Add code to remove an item from the list
 Finally, you will need to add the code that will allow the user to remove an item from the list. Add the following code right below the code to add an item.
 
 ![addcode](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/EditCode-S1-F1-US02-02.png)
@@ -90,7 +93,7 @@ if choice == "R":
     continue
 ```
 
-Note that the `pop` method on the collection allows you to remove an item from the list by providing the index of the item that you would like to remove.  In this case, we are using the `item_number` variable that the user provided to remove the item from the list. Since python collections are zero-based (i.e., their first index is 0) and our list displays items starting at 1 so we need to adjust the menu number by subtracting 1 from it to match where the item is stored in the collection. 
+Note that the `pop` method on the collection allows you to remove an item from the collection by providing the index of the item that you would like to remove.  In this case, we are using the `item_number` variable that the user provided to remove the item from the list. Since python collections are zero-based (i.e., their first index is 0) and our list displays items starting at 1 so we need to adjust the menu number by subtracting 1 from it to match where the item is stored in the collection. 
 
 Also note that we are checking to make sure that the `item_number` is within the range of the list before we attempt to remove the item.  If the `item_number` is not within the range of the list, we print an error message to the user and continue to the next iteration of the loop.
 
@@ -99,14 +102,16 @@ Also note that we are checking to make sure that the `item_number` is within the
 #### 5. Run the Application
 Now let's see this application in action. Open the terminal within Visual Studio code and run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
 
-Please experiment by adding a few to-do list items and then try to remove an item. When selecting "R" you will be prompted to enter the number of the item you would like to remove (as seen in the picture below). Remember that you will need to press 'x' or 'X' to exit the program.
+Please experiment by adding a few to-do list items and then try to remove an item. When selecting "r" or "R" you will be prompted to enter the number of the item you would like to remove (as seen in the picture below). Remember that you will need to press 'x' or 'X' to exit the program.
 
 ![RunApplication01](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US02-01.png)
 
+> [!NOTE]
+> The picture above assumes a local setup.  If you are running in Codespaces it you should click the play button on the top right corner of the Visual Studio Code window
 
 🎉 Congratulations you can now mark the "Complete first python application" officially off your list! You have completed Sprint 1 - Feature 1, User Story 2.
 
-❕Note that if you run the application multiple times, you will see that the items that you added in the previous run are no longer there. This is because the list is stored in memory and is not saved to a file. We will be adding this feature in the next user story.
+❕Note that if you run the application multiple times, you will see that the items that you added in the previous run are no longer there. This is because the list is stored in memory and is not saved to a file. We will be adding a feature in the next user story to save these to-do list items to a local file.
 
 <br/>
 
