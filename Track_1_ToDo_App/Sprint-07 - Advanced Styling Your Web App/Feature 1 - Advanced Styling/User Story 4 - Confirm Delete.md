@@ -1,5 +1,5 @@
 # User Story: Confirm Delete - Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 15 min._ ⏲️
 
 ## User Story 
 *As a user, I want to be able to verify that you really want to delete a task before deleting it.*
@@ -18,10 +18,15 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/src/app-s07-f01-us03/)
+
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
+<br/>
+
 
 <br/>
 
@@ -37,7 +42,7 @@ First, we need to add an additional bootstrap script to the `index.html` file to
 <br/>
 
 #### 2. Update the user interface to include a modal dialog
-First, we need to add a modal dialog to the application. Open the `index.html` file and add the following code to the bottom of the file before the closing `</body>` tag:
+Next, we need to add a modal dialog to the application. Open the `index.html` file and add the following code to the bottom of the file before the closing `</body>` tag:
 
 ```html
 <!-- Bootstrap Modal -->
@@ -66,7 +71,7 @@ This code will add a modal dialog to the application. The modal dialog will have
 <br/>
 
 #### 3. Update the remove button to show the modal dialog
-Next we need to update the remove button to show the modal dialog when the delete button is clicked. Open the `app.js` file replace the `<button type='submit'...>Remove</button>` with the following code:
+We need to update the remove button to show the modal dialog when the delete button is clicked. Open the `app.js` file replace the `<button type='submit'...>Remove</button>` with the following code:
 
 ```html
 <a type="button" class="btn btn-danger delete-btn" data-bs-toggle="modal" data-bs-target="#confirmModal" data-url="{{ url_for('remove_todo', id=todo.id) }}" data-taskname="{{ todo.name }}"">Remove</a>
@@ -75,7 +80,7 @@ Next we need to update the remove button to show the modal dialog when the delet
 <br/>
 
 #### 4. Add an event listener to the delete button
-Next, we need to add an event listener to the delete button to show the modal dialog when the delete button is clicked. Open the `app.js` file and add the following code within the DOMContentLoaded event listener:
+We need to add an event listener to the delete button to show the modal dialog when the delete button is clicked. Open the `app.js` file and add the following code within the DOMContentLoaded event listener:
 
 ```javascript
 const myModal = document.getElementById('confirmModal')
@@ -108,7 +113,7 @@ Save the changes to the `app.js` and `index.html` files and run the application.
 
 <br/>
 
-🎉 Congratulations! You have now updated the user interface to confirm that you really want to delete a task before deleting it.
+🎉 Congratulations! You have now updated the user interface to confirm that a user really wants to delete a task before deleting it.
 
 <br/>
 
