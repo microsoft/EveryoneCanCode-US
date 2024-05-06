@@ -23,7 +23,10 @@ In order to complete this user story you will need to complete the following tas
 ### Open Visual Studio Code
 Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story. If you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/src/app-s03-f01-us01/) 
 
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder
 <br/>
+
 
 ### Add Voice Recognition to the Web App
 
@@ -34,6 +37,8 @@ Open Visual Studio Code and open the source code the folder with your completed 
 We are going to use the Web Speech API to add voice recognition to the web app. This API is built into modern web browsers and allows you to interact via your voice.  
 
 In order to do this, we must update the add functionality in the web app by replacing the code for the form `<form action="/add>...</form>` in your `index.html` file: 
+
+Replace this code:
 
 ```html
 <form action="/add" method="post" class="my-4">
@@ -67,12 +72,18 @@ with the following code:
 </form>
 ```
 
-This code adds a button to the form that will allow the user to activate the microphone and speak their task. The `captureVoice()` function will be covered in the next step.
+This code adds a button to the form that will allow the user to activate the microphone and then speak using your voice to add a task. The `captureVoice()` function that is called when the user clicks on the microsoft button and is a JavaScript function that will help enable this functionality and will be covered in the next step.
 
 <br/>
 
 #### 2. Add Javascript to support voice recognition
-You will now need to create a Javascript file to help with the automation of capturing the voice from the browser.  Create a new file called `app.js` in the `static/js` folder of your application.  If these folders do not exist you will need to create them first.  Add the following code to the `app.js` file:
+You will now need to create a Javascript file to help with the automation of capturing the voice from the browser.  Create a new file called `app.js` in the `static/js` folder of your application.  If these folders do not exist you will need to create them first. 
+
+> [!NOTE]
+> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder. So you will want to create the following folders `/Track_1_ToDo_App/myApplication/static/js`
+
+<br/>
+Add the following code to the `app.js` file:
 
 ```javascript
 document.addEventListener("DOMContentLoaded", function() {
@@ -110,7 +121,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-This code will add the necessary Javascript to the web app to allow the user to activate the microphone and speak their task. The `captureVoice()` function will start the speech recognition process, and the `recognition.onresult` function will capture the voice input and display it in the input field. The `recognition.onspeechend` function will stop the speech recognition process when the user stops speaking. The `recognition.onnomatch` and `recognition.onerror` functions will handle errors that may occur during the speech recognition process. 
+This code will add the necessary Javascript to the web app to allow the user to activate the microphone and use your voice to add the task name. 
+- The `captureVoice()` function will start the speech recognition process
+- The `recognition.onresult` function will capture the voice input and display it in the input field. 
+- The `recognition.onspeechend` function will stop the speech recognition process when the user stops speaking. 
+- The `recognition.onnomatch` and `recognition.onerror` functions will handle errors that may occur during the speech recognition process. 
 
 <br/>
 
@@ -124,13 +139,14 @@ Link the Javascript file to the HTML document by adding the following code to th
 <br/>
 
 #### 4. Run the Application
-Now you can test the voice recognition feature by running the web app and clicking on the microphone button. Speak a task into the microphone and see it appear in the input field. Click the "Add" button to add the task to the list. The App should look something like this  (note the arrow shows the addition of the voice button):
+Now you can test the voice recognition feature by running the web app and clicking on the microphone button. Then use your voice to add a task via the microphone and see it appear in the input field. Then click the "Add" button to add the task to the list. The App should look something like this  (note the arrow shows the addition of the voice button):
 
 ![Voice Button](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/images/App_With_Voice_Button.png)
 
 <br/>
 🎉 Congratulations! You have now added voice recognition to your web app, allowing users to add tasks via voice commands. This feature will provide a convenient way for users to input tasks without typing.
 
+<br/>
 <br/>
 
 > [!NOTE]
