@@ -28,6 +28,33 @@ Open Visual Studio Code and open the source code the folder with your completed 
 > If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 <br/>
 
+#### 2. Setup Azure CLI
+To get started, we will first need to install the Azure CLI to help us deploy this application to the cloud.  If you are not familiar with the Azure CLI you can learn more at the following link: [What is the Azure CLI?](https://learn.microsoft.com/en-us/cli/azure/what-is-azure-cli)
+
+- If you are running in a **Codespace and/or Linux**, you should run the following command:
+
+  ```bash
+  curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+  ```
+
+  You can also reference [Install the Azure CLI on Linux](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt) for more information.
+
+- If you are running on **Windows**, you should run the following installers:
+  - [MSI for Azure CLI Windows 32-bit](https://aka.ms/installazurecliwindows)
+  - [MSI for Azure CLI Windows 64-bit](https://aka.ms/installazurecliwindowsx64)
+
+  You can also reference [Install Azure CLI on Windows](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli) for more information.
+
+- If you are running on **macOS**, you can install via Homebrew:
+
+  ```
+  brew update && brew install azure-cli
+  ```
+
+  You can also reference [Install Azure CLI on macOS](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos) for more information.
+
+
+
 ### Setting up an Azure SQL Database
 First, let's setup the cloud database to store our to-do items.
 
