@@ -54,20 +54,30 @@ To get started, we will first need to install the Azure CLI to help us deploy th
   You can also reference [Install Azure CLI on macOS](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos) for more information.
 
 
-
 ### Setting up an Azure SQL Database
-First, let's setup the cloud database to store our to-do items.
+Now that we have installed the Azure CLI, let's first setup the cloud database to store our to-do items.
 
-#### 2. Login to Azure Resource Management
+#### 1. Login to Azure Resource Management
+To use Azure we will first need to login with our Azure credentials.  If you are part of the event, you will be given Azure credentials by your coach.  If you are doing this exercise outside of the event you can sign-up for Azure [here](https://azure.microsoft.com/en-us/) and then provide those credentials when completing this exercise.
+
 In VS Code, open new terminal window and run the command below to login to Azure resource management. A browser window will be opened and redirected to Microsoft Entra ID to complete login to Azure resource management.
 
-```powershell
-az login
-```
+- If running on your **local machine**:
 
-#### 3. Set default subscription to deploy Azure resources
+  ```powershell
+  az login
+  ```
+- If running in **Codespaces**
 
-Once the login is complete run the command below to verify your tenant and subscriptions. If this command shows more than one subscription, copy Subscription ID that you would lke to deploy application and set as default subscription Azure SQL Database.
+  ```powershell
+  az login --use-device-code
+  ```
+
+  Then follow the instructions in the terminal window to log into a browser and provide the **code** that is displayed.
+
+
+#### 2. Set default subscription to deploy Azure resources
+Once the login is complete run the command below to verify your tenant and subscriptions. If this command shows more than one subscription, copy the subscription ID of the subscription that you would like to deploy your application to and set as default subscription for Azure SQL Database.
 
 ```powershell
 az account show
@@ -76,9 +86,10 @@ az account set --subscription <SubscriptionID>
 
 ![Show current account](../images/az-account-show.png)
 
-#### 4. Create Azure Resource Group
+#### 3. Create Azure Resource Group
+Next, we need to create an Azure resource group.  Think of Azure resource groups as logical containers where you can group all of the components of an application together under one "roof".   This makes it easier to deploy and manage the Azure resources associated with your application. 
 
-Create Azure resource group to create Azure resources, all resources created in this sprint will be created in this resource group.
+To create the Azure resource group you will need to run the following command: 
 
 ```powershell
 $resourcegroup = "rg-everyonecancode"
