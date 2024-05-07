@@ -156,5 +156,8 @@ This sprint is designed to help students deploy the To-Do application to the clo
 **📕Feature: Deploy to Azure**
 1. [**📖 Deploy To-Do App to Azure**](/Track_1_ToDo_App/Sprint-08%20-%20Deploy%20to%20the%20Cloud/Feature%201%20-%20Deploy%20to%20Azure.md/User%20Story%201%20-%20Deploy%20to%20Azure.md)
 
+> [!WARNING]
+> Please note that this **website is running on the public internet and is accessible by anyone that has the URL to view and/or edit  information.  So please do not put personal items in your to-do list**.   We would **highly recommend that you setup security on the website** if you would like to continue to run it and use the to-do list functionality. 
 
+<br/>
 Still interesting in learning more about coding?  Check out the [**Where to Learn More**](/Track_1_ToDo_App/Where%20to%20Learn%20More.md) section for more resources on coding and building applications.
