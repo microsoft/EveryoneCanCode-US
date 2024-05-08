@@ -46,13 +46,16 @@ Select SQL Database option to go to the create screen
 
 On the create screen, select create and then complete the form as follows, keeping defaults for everything except the following:
 
-* choose a resource group (or create a new one if one is not provided or you are not sure here).
+* choose a resource group (or create a new one if one is not provided or you are not sure here).  
 * **database name:** todo
 * **Server:** You will need to create a new server, click the *create new* link and complete the form for creating a server as follows:
 
 * **Server Name:** everyonecancode-<random> (replace random with a unique set of characters to make this globally unique)
 * **Region:** East US. Choose a region appropriate for where you are deploying the app. If you are in the US, East US is ok as starting point if you are unsure.
 * **Authentication:** Change the selection to *Use SQL Authentication** and enter an admin username (e.g. sqladmin) and unique password
+
+> [!NOTE]
+> if you are participating in the event both your resource group and server should already have been pre-created so you simply need to just select it from the drop-down
 
 ![Azure SQL Server Create](../images/az-portal-sql-srv.png)
 
@@ -96,7 +99,7 @@ flask
 flask[async]
 flask_sqlalchemy
 sqlalchemy
-semantic_kernel
+semantic-kernel==0.9.5b1
 pyodbc
 fastapi
 ```
@@ -135,7 +138,25 @@ Pay attention to the _SQLAZURECONNSTR_AZURE_SQL_CONNECTIONSTRING_ environment va
 
 #### 3. Update recommendations engine code to use Azure App Service environment variables
 
-Open _recommendation_engine.py_ file and replace all the code from the first 13 lines with this code:
+Open _recommendation_engine.py_ file and replace the following code:
+
+```python
+import json
+import asyncio
+import semantic_kernel as sk
+from services import Service
+from openai import AzureOpenAI
+from dotenv import dotenv_values
+
+config = dotenv_values(".env")
+
+#uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
+#False means use OpenAI, True means use Azure OpenAI
+selectedService = Service.AzureOpenAI if config.get("USE_AZURE_OPENAI") == "True" else Service.OpenAI
+deployment, api_key, endpoint = sk.azure_openai_settings_from_dot_env()
+```
+
+with this new code:
 
 ```python
 import os
@@ -154,6 +175,10 @@ use_open_ai = os.environ.get("USE_AZURE_OPENAI", 'True')
 selectedService = Service.AzureOpenAI if use_open_ai == "True" else Service.OpenAI
 ```
 
+The new code will use the environment variables to pull the values for the OpenAI service verus using a `.env` file.  Environment variables provide a more secure way of holding these values in the app service.
+
+
+
 #### 4. Add Azure Web App Config Settings
 
 Go back to the browser, navigate to the Azure Portal and find your Web App you deployed earlier. Open the web app and navigate to the Settings->Environment Variables section
@@ -161,10 +186,10 @@ Go back to the browser, navigate to the Azure Portal and find your Web App you d
 ![Web App Environment Variables](../images/az-portal-webapp-env.png)
 
 Under App Settings add the following settings and the values you have used prior
-AZURE_OPENAI_KEY: (use key from prior sprints)
-AZURE_OPENAI_DEPLOYMENT_NAME: gpt-35-turbo
-AZURE_OPENAI_ENDPOINT: (use endpoint from prior sprints)
-USE_AZURE_OPENAI: True
+- AZURE_OPENAI_KEY: (use key from prior sprints)
+- AZURE_OPENAI_DEPLOYMENT_NAME: gpt-35-turbo
+- AZURE_OPENAI_ENDPOINT: (use endpoint from prior sprints)
+- USE_AZURE_OPENAI: True
 
 And then switch to the connection strings section and add the following connection string, replacing the password with the one you used when you created your SQL Database.
 
