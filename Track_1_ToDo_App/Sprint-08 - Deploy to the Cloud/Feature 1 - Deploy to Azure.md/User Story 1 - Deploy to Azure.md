@@ -54,7 +54,7 @@ On the create screen, select create and then complete the form as follows, keepi
 * **Region:** East US. Choose a region appropriate for where you are deploying the app. If you are in the US, East US is ok as starting point if you are unsure.
 * **Authentication:** Change the selection to *Use SQL Authentication** and enter an admin username (e.g. sqladmin) and unique password
 
-![Azure SQL Server Create](../images/az-portal-sql-srv.png.png)
+![Azure SQL Server Create](../images/az-portal-sql-srv.png)
 
 * **Backup Storage Redundance:** Change to *Locally-redundant backup storage* 
 
