@@ -5,16 +5,14 @@
 You will learn the following:
 - How to sign up at GitHub and create an account
 - How to edit your profile and upload a picture
-- How to fork a repository
 - Bonus: How to build your own Octocat
 
 ## Table Of Contents
 
 1. [Sign up and create a GitHub account](#sign-up-and-create-at-github-account)
 2. [Edit your GitHub profile](#edit-your-github-profile)
-3. [Fork repository](#fork-repository)
-4. [Create your codespace](#create-your-codespace)
-5. [Bonus Challenge: Octocat](#bonus-challenge-build-your-own-octocat)
+3. [Create your codespace](#create-your-codespace)
+4. [Bonus Challenge: Octocat](#bonus-challenge-build-your-own-octocat)
 
 ## Sign up and create at GitHub account
 
@@ -57,14 +55,20 @@ To change or add any of your information, click on your icon in the top right co
 
 ![Profile page](../content-images/Sprint%2000/github/EditProfile.gif)
 
-## Fork Repository
-
-A Fork is a copy of a repository in your own GitHub account. This is extremely handy if you want to freely experiment without making any changes to the original project.
-
-Now, let's go ahead and fork this repository!
-
-![Highlighted fork button top right](../content-images/Sprint%2000/github/ForkTheRepository.png)
-
 Now that you have successfully created your GitHub account, we are ready to set up your coding environment next!
 
-[🔼 Home](../README.md) | [Next setup step ▶](./readme.md)
+## Bonus Challenge: Build your own Octocat
+
+Octocat is the official mascot of GitHub and the cutest, friendliest, and most tentacular cat you'll ever meet! With its unique octopus-like shape, Octocat has become a beloved symbol of the GitHub community, popping up in merchandise, events, and social media.
+
+As an extra challenge for those who finish early, we dare you to unleash your creativity and design your own Octocat using the Octocat builder at [https://myoctocat.com](https://myoctocat.com/). This tool allows you to customize the color, shape, and accessories of your Octocat, and share it with others.
+
+
+Think of your Octocat as your personal avatar, your spirit animal, or your alter ego. Give it a funky hairstyle, a cool outfit, or a quirky accessory. Make it reflect your personality, your interests, or your sense of humor.
+
+Who knows, your Octocat might become the next internet sensation, the star of a blockbuster movie, or the mascot of a future GitHub feature. Or it might just make you smile :)
+
+So go ahead, have fun, and show us what you've got!
+
+
+[🔼 Home](/Track_1_ToDo_App/README.md) | [Next setup step ▶](./02%20-%20Setup%20To-Do%20Application%20Repository.md)

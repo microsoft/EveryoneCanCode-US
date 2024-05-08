@@ -7,10 +7,17 @@ This format is designed to help students walk through the sprints and user stori
 
 This sprint is designed to help students get their environment setup and ready to start coding.  The sprint will walk students through setting up their development environment, installing the necessary tools, and getting the code base for the To-Do application.
 
-1. [**Setup a GitHub Account**](./Sprint-00%20-%20Environment%20Setup/01%20-%20Setup%20GitHub%20Account.md) 
+1. [**Setup a GitHub Account**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/01%20-%20Setup%20GitHub%20Account.md)
+2. [**Setup the To-Do App Repository**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02%20-%20Setup%20To-Do%20Application%20Repository.md)
+3. [**Setup GitHub Code Spaces**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02a%20-%20Use%20GitHub%20CodeSpaces.md)
 
-2. **Setup Local Development Environment** ([**Windows Setup**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02b%20-%20Setup%20Local%20Development%20Environment%20on%20Windows.md)) ([**Mac Setup**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02c%20-%20Setup%20Local%20Development%20Environment%20on%20Mac.md))
+    <details>
+    <summary>click here if you would prefer to setup a local development environment</summary>
 
+    - [**Windows Setup**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02b%20-%20Setup%20Local%20Development%20Environment%20on%20Windows.md) 
+    - [**Mac Setup**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02c%20-%20Setup%20Local%20Development%20Environment%20on%20Mac.md)
+    </details> 
+<br/>
 
 > [!NOTE]
 > if you can't setup a local development environment you can use GitHub CodeSpaces as an alternative. Follow the instructions [here](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02a%20-%20Use%20GitHub%20CodeSpaces.md)

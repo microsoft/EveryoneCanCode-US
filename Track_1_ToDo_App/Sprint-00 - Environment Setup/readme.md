@@ -9,7 +9,8 @@ The objective of this sprint is to setup the development environment for the pro
 ## Setup Instructions
 
 1. [**Setup a GitHub Account**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/01%20-%20Setup%20GitHub%20Account.md)
-2. [**Setup GitHub Code Spaces**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02a%20-%20Use%20GitHub%20CodeSpaces.md)
+2. [**Setup the To-Do App Repository**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02%20-%20Setup%20To-Do%20Application%20Repository.md)
+3. [**Setup GitHub Code Spaces**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02a%20-%20Use%20GitHub%20CodeSpaces.md)
 
     <details>
     <summary>click here if you would prefer to setup a local development environment</summary>
