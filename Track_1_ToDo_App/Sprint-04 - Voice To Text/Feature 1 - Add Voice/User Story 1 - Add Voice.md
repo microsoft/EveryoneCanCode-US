@@ -21,7 +21,7 @@ no resources at this time
 In order to complete this user story you will need to complete the following tasks
 
 ### Open Visual Studio Code
-Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/src/app-s03-f01-us01/) by copying it over to your into your local directory or Codespace. 
+Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/src/app-s03-f01-us01/) by copying it over into your local directory or Codespace. 
 
 <br/>
 

@@ -24,7 +24,7 @@ In order to complete this user story you will need to complete the following tas
 The first step in converting the application to a web application is to install a web framework. We will be using **Flask** for this workshop. Flask is a lightweight web framework that is easy to use and perfect for small projects like this one.
 
 #### 1. Open Visual Studio Code
-Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/src/app-s01-f02-us02/) by copying it over to your into your local directory or Codespace. 
+Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/src/app-s01-f02-us02/) by copying it over into your local directory or Codespace. 
 
 
 <br/>
