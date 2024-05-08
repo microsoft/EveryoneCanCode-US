@@ -2,7 +2,8 @@
 
 ## Table of Contents
 1. [Python](#Python)
-2. [Flask](#Flask)
+2. [Flask](#flask--jinga)
+3. [JavaScript](#javascript)
 
 
 ## Python
