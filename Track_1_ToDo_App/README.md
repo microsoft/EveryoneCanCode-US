@@ -160,4 +160,5 @@ This sprint is designed to help students deploy the To-Do application to the clo
 > Please note that **your to-do application** once deployed to the cloud **is running on the public internet and is accessible by anyone that has the URL to view and/or edit  information.  So please do not put personal items in your to-do list**.   We would **highly recommend that you setup security on the website** if you would like to continue to run it and use the to-do list functionality. 
 
 <br/>
+
 Still interesting in learning more about coding?  Check out the [**Where to Learn More**](/Track_1_ToDo_App/Where%20to%20Learn%20More.md) section for more resources on coding and building applications.
