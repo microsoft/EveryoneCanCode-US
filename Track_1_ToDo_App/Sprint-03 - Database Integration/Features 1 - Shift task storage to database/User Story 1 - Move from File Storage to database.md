@@ -16,11 +16,9 @@ no resources at this time
 In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
-Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/) 
 
-> [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
-<br/>
+Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/) by copying it over into your local directory or Codespace. 
+
 
 ### Setup SQL Alchemy tookit
 

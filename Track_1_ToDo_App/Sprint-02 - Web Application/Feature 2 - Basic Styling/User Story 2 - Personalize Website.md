@@ -22,10 +22,8 @@ no resources at this time
 In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
-Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us01/) 
+Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us01/) by copying it over into your local directory or Codespace. 
 
-> [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 
 ### Updating Titles
 
@@ -67,7 +65,7 @@ To do this we will need to add a custom CSS file. Create a new file called `styl
 ![Create CSS File](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/NewFile-S2-F2-US2-01.png)
 
 > [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder. So you will want to create the following folders `/myApplication/static/css`
+> If you are using Codespaces, you will want to create the following folders `/static/css/` in the root of the repository.
 
 #### 2. Add Custom Color Scheme
 Add the following code to the `style.css` file to define a custom color scheme for the web app:
@@ -164,7 +162,7 @@ You can experiment with different colors and styles to create a custom look and 
 <br/>
 
 #### 4. Run the Application
-Save the changes to the `styles.css` file and refresh the web app in your browser. You should see the background image displayed on the web app, providing a more visually appealing experience for the user.
+Save the changes to the `style.css` file and refresh the web app in your browser. You should see the background image displayed on the web app, providing a more visually appealing experience for the user.
 
 ![Background Image](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/RunApp-S2-F2-US2-02.png)
 

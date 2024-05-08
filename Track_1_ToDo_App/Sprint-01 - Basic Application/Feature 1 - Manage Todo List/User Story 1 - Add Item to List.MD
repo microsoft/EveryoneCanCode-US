@@ -29,8 +29,20 @@ In order to complete this user story you will need to complete the following tas
 
 ### Making your first application
 
-#### 1. Open Visual Studio Code
-- From the terminal window, navigate to the project directory
+#### 1. Start your Codespace or Open Visual Studio Code locally
+
+If you are using a Codespaces, please go into the repo that you created for this project and start the codespace by directly clicking on the Codespace name.  In the case of the image below, the Codespace is named _symmetrical computing-machine_. Note however, that each Codespace auto-generates a unique name for that code space so your Codespace name will be different.  
+
+![Start Codespaces](/Track_1_ToDo_App/content-images/github-start-codespace.png)
+
+This will take you directly into a online visual studio code environment.
+
+![online visual studio code](/Track_1_ToDo_App/content-images/github-start-codespace-02.png)
+
+<details>
+<summary>click <b>here</b> if you would prefer to run Visual Studio Code in a local development environment</summary>
+
+- From the terminal/console window, navigate to the project directory
   
     ```bash
     cd <project directory>
@@ -40,8 +52,7 @@ In order to complete this user story you will need to complete the following tas
     ```cmd
     code . 
     ```
-> [!TIP] 
-> The repository for this training has a directory named `myApplication` that you can use as your default working directory while building the application or feel free to choose any directory where you would like to put this application. 
+</details> 
 
 <br/>
 

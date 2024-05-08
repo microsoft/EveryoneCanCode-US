@@ -22,17 +22,39 @@ The following resources/videos will help you get a better understanding of some 
 
 ## 📋Steps
 
-#### 1. Open Visual Studio Code
-- Go to your application directory and start visual studio code by typing `code .` in the terminal window and pressing enter.
+### Start your Codespace or Open Visual Studio Code locally
+If you are using a Codespaces, please go into the repo that you created for this project and start the codespace by directly clicking on the Codespace name.  In the case of the image below, the Codespace is named _symmetrical computing-machine_. Note however, that each Codespace auto-generates a unique name for that code space so your Codespace name will be different.  
 
-- Open the `app.py` file in the root of your project folder.
+![Start Codespaces](/Track_1_ToDo_App/content-images/github-start-codespace.png)
 
-> [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
+This will take you directly into a online visual studio code environment.
+
+![online visual studio code](/Track_1_ToDo_App/content-images/github-start-codespace-02.png)
+
+<details>
+<summary>click <b>here</b> if you would prefer to run Visual Studio Code in a local development environment</summary>
+
+- From the terminal/console window, navigate to the project directory
+  
+    ```bash
+    cd <project directory>
+    ```
+- Open up Visual Studio Code in the project directory by executing the following command.
+    
+    ```cmd
+    code . 
+    ```
+</details> 
 
 <br/>
 
-#### 2. Add a new menu option to remove an item from the list
+Open the `app.py` file in the root of your project folder.
+
+<br/>
+
+### Updating the code base for new functionality
+
+#### 1. Add a new menu option to remove an item from the list
 The first change that we will need to make to the application will be to add a new menu option that will allow the user to remove an item from the list. Update your menu structure to include the "R - Remove to-do item" option. You menu structure should now look like this:
 
 ```python
@@ -52,7 +74,7 @@ as this code is part of the while loop
 
 <br/>
 
-#### 3. Identifying items in the list
+#### 2. Identifying items in the list
 Next, we need a way to identify a to-do item so that we can remove it from the list.  The easiest way to do this is to add a line number to each item that identifies that item in the list. This will allow the user to select an item from the list by providing a line number.  To do this, we will need to update our code to print out the line number for each item in the list.   Replace the code that prints out the list at the top of the while loop 
 
 ![replacecode](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/EditCode-S1-F1-US02-01.png)
@@ -74,7 +96,7 @@ This code will print out the list of items in the collection along with the line
 
 <br/>
 
-#### 4. Add code to remove an item from the list
+#### 3. Add code to remove an item from the list
 Finally, you will need to add the code that will allow the user to remove an item from the list. Add the following code right below the code to add an item.
 
 ![addcode](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/EditCode-S1-F1-US02-02.png)
@@ -99,7 +121,7 @@ Also note that we are checking to make sure that the `item_number` is within the
 
 <br/>
 
-#### 5. Run the Application
+#### 4. Run the Application
 Now let's see this application in action. Open the terminal within Visual Studio code and run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
 
 Please experiment by adding a few to-do list items and then try to remove an item. When selecting "r" or "R" you will be prompted to enter the number of the item you would like to remove (as seen in the picture below). Remember that you will need to press 'x' or 'X' to exit the program.
