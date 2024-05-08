@@ -28,9 +28,10 @@ The outline below documents the sprints and user stories that you will be implem
 
 This sprint is designed to help students get their environment setup and ready to start coding.  The sprint will walk students through setting up their development environment, installing the necessary tools, and getting the code base for the To-Do application.
 
-1. [**Setup a GitHub Account**](./Sprint-00%20-%20Environment%20Setup/01%20-%20Setup%20GitHub%20Account.md) 
 
-2. [**Setup GitHub Code Spaces**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02a%20-%20Use%20GitHub%20CodeSpaces.md)
+1. [**Setup a GitHub Account**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/01%20-%20Setup%20GitHub%20Account.md)
+2. [**Setup the To-Do App Repository**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02%20-%20Setup%20To-Do%20Application%20Repository.md)
+3. [**Setup GitHub Code Spaces**](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/02a%20-%20Use%20GitHub%20CodeSpaces.md)
 
     <details>
     <summary>click here if you would prefer to setup a local development environment</summary>
