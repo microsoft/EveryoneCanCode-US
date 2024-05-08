@@ -15,8 +15,7 @@ You will learn the following:
 - [Installing and using extensions in a Codespace](#installing-and-using-extensions-in-a-codespace)
 
 ## Introduction to GitHub Codespaces
-
-Welcome to our project! If you're new to programming, don't worry. We're here to guide you through the process. We use something called Codespaces, which is a feature provided by GitHub. You can learn more about it [here](https://github.com/features/codespaces).
+We will use something called Codespaces, which is a feature provided by GitHub. You can learn more about it [here](https://github.com/features/codespaces).
 
 GitHub Codespaces is a cloud-based development environment. It's like a virtual coding setup that lives on the internet, not on your personal computer. It allows you to write, run, debug, test, save different versions of your code (commit), and share your code with others (push), all from your web browser. This means you don't need to set up a local development environment on your computer, which can be a complex and time-consuming process, especially for beginners.
 
@@ -39,11 +38,11 @@ Now that you know what Codespaces is and why it's useful, let's dive into how to
 
 Creating a new Codespace is easy, when you know where to look:
 
-1. Navigate to the main page of the GitHub repository for which you want to create a Codespace.  For this exercise you will be using your forked repository from the previous setup step. 
-2. Click on the green "Code" button on the top right and switch from the local to the Codespaces tab.
+1. Navigate to the main page of the GitHub repository for which you want to create a Codespace.  For this exercise you will be using the repository you just created in the previous step. 
+2. Click on the green "Code" button on the top right and switch from the _Local_ to the _Codespaces_ tab.
 3. Click on the plus symbol. GitHub will now create a new Codespace and open it in a new browser window. It might take a few minutes to load but just like that you're done!
 
-![Create Codespaces](../content-images/Sprint%2000/github/CreateCodespaces.png)
+![Create Codespaces](./images/CreateCodespaces.png)
 
 To stop a Codespace, follow these steps:
 
@@ -53,9 +52,12 @@ To stop a Codespace, follow these steps:
 
 ![Stop Codespaces](../content-images/Sprint%2000/github/StopCodespaces.png)
 
-If you do not explicitly stop a codespace, it will continue to run until it times out from inactivity. Closing a codespace does not stop the Codespace.
+> [!WARNING]
+> If you do not explicitly stop a codespace, it will continue to run until it times out from inactivity. Closing a codespace does not stop the Codespace.
 
-## Understanding the `devcontainer.json` file
+## OPTIONAL: Understanding CodeSpaces
+
+### Understanding the `devcontainer.json` file
 
 In our project, you'll find a file named `devcontainer.json` which is located in the.devcontainer folder. This file is automatically detected by GitHub and like a recipe for Codespaces. It tells Codespaces how to set up the environment for our project. Let's break down what each part means:
 
@@ -99,7 +101,7 @@ In our project, you'll find a file named `devcontainer.json` which is located in
 
     By running this command, we make sure that all the necessary Python packages are installed in the Codespace. This is like setting up all the tools and materials before starting a DIY project.
 
-## Installing and using extensions in a Codespace
+### Installing and using extensions in a Codespace
 
 The `devcontainer.json` file also allows us to customize our Codespaces environment. We have two types of customizations:
 
@@ -116,4 +118,4 @@ By including these extensions in our `devcontainer.json` file, we make sure they
 We hope this helps you understand how our project is set up in Codespaces. Happy coding!
 
 
-[🔼 Sprint 0 - Home](readme.md) | [Next Sprint ▶](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/README.md)
+[🔼 Sprint 0 - Home](readme.md) | [◀ Previous setup step](./02%20-%20Setup%20To-Do%20Application%20Repository.md) | [Next Sprint ▶](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/README.md)
