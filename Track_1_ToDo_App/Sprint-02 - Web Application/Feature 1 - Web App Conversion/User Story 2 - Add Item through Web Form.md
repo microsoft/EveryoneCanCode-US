@@ -24,10 +24,8 @@ In order to complete this user story you will need to complete the following tas
 The first set of changes that we will need to make is to update the web application's user interface to allow the user to add new items via the web page.
 
 #### 1. Open Visual Studio Code
-Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us01/)
+Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us01/) by copying it over to your into your local directory or Codespace. 
 
-> [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
 
 #### 2. Update the User interface to Add New To-Do Items
 To do this, we need to update the `index.html` to include a basic form that will allow a user to add tasks and then subsequently call the backend server to add it to the file. Your HTML should be updated to look like this:
