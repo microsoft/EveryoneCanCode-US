@@ -20,19 +20,41 @@ The following resources/videos will help you get a better understanding of some 
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story you will need to complete the following tasks:
 
-#### 1. Open Visual Studio Code
-- Go to your application directory and start visual studio code by typing `code .` in the terminal window and pressing enter.
+### Start your Codespace or Open Visual Studio Code locally
+If you are using a Codespaces, please go into the repo that you created for this project and start the codespace by directly clicking on the Codespace name.  In the case of the image below, the Codespace is named _symmetrical computing-machine_. Note however, that each Codespace auto-generates a unique name for that code space so your Codespace name will be different.  
 
-- Open the `app.py` file in the root of your project folder.
+![Start Codespaces](/Track_1_ToDo_App/content-images/github-start-codespace.png)
 
-> [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
+This will take you directly into a online visual studio code environment.
+
+![online visual studio code](/Track_1_ToDo_App/content-images/github-start-codespace-02.png)
+
+<details>
+<summary>click <b>here</b> if you would prefer to run Visual Studio Code in a local development environment</summary>
+
+- From the terminal/console window, navigate to the project directory
+  
+    ```bash
+    cd <project directory>
+    ```
+- Open up Visual Studio Code in the project directory by executing the following command.
+    
+    ```cmd
+    code . 
+    ```
+</details> 
 
 <br/>
 
-#### 2. Update code to load to-do list from file on start
+Open the `app.py` file in the root of your project folder.
+
+<br/>
+
+### Updating the code base for new functionality
+
+#### 1. Update code to load to-do list from file on start
 The first change that we will need to make to the code is to update the logic for the start of the program. We will need to add code that will load the to-do list from a file when the program starts.  Add the following code to the beginning of the program, right after the `todo_list = []` statement:
 
 ![insertcode](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/InsertCode-S1-F2-US02-01.png)
@@ -53,7 +75,7 @@ This code will open a file named `todo_list.txt` in the current directory and re
 
 <br/>
 
-#### 3. Run the application
+#### 2. Run the application
 Now let's see this application in action. Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
 
 - When you start the program you should automatically see the list of to-do items that were previously saved in the file.
