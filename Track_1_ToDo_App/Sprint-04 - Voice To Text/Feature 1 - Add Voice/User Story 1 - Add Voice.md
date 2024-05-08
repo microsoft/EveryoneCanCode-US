@@ -21,15 +21,10 @@ no resources at this time
 In order to complete this user story you will need to complete the following tasks
 
 ### Open Visual Studio Code
-Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story. If you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/src/app-s03-f01-us01/) 
-
-> [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/myApplication/` folder
+Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/src/app-s03-f01-us01/) by copying it over to your into your local directory or Codespace. 
 
 <br/>
 
-> [!NOTE]
->To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
 
 <br/>
 
@@ -150,6 +145,12 @@ Link the Javascript file to the HTML document by adding the following code to th
 Now you can test the voice recognition feature by running the web app and clicking on the microphone button. Then use your voice to add a task via the microphone and see it appear in the input field. Then click the "Add" button to add the task to the list. The App should look something like this  (note the arrow shows the addition of the voice button):
 
 ![Voice Button](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/images/App_With_Voice_Button.png)
+
+
+> [!NOTE]
+>To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
 
 <br/>
 🎉 Congratulations! You have now added voice recognition to your web app, allowing users to add tasks via voice commands. This feature will provide a convenient way for users to input tasks without typing.
