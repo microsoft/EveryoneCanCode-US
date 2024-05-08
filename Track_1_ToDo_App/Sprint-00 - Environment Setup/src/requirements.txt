@@ -3,4 +3,6 @@ flask
 flask[async]
 flask_sqlalchemy
 sqlalchemy
-semantic_kernel
+semantic-kernel==0.9.5b1
+pyodbc
+fastapi

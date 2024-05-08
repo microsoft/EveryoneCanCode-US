@@ -13,11 +13,12 @@ from priority import Priority
 from context_processors import inject_current_date
 
 app = Flask(__name__)
-basedir = os.path.abspath(os.path.dirname(__file__))   # Get the directory of the this file
-todo_file = os.path.join(basedir, 'todo_list.txt')     # Create the path to the to-do list file using the directory
-app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(basedir, 'todos.db')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+# mssql+pyodbc://<sql user name>:<password>@<azure sql server>.database.windows.net:1433/todo?driver=ODBC+Driver+17+for+SQL+Server
+sql_user_name = os.environ.get("AZURE_SQL_USER");
+sql_password = os.environ.get("AZURE_SQL_PASSWORD");
+azure_sql_server= os.environ.get("AZURE_SQL_SERVER");
+azure_sql_port = os.environ.get("AZURE_SQL_PORT");
 db.init_app(app)
 
 @app.context_processor
