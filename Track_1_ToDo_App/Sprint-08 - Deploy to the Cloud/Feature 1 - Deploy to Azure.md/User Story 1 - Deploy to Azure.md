@@ -1,5 +1,5 @@
 # User Story: Deploy to Azure Step-by-Step
-⏲️ _Est. time to complete: 30 min._ ⏲️
+⏲️ _Est. time to complete: 60 min._ ⏲️
 
 ## User Story
 
@@ -23,12 +23,12 @@ In order to complete this user story you will need to complete the following tas
 ### Setup Your Azure Cloud Environment
 
 #### 1. Login in to the Azure Portal
-To use Azure we will first need to login with our Azure credentials.  If you are part of the event, you will be given Azure credentials by your coach.  If you are doing this exercise outside of the event you can sign-up for Azure [here](https://azure.microsoft.com/en-us/) and then provide those credentials when completing this exercise.
+To use Azure we first need to login with our Azure credentials.  If you are part of the _Everyone Can Code_ event, you will be given Azure credentials by your coach.  If you are doing this exercise outside of the event you can sign-up for Azure [here](https://azure.microsoft.com/en-us/) and then provide those credentials when completing this exercise.
 
 ![Azure Portal Home](../images/az-portal-login.png)
 
 > [!NOTE]
-> If you are not part of the 2 day Everyone Can Code Event, you can use your Azure credentials or you can sign up [here to get started](https://azure.microsoft.com/en-us/free/).
+> If you are not part of the 2 day Everyone Can Code Event, you can use your own Azure credentials or you can sign up [here to get started](https://azure.microsoft.com/en-us/free/).
 <br/>
 
 #### 2. Setup both the Azure SQL Database and Azure Web App Service
@@ -64,7 +64,7 @@ E. You should now see the _Review + create_ tab of the _Create Web App + Databas
 ![Review and Create](../images/az-review-and-create.png)
 
 1. First, you will want to click on the database password copy button and save that password for a later step
-2. after you have safed the password, you should then select the `Create` button to start deploying your SQL database and Web App
+2. After you have safed the password, you should then select the `Create` button to start deploying your SQL database and Web App
 
 You may want to keep that page open to see when your deployement is done.
 
@@ -72,7 +72,7 @@ You may want to keep that page open to see when your deployement is done.
 ### Updating the application code to support a cloud deployment
 
 #### 1. Update code to use Azure App Service database connection string environment variable
-The first change that we will make to the code is to update the connection string information in our code base to use an environment variable instead of be a relative path.
+The first change that we will make to the code is to update the connection string information in our code base to use an environment variable instead of a relative path.
 
 1. Open `app.py` file and make sure that you add an `import os` to the top of the file.
 
@@ -179,7 +179,7 @@ In order to help us deploy our code to Azure from within **Visual Studio Code** 
 ![Azure Tools Extension](../images/visual-studio-code-azure-tools-extension.png)
 
 1. Click on the Extension box on the left pane (or hit CTRL+SHIFT+X)
-2. In the search box type in "azure" and the Azure Tools extension should be one of the top items returned in the search
+2. In the search box type in "azure" and the **Azure Tools** extension should be one of the top items returned in the search
 3. Click on the _Install_ button to install this extension
 
 #### 2. Log into extension
@@ -204,16 +204,15 @@ In order to help us deploy our code to Azure from within **Visual Studio Code** 
 #### 3. Add Environment Variables
 Using this new extension we will update some of the environment variables for our Web App to be able to function.
 
-1. Right click on the _Applicatin Settings_ under the Web App that you just created and select the _Add New Setting..._ menu item
+1. Right click on the _Applicatin Settings_ under the Web App that you just created and select the _Upload Local Settings..._ menu item
 
-![Application Settings](../images/visual-studio-code-azure-tools-extension-03.png)
+![Application Settings](../images/azure-tools-upload-setting-01.png)
 
-2. You will then be asked for the variable name as well as the value.  Please create the following variables:
+2. You should then pick the `.env` file that we setup in an earlier step.
 
-- AZURE_OPENAI_KEY: (use key from prior sprints)
-- AZURE_OPENAI_DEPLOYMENT_NAME: gpt-35-turbo
-- AZURE_OPENAI_ENDPOINT: (use endpoint from prior sprints)
-- USE_AZURE_OPENAI: True
+![Application Settings 2](../images/azure-tools-upload-setting-02.png)
+
+This will bring in all of the Azure OpenAI keys into the environment variables for the web server. 
 
 #### 4. Deploy code base to Web App
 We are now ready to move our application to the cloud.  
