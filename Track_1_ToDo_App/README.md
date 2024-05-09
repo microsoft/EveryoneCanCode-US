@@ -168,6 +168,16 @@ This sprint is designed to help students deploy the To-Do application to the clo
 
 <br/>
 
+🎉 **Congratulations!**  You have completed the **Everyone Can Code** To-Do application track!!!   We hope that we "Lit Your Fire for Coding" and that you are excited to continue on your coding journey!
+
+### Bonus Activities
+Are you still looking for additional ideas on how you could continue to learn?  We have defined some "homework" scenarios that you can work on after this training.  These are just suggestions and would definitely encourage you to come up with your own ideas as well
+
+- **Multiple List per User** - Update the application to allow a user to store multiple lists underneath their account.
+- **Mulit-tenant** - Update the application to allow different users to log in and see their "own" lists.
+
 <br/>
+
+### Where to learn more
 
 Still interesting in learning more about coding?  Check out the [**Where to Learn More**](/Track_1_ToDo_App/Where%20to%20Learn%20More.md) section for more resources on coding and building applications.
