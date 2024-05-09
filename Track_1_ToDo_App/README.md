@@ -164,7 +164,7 @@ This sprint is designed to help students deploy the To-Do application to the clo
 
 <br/>
 
-3. **BONUS Activity**:  If you have time, you can experiment with setting up different authentication providers for the website.  At the time of this repo being created there are providers for Facebook, Google, Twitter, GitHub, Apple, and OpenID Connect.
+
 
 <br/>
 
@@ -173,8 +173,12 @@ This sprint is designed to help students deploy the To-Do application to the clo
 ### Bonus Activities
 Are you still looking for additional ideas on how you could continue to learn?  We have defined some "homework" scenarios that you can work on after this training.  These are just suggestions and would definitely encourage you to come up with your own ideas as well
 
-- **Multiple List per User** - Update the application to allow a user to store multiple lists underneath their account.
+- **Multiple lists per User** - Update the application to allow a user to store multiple lists underneath their account.
 - **Mulit-tenant** - Update the application to allow different users to log in and see their "own" lists.
+- **Different Authentication Provider** - You can experiment with setting up different authentication providers for the website. At the time of this repo being created there are providers for Facebook, Google, Twitter, GitHub, Apple, and OpenID Connect.
+- **Migrate to a NoSQL database** - Migrate your backend storage from SQL to a NoSQL database like CosmosDB.
+
+Want to continue using Azure after this event.  You can sign up [here to get started](https://azure.microsoft.com/en-us/free/) with a free Azure account.
 
 <br/>
 
