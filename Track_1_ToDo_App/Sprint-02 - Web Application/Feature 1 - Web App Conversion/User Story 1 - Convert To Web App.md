@@ -77,6 +77,8 @@ To use the Flask framework you will need to initialize the Flask app. To do this
 app = Flask(__name__)
 ```
 
+`__name__` is a special variable in Python that represents the name of the currently-running module. If the script is running directly, such as `python app.py`, the value will be "\_\_main\_\_"
+
 <br/>
 
 #### 4. Get location of the to-do list file 
