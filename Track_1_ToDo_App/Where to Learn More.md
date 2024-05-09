@@ -1,10 +1,13 @@
 # 🎓 Where To Learn More
 
 ## Table of Contents
-1. [Python](#Python)
-2. [Flask](#flask--jinga)
-3. [JavaScript](#javascript)
+1. [GitHub](#github) 
+2. [Python](#Python)
+3. [Flask](#flask--jinga)
+4. [JavaScript](#javascript)
 
+## GitHub
+- [GitHub Docs](https://docs.github.com/en)
 
 ## Python
 - [MS Learn Python Learning Path](https://docs.microsoft.com/en-us/learn/paths/python-first-steps/)
@@ -22,6 +25,8 @@
 - [Documenation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [MS Learn Beginner's Series to JavaScript](https://learn.microsoft.com/en-us/shows/beginners-series-to-javascript/)
 - [W3 Schools - JavaScript 101](https://www.w3schools.com/js/)
+
+
 
 <br/>
 [🔼 Home ](/Track_1_ToDo_App/README.md) 
