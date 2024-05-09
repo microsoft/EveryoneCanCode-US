@@ -23,6 +23,9 @@ The following resources/videos will help you get a better understanding of some 
 In order to complete this user story you will need to complete the following tasks:
 
 ### Start your Codespace or Open Visual Studio Code locally
+<details>
+<summary>click <b>here</b> if you are running in Codespaces</summary>
+
 If you are using a Codespaces, please go into the repo that you created for this project and start the codespace by directly clicking on the Codespace name.  In the case of the image below, the Codespace is named _symmetrical computing-machine_. Note however, that each Codespace auto-generates a unique name for that code space so your Codespace name will be different.  
 
 ![Start Codespaces](/Track_1_ToDo_App/content-images/github-start-codespace.png)
@@ -30,9 +33,10 @@ If you are using a Codespaces, please go into the repo that you created for this
 This will take you directly into a online visual studio code environment.
 
 ![online visual studio code](/Track_1_ToDo_App/content-images/github-start-codespace-02.png)
+</details>
 
 <details>
-<summary>click <b>here</b> if you would prefer to run Visual Studio Code in a local development environment</summary>
+<summary>click <b>here</b> if you are running Visual Studio Code in a local development environment</summary>
 
 - From the terminal/console window, navigate to the project directory
   
