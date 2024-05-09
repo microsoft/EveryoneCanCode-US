@@ -235,7 +235,7 @@ Click on the _Browse_ or _Default domain name_ in the App Service overview page.
   ![Search for App Service in Azure Portal](../images/azure-web-app-todo.png)
 
 > [!CAUTION]
-> Please note that once **your to-do application** is deployed to the cloud it **is running on the public internet and is accessible by anyone that has the URL to view and/or edit  information.  So, please do not put personal items in your to-do list**.   We would also **highly recommend that you setup security on the website** if you plan to continue to run it and use the to-do list functionality. You enable this through the next user story.
+> Please note that once **your to-do application** is deployed to the cloud it **is running on the public internet and is accessible by anyone that has the URL to view and/or edit the information.  So, please do not put personal items in your to-do list**.   We would also **highly recommend that you setup security on the website**. You can enable this through the next user story.
 
 <br/>
 🎉 Congratulations! You have now successfully deployed your to-do application to the Azure cloud.  In the next exercise we will setup authentication.
