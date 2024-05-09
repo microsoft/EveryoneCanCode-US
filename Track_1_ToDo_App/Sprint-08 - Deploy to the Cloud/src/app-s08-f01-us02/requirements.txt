@@ -1,0 +1,8 @@
+openai
+flask
+flask[async]
+flask_sqlalchemy
+sqlalchemy
+semantic-kernel==0.9.5b1
+pyodbc
+fastapi

@@ -3,11 +3,11 @@
 
 ## User Story
 
-As a user I want to deploy my solution to the cloud so that I can access my application at any time.
+_As a user I want to deploy my solution to the cloud so that I can access my application at any time._
 
 ## 🎯Acceptance Criteria:
 - Azure SQL Database named _todo_ is created and todo items are persisted by the application.
-- Azure App Service is with Python runtime environment is created and deployed application.
+- Azure App Service with Python runtime environment is created and deployed application.
 - Created database connection string using the Azure SQL Database information to connect through my application to persist todo items.
 - Configured Azure OpenAI information to access as environment variables using Azure App Service settings in my application.
 
@@ -234,11 +234,11 @@ Click on the _Browse_ or _Default domain name_ in the App Service overview page.
 
   ![Search for App Service in Azure Portal](../images/azure-web-app-todo.png)
 
-> [!WARNING]
-> Please note that **your to-do application** once deployed to the cloud **is running on the public internet and is accessible by anyone that has the URL to view and/or edit  information.  So please do not put personal items in your to-do list**.   We would **highly recommend that you setup security on the website** if you would like to continue to run it and use the to-do list functionality. 
+> [!CAUTION]
+> Please note that once **your to-do application** is deployed to the cloud it **is running on the public internet and is accessible by anyone that has the URL to view and/or edit  information.  So, please do not put personal items in your to-do list**.   We would also **highly recommend that you setup security on the website** if you plan to continue to run it and use the to-do list functionality. You enable this through the next user story.
 
 <br/>
-🎉 Congratulations! You have now successfully deployed your to-do application to the Azure cloud.
+🎉 Congratulations! You have now successfully deployed your to-do application to the Azure cloud.  In the next exercise we will setup authentication.
 
 <br/>
 
@@ -247,4 +247,4 @@ Click on the _Browse_ or _Default domain name_ in the App Service overview page.
 
 <br/>
 
-[🔼 **Home** ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story** (in previous sprint) ](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/Feature%201%20-%20Advanced%20Styling/User%20Story%205%20-%20Show%20Spinner.md)
+[🔼 **Home** ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story** (in previous sprint) ](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/Feature%201%20-%20Advanced%20Styling/User%20Story%205%20-%20Show%20Spinner.md) | [**Next user story** ▶](/Track_1_ToDo_App/Sprint-08%20-%20Deploy%20to%20the%20Cloud/Feature%201%20-%20Deploy%20to%20Azure.md/User%20Story%202%20-%20Setup%20Authentication.md)
