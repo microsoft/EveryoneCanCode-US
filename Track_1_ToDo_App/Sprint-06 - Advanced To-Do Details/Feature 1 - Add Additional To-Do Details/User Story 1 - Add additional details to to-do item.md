@@ -1,4 +1,4 @@
-# User Story: Add traditional details to to-do item - Step-by-Step
+# User Story: Add Additional details to to-do item - Step-by-Step
 ⏲️ _Est. time to complete: 45 min._ ⏲️
 
 ## User Story
