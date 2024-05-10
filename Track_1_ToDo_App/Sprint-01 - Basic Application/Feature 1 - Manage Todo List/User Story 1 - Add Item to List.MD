@@ -175,7 +175,7 @@ Now let's see this application in action with the menu system in place. Open the
 > [!NOTE]
 > The picture above assumes a local setup.  If you are running in Codespaces it you should click the play button on the top right corner of the Visual Studio Code window
 
-Now you should see a menu structure where you can interact with the system. Pressing 'a' or 'A' (and hitting <ENTER>) will allow you to add an item to the list. Please experiment by adding a few to-do list items (Note you will also have to hit <ENTER> after typing in your to-do list item name to have it accept the input and add it to the list).  Remember that you will need to press 'x' or 'X' (and hitting <ENTER>) to exit the program.
+Now you should see a menu structure where you can interact with the system. Pressing 'a' or 'A' (and hitting `<ENTER>`) will allow you to add an item to the list. Please experiment by adding a few to-do list items (Note you will also have to hit `<ENTER>` after typing in your to-do list item name to have it accept the input and add it to the list).  Remember that you will need to press 'x' or 'X' (and hitting `<ENTER>`) to exit the program.
 
 Here's what my application looks like after adding a few items to the list:
 
