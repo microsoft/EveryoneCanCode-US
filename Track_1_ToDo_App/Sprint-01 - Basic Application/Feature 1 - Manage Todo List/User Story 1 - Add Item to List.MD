@@ -57,7 +57,7 @@ This will take you directly into a online visual studio code environment.
 <br/>
 
 #### 2. Create the `app.py` application file
-Every program needs a starting point. Create a new file named `app.py` in the root of your project folder. Select the new file icon as seen below (in codespaces this will appear when you hover over the explorer pane):
+Every program needs a starting point. Create a new file named `app.py` in the root of your project folder. Select the new file icon as seen below (this will appear when you hover over the explorer pane):
 
 ![CreateNewFile](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/NewFile-S01-F01-US01-01.png)
 
