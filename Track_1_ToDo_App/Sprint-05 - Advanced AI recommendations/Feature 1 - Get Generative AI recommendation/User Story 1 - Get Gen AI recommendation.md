@@ -113,7 +113,7 @@ This code defines the `RecommendationEngine` class, which initializes the AI ser
 
 <br/>
 
-#### 4. Create the Get Recommendations Method
+#### 3. Create the Get Recommendations Method
 Next, we will create a method in the `RecommendationEngine` class to generate AI recommendations based on the task name. Add the following code to the `recommendation_engine.py` file as a method of the `RecommendationEngine` class:
 
 ```python
@@ -185,7 +185,7 @@ supporting website. RETURN ONLY JSON AND NOTHING ELSE
 
 <br/>
 
-#### 5. Create configuration settings for Azure OpenAI
+#### 4. Create configuration settings for Azure OpenAI
 We now need to add the `.env` file to our project.  This file will contain all of the keys and secrets needed to properly configure the Azure OpenAI service. Create a `.env` file in the root of your repo.  This file will be used to store the configuration settings for the Azure OpenAI service and should look something like this: 
 
 ```text
@@ -202,7 +202,7 @@ This environment file sets the `USE_AZURE_OPENAI` variable to `True` to use the 
 
 <br/>
 
-#### 6. Build Unit Test for Recommendation Engine
+#### 5. Build Unit Test for Recommendation Engine
 Given that this functionality is complex we will want to be able to test the code outside of the larger application.  A quick way to do this is to add a test function in the same file and if the developer "runs" this file instead of the app.py file, they will get the recommendation engine test function to run.   To do this we need to add the following code to the end of the file `recommendation_engine.py` to test the recommendation engine:
 
 ```python
@@ -222,7 +222,7 @@ This code defines a test function `test_recommendation_engine` that creates an i
 
 <br/>
 
-#### 7. Test the Recommendation Engine
+#### 6. Test the Recommendation Engine
 Open the terminal and navigate to the folder where your `recommendation_engine.py` file is located. Run the application by typing `python recommendation_engine.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window when in the `recommendation_engine.py` file.  For Codespaces, the easiest path is to just click the play button.   This will run the test function within the terminal window.
 
 You should see results that are similar to this:
