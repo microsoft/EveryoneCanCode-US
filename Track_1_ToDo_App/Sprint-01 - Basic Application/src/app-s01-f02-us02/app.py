@@ -11,6 +11,7 @@ try:
         for line in file:
             todo_list.append(line.strip())
 except FileNotFoundError:
+    print("No saved items found")
     pass #ignore the error if the file does not exist, simply start with an empty list
 
 #continue to loop and display menu until user selects to exit the program
