@@ -62,4 +62,4 @@ I then clicked on the `Download` button which presents another set of options.  
 <br/>
 <br/>
 
-[🔼 Back Personalize Web Application User Story  ](./User%20Story%202%20-%20Personalize%20Website.md)
+[🔼 Back Personalize Web Application User Story  ](./User%20Story%202%20-%20Personalize%20Website.md#1-create-or-use-a-background-picture)
