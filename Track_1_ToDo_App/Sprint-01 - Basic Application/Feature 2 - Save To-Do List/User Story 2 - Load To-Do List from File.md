@@ -72,10 +72,11 @@ try:
         for line in file:
             todo_list.append(line.strip())
 except FileNotFoundError:
+    print("No saved items found")
     pass
 ```
 
-This code will open a file named `todo_list.txt` in the current directory and read each line from the file.  The `r` parameter in the `open` function tells Python to open the file in read mode.  The `for` loop will iterate through each line in the file and add it to the `todo_list`.  The `strip` function is used to remove any leading or trailing whitespace from the line before adding it to the `todo_list`.  If the file does not exist, the `except FileNotFoundError` block will catch the error and the program will continue without loading any items.
+This code will open a file named `todo_list.txt` in the current directory and read each line from the file.  The `r` parameter in the `open` function tells Python to open the file in read mode.  The `for` loop will iterate through each line in the file and add it to the `todo_list`.  The `strip` function is used to remove any leading or trailing whitespace from the line before adding it to the `todo_list`.  If the file does not exist, the `except FileNotFoundError` block will catch the error and the program will first print a message letting the user know that it didn't find any previously saved items and then continue without loading any items. As an example, if you are running the program for the very first time, that file would not have been created so the exception would get thrown and in this case we want the program to continue to execute.
 
 <br/>
 

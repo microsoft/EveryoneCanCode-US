@@ -138,7 +138,7 @@ Please experiment by adding a few to-do list items and then try to remove an ite
 🎉 Congratulations you can now mark the "Complete first python application" officially off your list! You have completed Sprint 1 - Feature 1, User Story 2.
 
 > [!NOTE]
-> Note that if you run the application multiple times, you will see that the items that you added in the previous run are no longer > there. This is because the list is stored in memory and is not saved to a file. We will be adding a feature in the next user story to save these to-do list items to a local file.
+> Note that if you run the application multiple times, you will see that the items that you added in the previous run are no longer there. This is because the list is stored in memory and is not saved to a file. We will be adding a feature in the next user story to save these to-do list items to a local file.
 
 <br/>
 
