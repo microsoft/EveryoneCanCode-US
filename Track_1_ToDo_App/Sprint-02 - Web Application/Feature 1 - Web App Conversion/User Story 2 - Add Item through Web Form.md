@@ -76,7 +76,11 @@ def add_todo():
 
 The code above creates a new route that listens for POST requests to the `/add` URL. When a POST request is received, the function add_todo is called. This function retrieves the value of the "todo" form field from the request, appends it to the todo_list, saves it to the file and then redirects the user back to the index page.
 
-Note that the `save_todo_list()` function is not yet implemented so you may see a yellow swiggly line underneath that function call.  Don't worry we will add it in the next step.
+Note that the `save_todo_list()` function is not yet implemented so you may see a yellow swiggly line underneath that function call.  
+
+![save_to_do_list error](../images/save_to_do_list%20error.png)
+
+Don't worry we will add it in the next step.
 
 <br/>
 
@@ -94,6 +98,8 @@ def save_todo_list():
 ```
 
 You should notice that the yellow swiggly line in the previous step should have disappeared as this function has now been defined. 
+
+
 
 <br/>
 
