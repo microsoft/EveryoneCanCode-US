@@ -75,7 +75,7 @@ import os
 
 
 #### 3. Initialize the Flask App
-To use the Flask framework you will need to initialize the Flask app. To do this, add the following right after the `import os` statement in step 2:
+To use the Flask framework you will need to initialize the Flask app. To do this, add the following right after the `import os` statement in step 2 and before the `todo_list = []` statement:
 
 ```python
 app = Flask(__name__)
@@ -93,6 +93,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 todo_file = os.path.join(basedir, 'todo_list.txt')
 ```
 
+
 <br/>
 
 #### 5. Load the to-do list from the file
@@ -107,7 +108,7 @@ This code replaces the prevously hard-code file name with the variable `todo_fil
 <br/>
 
 #### 6. Create a route for the homepage
-Now that we are using the Flask Framework we will also need to define the entry point for the application on the back-end server.  We do this by creating "routes".  Routes represent the URL paths that the browser will call to access that functionality.  We will need to define a route for the homepage.  To do this, add the following code snippet below to replace ALL of the code starting with the `while True:` statement all the way to the end of the file.  This code is no longer needed for the web application.
+Now that we are using the Flask Framework, the `app.py` file will now represent the back-end web server logic that will run when you spin up the website.  We will need to define the entry point for the application on the back-end web server.  We do this by creating "routes".  Routes represent the URL paths that the browser will call to access that functionality.  We will need to define a route for the homepage.  To do this, add the following code snippet below to replace ALL of the code starting with the `while True:` statement all the way to the end of the file.  This code is no longer needed for the web application.
 
 Replace the code in the red box below:
 
@@ -121,12 +122,12 @@ def index():
     return render_template("index.html", todo_list=todo_list)
 ```
 
-Routes are defined using the `@app.route` decorator. This decorator tells Flask that the function below it is a route. In this case, the route is the homepage or root of the application ("/"). The function below the decorator is called index. This function will simply pass the todo_list variable to the index.html file to render the list of to-do items.
+Routes are defined using the `@app.route` decorator. This decorator tells Flask that the function below it is a route. In this case, the route is the homepage or root of the application ("/"). The function below the decorator is called index. This function will simply pass the todo_list variable to the index.html file to render the list of to-do items in a web page.
 
 <br/>
 
 #### 7. Create Application starting point
-Finally, to enable the app to run you need to add this code to the bottom of the file:
+Finally, to enable the app to run you need to add this code to the bottom of the `app.py` file:
 
 ```python
 if __name__ == "__main__":
@@ -141,14 +142,11 @@ This code will run the Flask app when you run the Python script. The debug=True 
 <br/>
 
 #### 8. Create the User Interface for the Web Application
-At this point, you have the backend functionality to run the Flask app, but you need to define a front end page to render the view. To do this you will need to define the html to display when the homepage route is engaged. 
+At this point, we have created the backend functionality to run the Flask app, but we still need to define a web page that will render the view when the user hits the home page. To do this we will need to define the html to display when the homepage route is engaged. 
 
-Create a ```index.html``` file in a subfolder called ```templates```.
+Create a ```index.html``` file in a subfolder called ```templates```. The ```templates``` folder should be in the root directory of your project.   
 
 ![Directory01](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/Directory01.png)
-
-> [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder. So you would want to create the templates directory underneath that folder.
 
 Add the following code to this index.html file:
 
@@ -183,8 +181,6 @@ You can add tasks to a to-do_list.txt file to see them display on the page.
 
 <br/>
 
-> [!IMPORTANT]
-> If you are using Codespaces, you will need to copy the `todo_list.txt` file from the root of the repository to the `/myApplication/` as flask will be using this directory as the root of the web server.
 
 ![WebApp01](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/outcome-S02-f01-US01.png)
 
