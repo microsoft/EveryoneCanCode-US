@@ -11,8 +11,7 @@ You will learn the following:
 
 1. [Sign up and create a GitHub account](#sign-up-and-create-at-github-account)
 2. [Edit your GitHub profile](#edit-your-github-profile)
-3. [Create your codespace](#create-your-codespace)
-4. [Bonus Challenge: Octocat](#bonus-challenge-build-your-own-octocat)
+3. [Bonus Challenge: Octocat](#bonus-challenge-build-your-own-octocat)
 
 ## Sign up and create at GitHub account
 
