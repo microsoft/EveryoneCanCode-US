@@ -26,11 +26,6 @@ Open Visual Studio Code (either locally in the project directory that you setup 
 <br/>
 
 
-<br/>
-
-<br/>
-
-
 ### Add Voice Recognition to the Web App
 
 > [!NOTE]
@@ -82,9 +77,6 @@ This code adds a button to the form that will allow the user to activate the mic
 #### 2. Add Javascript to support voice recognition
 You will now need to create a Javascript file to help with the automation of capturing the voice from the browser.  Create a new file called `app.js` in the `static/js` folder of your application.  If these folders do not exist you will need to create them first. 
 
-> [!NOTE]
-> If you are using Codespaces, the root of your project folder may be in the `/Track_1_ToDo_App/myApplication/` folder. So you will want to create the following folders `/Track_1_ToDo_App/myApplication/static/js`
-
 <br/>
 Add the following code to the `app.js` file:
 
@@ -133,7 +125,7 @@ This code will add the necessary Javascript to the web app to allow the user to 
 <br/>
 
 #### 3. Link the Javascript file to the HTML document
-Link the Javascript file to the HTML document by adding the following code to the `<head>` tag in your `index.html` file.
+Link the Javascript file to the HTML document by adding the following code within the `<head>` tag in your `index.html` file.
 
 ```html
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
@@ -148,7 +140,9 @@ Now you can test the voice recognition feature by running the web app and clicki
 
 
 > [!NOTE]
->To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+> You may get a pop-up window that asks you whether or not your browser and/or your Codespace has permission to use your microphone, please select `Allow` if you want to test the microphone functionality.
+> 
+> To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
 
 <br/>
 
