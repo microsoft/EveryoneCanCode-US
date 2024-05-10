@@ -4,24 +4,23 @@ import asyncio
 from services import Service
 from openai import AzureOpenAI
 
-deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME", '')
-api_key = os.environ.get("AZURE_OPENAI_API_KEY", '')
-endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", '')
-use_open_ai = os.environ.get("USE_AZURE_OPENAI", 'True')
-
-#uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
-#False means use OpenAI, True means use Azure OpenAI
-selectedService = Service.AzureOpenAI if use_open_ai == "True" else Service.OpenAI
-
 class RecommendationEngine:
     def __init__(self):
-        if selectedService == Service.AzureOpenAI:
-            self.client = AzureOpenAI(azure_endpoint = endpoint, 
-                        api_key=api_key,  
-                        api_version="2024-02-15-preview"
-                        )
-        else:
-            raise Exception("OpenAI not implemented")     
+            self.deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME", '')
+            api_key = os.environ.get("AZURE_OPENAI_API_KEY", '')
+            endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", '')
+            use_open_ai = os.environ.get("USE_AZURE_OPENAI", 'True')
+
+            #uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
+            #False means use OpenAI, True means use Azure OpenAI
+            selectedService = Service.AzureOpenAI if use_open_ai == "True" else Service.OpenAI
+            if selectedService == Service.AzureOpenAI:
+                self.client = AzureOpenAI(azure_endpoint = endpoint, 
+                            api_key=api_key,  
+                            api_version="2024-02-15-preview"
+                            )
+            else:
+                raise Exception("OpenAI not implemented")        
 
 
     async def get_recommendations(self, keyword_phrase, previous_links_str=None):
@@ -46,7 +45,7 @@ class RecommendationEngine:
                         {"role":"user","content":prompt},]
 
         response = self.client.chat.completions.create(
-                        model=deployment,
+                        model=self.deployment,
                         messages = message_text,
                         temperature=0.14,
                         max_tokens=800,
