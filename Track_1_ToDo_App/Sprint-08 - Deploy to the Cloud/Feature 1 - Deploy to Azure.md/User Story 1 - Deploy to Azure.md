@@ -23,7 +23,23 @@ In order to complete this user story you will need to complete the following tas
 ### Setup Your Azure Cloud Environment
 
 #### 1. Login in to the Azure Portal
-To use Azure we first need to login with our Azure credentials.  If you are part of the _Everyone Can Code_ event, you will be given Azure credentials by your coach.  If you are doing this exercise outside of the event you can sign-up for Azure [here](https://azure.microsoft.com/en-us/) and then provide those credentials when completing this exercise.
+To use Azure, we first need to login with our Azure credentials. Go to [**https://portal.azure.com**](https://portal.azure.com)
+
+If you are part of the _Everyone Can Code_ event, you will be given Azure credentials by your coach.  If you are doing this exercise outside of the event you can sign-up for Azure [here](https://azure.microsoft.com/en-us/) and then provide those credentials when completing this exercise.
+
+After logging in you may get prompted with an _Action Required_ dialogue similar to the one below:
+
+![Security Information](../images/az-portal-security-information.png)
+
+For this event, you an simply select **Ask Later**, however if this was an account you created, we would highly recommend you fill out the additional security information. 
+
+You may also get a second dialogue asking you if you would like to "Stay signed in?".  You can simply say _Yes_ to that as well.
+
+That will likely take you to the Azure Welcome page:
+
+![Azure Welcome](../images/az-portal-welcome-to-azure.png)
+
+You can either hit _Cancel_ or go through the _Getting Started_ pages.   In either case you should land on the home page for the azure portal which will look something like this:
 
 ![Azure Portal Home](../images/az-portal-login.png)
 
@@ -51,7 +67,7 @@ D. You will now need to configure your services information
 ![Azure Configure Web App and Database](../images/az-configure-web-db-01.png)
 
 Please fill in the following information and then click on the `Review + create` button
-1. **resource group** - For the event, the subscription should already have a pre-allocated resource group for you to use.  Simply select that resource group.
+1. **resource group** - For the event, the subscription should already have a pre-allocated resource group for you to use.  It should have the format `rg-hero-XXX`, where hero-XXX is the username you were given. Simply select that resource group.
 2. **Region** - East US. Choose a region appropriate for where you are deploying the app. If you are in the US, East US is ok as starting point if you are unsure.
 3. **Name** - Give your webapp a unique name that no one else in the world will use (e.g., <yourinitials-everyonecancode>)
 4. **Runtime Stack:** - Choose `Python 3.12`
@@ -112,7 +128,7 @@ else:
 #### 2. Update recommendations engine code to use Azure App Service environment variables
 We also want to update to use environment variables for all of the OpenAI configuration information. 
 
-1. Open `recommendation_engine.py` file and replace the following code:
+1. Open `recommendation_engine.py` file and replace the following imports:
 
 ```python
 import json
@@ -121,15 +137,9 @@ import semantic_kernel as sk
 from services import Service
 from openai import AzureOpenAI
 from dotenv import dotenv_values
-
-config = dotenv_values(".env")
-
-#uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
-#False means use OpenAI, True means use Azure OpenAI
-selectedService = Service.AzureOpenAI if config.get("USE_AZURE_OPENAI") == "True" else Service.OpenAI
 ```
 
-with this new code:
+with these imports:
 
 ```python
 import os
@@ -137,24 +147,34 @@ import json
 import asyncio
 from services import Service
 from openai import AzureOpenAI
-
-deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME", '')
-api_key = os.environ.get("AZURE_OPENAI_API_KEY", '')
-endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", '')
-use_open_ai = os.environ.get("USE_AZURE_OPENAI", 'True')
-
-#uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
-#False means use OpenAI, True means use Azure OpenAI
-selectedService = Service.AzureOpenAI if use_open_ai == "True" else Service.OpenAI
 ```
 
-The new code will use the environment variables to pull the values for the OpenAI service verus using a `.env` file.  Environment variables provide a more secure way of holding these values in the app service.
+These changes get rid of the `os`, `semantic_kernel`, and `dotev` modules
 
-2. Also remove the following code from the `def __init__(self)` function:
+
+2. Replace the `def __init__(self)` function with the following code:
 
 ```python
-deployment, api_key, endpoint = sk.azure_openai_settings_from_dot_env()
+    def __init__(self):
+        self.deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME", '')
+        api_key = os.environ.get("AZURE_OPENAI_API_KEY", '')
+        endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", '')
+        use_open_ai = os.environ.get("USE_AZURE_OPENAI", 'True')
+
+        #uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
+        #False means use OpenAI, True means use Azure OpenAI
+        selectedService = Service.AzureOpenAI if use_open_ai == "True" else Service.OpenAI
+        if selectedService == Service.AzureOpenAI:
+            self.client = AzureOpenAI(azure_endpoint = endpoint, 
+                        api_key=api_key,  
+                        api_version="2024-02-15-preview"
+                        )
+        else:
+            raise Exception("OpenAI not implemented")     
 ```
+
+This updates the code to get information from the enivronment variables instead of the `.env` file. 
+
 
 #### 3. Create requirements.txt file to install Python modules
 
@@ -223,7 +243,7 @@ We are now ready to move our application to the cloud.
 
 2. Pick the root directory of your project.  
 
-![Deploy 2](../images/visual)
+![Deploy 2](../images/visual-studio-code-deploy-app-01.png)
 
 
 #### 5. Access Application in Web Browser
