@@ -5,13 +5,11 @@
 You will learn the following:
 - What is GitHub Codespaces and how it can benefit your development process.
 - How to create and stop GitHub Codespaces.
-- How to understand and use the `devcontainer.json` file in a project.
 - How to install and use extensions in a Codespace.
 
 ## Table Of Contents
 - [Introduction to GitHub Codespaces](#introduction-to-github-codespaces)
 - [Creating and Stopping a GitHub Codespace](#creating-and-stopping-a-github-codespace)
-- [Understanding the `devcontainer.json` file](#understanding-the-devcontainerjson-file)
 - [Installing and using extensions in a Codespace](#installing-and-using-extensions-in-a-codespace)
 
 ## Introduction to GitHub Codespaces
@@ -55,65 +53,8 @@ To stop a Codespace, follow these steps:
 > [!WARNING]
 > If you do not explicitly stop a codespace, it will continue to run until it times out from inactivity. Closing a codespace does not stop the Codespace.
 
-## OPTIONAL: Understanding CodeSpaces
-
-### Understanding the `devcontainer.json` file
-
-In our project, you'll find a file named `devcontainer.json` which is located in the.devcontainer folder. This file is automatically detected by GitHub and like a recipe for Codespaces. It tells Codespaces how to set up the environment for our project. Let's break down what each part means:
-
-```json
-{
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "postCreateCommand": "python3 -m pip install -r Application/requirements.txt",
-  "customizations": {
-    "codespaces": {
-      "openFiles": ["Application/README.md"]
-    },
-    "vscode": {
-      "extensions": [
-        "ms-toolsai.jupyter",
-        "ms-python.python"
-      ]
-    }
-  }
-}
-```
-
-- `"image": "mcr.microsoft.com/devcontainers/universal:2"`: This line tells Codespaces to use a specific Docker image. Docker images are like blueprints for creating containers, which are isolated environments where you can run your code. 
-
-    In this case, we're using the `mcr.microsoft.com/devcontainers/universal:2` image. This is a universal image provided by Microsoft that includes a wide range of development tools. It's designed to support many different types of projects, making it a great starting point for most Codespaces.
-
-    This image includes tools for several programming languages, databases, and utilities. It also includes the Visual Studio Code Server, which allows you to use Visual Studio Code's interface in your web browser.
-
-    By using this image, we ensure that everyone working on the project has the same tools available, regardless of their local machine. 
-
-- `"postCreateCommand": "python3 -m pip install -r Application/requirements.txt"`: After the base Docker image is set up, this command runs. It's like adding the specific ingredients for our project. 
-
-    This command is a standard way to install Python packages. Here's what each part of the command does:
-
-    - `python3`: This is the version of Python we're using. Python 3 is the current and most widely used version of Python.
-
-    - `-m pip`: This tells Python to use the `pip` tool. `pip` is like a handyman that can fetch and install Python packages for you. These packages are ready-made pieces of code that you can use in your project.
-
-    - `install`: This is the task we're giving to `pip`. It's like saying, "Hey pip, please install something for me."
-
-    - `-r Application/requirements.txt`: The `-r` option tells `pip` to look in a specific file for a list of packages to install. In this case, the file is `Application/requirements.txt`. This file is like a shopping list of all the Python packages that our project needs.
-
-    By running this command, we make sure that all the necessary Python packages are installed in the Codespace. This is like setting up all the tools and materials before starting a DIY project.
-
-### Installing and using extensions in a Codespace
-
-The `devcontainer.json` file also allows us to customize our Codespaces environment. We have two types of customizations:
-
-- `"codespaces"`: These customizations apply when we're using Codespaces. `"openFiles": ["README.md"]` means that the `README.md` file that you saw on the main page will automatically pop up when you start the Codespace. It's like walking into a room and finding a welcome note on the table.
-
-- `"vscode": {"extensions": ["ms-toolsai.jupyter", "ms-python.python"]}`: This part tells Visual Studio Code to automatically add two helpers, called extensions, when the Codespace is created:
-
-  - `ms-toolsai.jupyter`: This is like a digital notebook where you can write and run code, and also add notes, images, or even equations. It's very popular in data science because you can see your data and your code side by side. The Jupyter extension lets you use these notebooks right inside Visual Studio Code.
-
-  - `ms-python.python`: This is a helper for writing Python code. It adds features like code suggestions, checks your code for mistakes, and even formats your code to make it look neat and consistent. It's like having a helpful robot that watches over your shoulder while you code.
-
-By including these extensions in our `devcontainer.json` file, we make sure they are automatically added in the Codespace. This means you don't have to add them yourself, and everyone working on the project has the same setup.
+> [!TIP]
+> You can make your own Codespace development environment by creating a Dev Container and have it run on your own Docker or Kubernetes platform. Check out **[Create a Dev Container](https://code.visualstudio.com/docs/devcontainers/create-dev-container)** to get started. 
 
 We hope this helps you understand how our project is set up in Codespaces. Happy coding!
 
