@@ -54,7 +54,7 @@ async def get_recommendations(self, keyword_phrase, previous_links_str=None):
                     {"role":"user","content":prompt},]
 
     response = self.client.chat.completions.create(
-                    model= deployment,
+                    model= self.deployment,
                     messages = message_text,
                     temperature=0.14,
                     max_tokens=800,

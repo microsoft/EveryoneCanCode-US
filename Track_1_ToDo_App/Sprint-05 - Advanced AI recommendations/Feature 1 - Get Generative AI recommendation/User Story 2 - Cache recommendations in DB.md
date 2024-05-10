@@ -29,7 +29,7 @@ The first thing we will need to do is add the recommendations to the database.  
 recommendations_json = db.Column(db.JSON)    
 ```
 
-This code adds a new column to the `Todo` model called `recommendations_json` that will store the AI recommendations in JSON format.  **Note we will still keep the `recommendations` instance variable so that it is easy for the UI to work with the collection**.
+This code adds a new column to the `Todo` model called `recommendations_json` that will store the AI recommendations in JSON format in the database.  **Note we will still keep the `recommendations` instance variable which is a transient variable so that it is easy for the UI to work with the collection**.
 
 <br/>
 
