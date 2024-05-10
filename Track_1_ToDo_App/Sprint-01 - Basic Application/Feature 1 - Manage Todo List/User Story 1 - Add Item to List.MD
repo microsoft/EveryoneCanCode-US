@@ -68,12 +68,17 @@ then, in the text field that appears, enter the name of the file `app.py` and pr
 <br/>
 
 #### 3. Create the collection to hold the to-do items
-Create an empty collection to hold your to-list items with the variable named 'todo_list' by adding the following code to the top of the `app.py` file.
+Create an empty collection to hold your to-list items with the variable named `todo_list` by adding the following code to the top of the `app.py` file.
     
 ```python
 todo_list = []
 ```
 
+> [!NOTE]
+> You may be prompted by Visual Studio Code asking you if you would like to install the 'Python' extension from Microsoft.  If you see this dialogue, please select the `Install` button.
+> ![install python extension](../images/visual-studio-code-install-python-extension.png)
+>
+> This extension provides rich support for the Python language (for all actively supported Python versions), providing access points for extensions to seamlessly integrate and offer support for IntelliSense (Pylance), debugging (Python Debugger), formatting, linting, code navigation, refactoring, variable explorer, test explorer, and more!
 <br/>
 
 #### 4. Create some sample to-do items
