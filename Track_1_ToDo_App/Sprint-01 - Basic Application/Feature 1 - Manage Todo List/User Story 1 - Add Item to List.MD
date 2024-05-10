@@ -160,7 +160,7 @@ while True:
     #user selected something else
     print("Invalid choice")
 ```
-This code creates a while loop that will continue to run over an over again until the user selects to exit the program by selecting "x" or "X".  For each iteration of the while loop, 
+This code creates a while loop that will continue to run over an over again until the user selects to exit the program by typing "x" or "X".  For each iteration of the while loop, 
 - it will first loop through the collection of to-do items and print them out
 - it will display the menu 
 - it will accept input from the user on which menu item to perform and will then execute the corresponding code related to that menu item. 
@@ -175,7 +175,7 @@ Now let's see this application in action with the menu system in place. Open the
 > [!NOTE]
 > The picture above assumes a local setup.  If you are running in Codespaces it you should click the play button on the top right corner of the Visual Studio Code window
 
-Now you should see a menu structure where you can interact with the system. Pressing 'a' or 'A' will allow you to add an item to the list. Please experiment by adding a few to-do list items.  Remember that you will need to press 'x' or 'X' to exit the program.
+Now you should see a menu structure where you can interact with the system. Pressing 'a' or 'A' (and hitting <ENTER>) will allow you to add an item to the list. Please experiment by adding a few to-do list items (Note you will also have to hit <ENTER> after typing in your to-do list item name to have it accept the input and add it to the list).  Remember that you will need to press 'x' or 'X' (and hitting <ENTER>) to exit the program.
 
 Here's what my application looks like after adding a few items to the list:
 
