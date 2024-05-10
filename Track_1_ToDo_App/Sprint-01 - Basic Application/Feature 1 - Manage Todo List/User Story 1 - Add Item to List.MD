@@ -104,7 +104,7 @@ This code will loop through the `todo_list` and print each item to the console. 
 <br/>
 
 #### 6. Run the application 
-Now let's see this application in action. Open a terminal window within visual studio code and run the application by typing `python app.py` and pressing the enter key or simply click the play button on the top right corner of the Visual Studio Code window.
+Now let's see this application in action. Open a terminal window within visual studio code by holding down ctrl+shift+p then typing 'terminal' and selecting 'View: toggle terminal'. In the terminal window that opens at the bottom run the application by typing `python app.py` and pressing the enter key. You could also simply click the play button on the top right corner of the Visual Studio Code window.
 
 ![RunApplication01](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US01-01.png)
 
