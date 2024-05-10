@@ -121,7 +121,7 @@ if choice == "R":
 
 Note that the `pop` method on the collection allows you to remove an item from the collection by providing the index of the item that you would like to remove.  In this case, we are using the `item_number` variable that the user provided to remove the item from the list. Since python collections are zero-based (i.e., their first index is 0) and our list displays items starting at 1 so we need to adjust the menu number by subtracting 1 from it to match where the item is stored in the collection. 
 
-Also note that we are checking to make sure that the `item_number` is within the range of the list before we attempt to remove the item.  If the `item_number` is not within the range of the list, we print an error message to the user and continue to the next iteration of the loop.
+Also, note that we are checking to make sure that the `item_number` is within the range of the list before we attempt to remove the item (i.e., `item_number` is greater than zero or less than or equal to the length of the current list).  If the `item_number` is not within the range of the list, we print an error message to the user and continue to the next iteration of the loop.  
 
 <br/>
 
@@ -137,7 +137,8 @@ Please experiment by adding a few to-do list items and then try to remove an ite
 
 🎉 Congratulations you can now mark the "Complete first python application" officially off your list! You have completed Sprint 1 - Feature 1, User Story 2.
 
-❕Note that if you run the application multiple times, you will see that the items that you added in the previous run are no longer there. This is because the list is stored in memory and is not saved to a file. We will be adding a feature in the next user story to save these to-do list items to a local file.
+> [!NOTE]
+> Note that if you run the application multiple times, you will see that the items that you added in the previous run are no longer > there. This is because the list is stored in memory and is not saved to a file. We will be adding a feature in the next user story to save these to-do list items to a local file.
 
 <br/>
 
