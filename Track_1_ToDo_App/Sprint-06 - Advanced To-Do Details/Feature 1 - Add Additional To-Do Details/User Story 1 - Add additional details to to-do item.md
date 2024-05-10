@@ -75,7 +75,7 @@ from sqlalchemy import Integer, String, Boolean
 <br/>
 
 #### 3. Add methods to the ToDo model to make the fields more user-friendly
-These fields will be used throughout the application and since several of these fields including `completed` and `priority` are being stored in a **format that isn't as user-readable as we would like, we will need to add some additional code to the application to make these fields more user-friendly**.  To do this we will add a couple of additional methods to our ToDo model.  Open the `database.py` file in the source folder of your application. Add the following code right after the `__str__(self)` method:
+These fields will be used throughout the application and since several of these fields including `completed` and `priority` are being stored in a **format that isn't as user-readable as we would like, we will need to add some additional code to the application to make these fields more user-friendly**.  To do this, we will add a couple of additional methods to our ToDo model.  Open the `database.py` file in the source folder of your application. Add the following code right after the `__str__(self)` method:
 
 ```python
 def priority_str(self):
@@ -102,6 +102,8 @@ def completed_str(self):
         return "No"
 ```
 
+> [!TIP]
+> Please make sure that these two additional methods align with the `__str__(self)` method as they are also methods within the database class.  If you don't align these properly you will get errors later on when trying to run the code as the editor won't giving you any errors now, as it will think these are regular function in the file vs being methods of the database class.  The errors won't occur until you try to access these method on that class.   
 
 
 <br/>
@@ -400,7 +402,7 @@ For the sake of making these changes easier in this step-by-step, instead of wal
 ```
 
 - This code adds three new sections to the `index.html` template:
-    - The `recommendations-div` section is updated to only show the recommendations when a user selects that functionality.
+    - The `recommendations-div` section is updated to only show the recommendations when a user selects that functionality. 
     - The `details-div` section displays the details of a task when the user clicks on a task. This section includes the task name, priority, due date, notes, and completion status.
     - The `edit-div` section allows the user to edit the details of a task. This section includes form fields for the task name, priority, due date, notes, and completion status. The user can update the task by clicking the "Update" button or cancel the update by clicking the "Cancel" button.
 - The code adds two new buttons to the task list that allow the user to view the details of a task and edit the details of a task. 
