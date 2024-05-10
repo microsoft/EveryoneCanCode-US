@@ -70,7 +70,7 @@ Array.from(navLinks).forEach((navLink) => {
 ### Update the user interface to show the spinner when hitting the refresh button
 
 #### 1. Update the user interface to support the spinner on the refresh button
-Since the recommendation functionality can also be called through the refresh button, we will need to update the user interface to show the spinner when the refresh button is clicked. Open the `index.html` file and add an onclick event to the refresh button, the new code should look like:
+Since the recommendation functionality can also be called through the refresh button, we will need to update the user interface to show the spinner when the refresh button is clicked. Open the `index.html` file and add an onclick event to the refresh button (note the refresh button is right under the "Don't like recommendations?" text in the html), the new code should look like:
 
 ```html
 <a href="{{ url_for('recommend', id=g.todo.id, refresh=true) }}" class="btn btn-info btn-fixed-width" onclick="handleRefresh()"> Refresh </a>

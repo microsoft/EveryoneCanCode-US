@@ -56,7 +56,7 @@ This code will create a new route called `/completed` that will take in the id a
 <br/>
 
 #### 2. Create a Context Processor to Pass the Current Date to the User Interface
-Per the acceptance criteria above there is a requirement to display the due date of the task in a friendly format underneath the name of the task as well as understand if the due date is past due or in the future. To support this requirement, we will need update the app to pass the current date to the user interface.  We could continue to do this through the flask global module  `g` in a similar way that we pass the other variables, but for the sake of this exercise we wanted to show you another way to pass variables to the user interface.  We will do this through context processors.   To enable this we first need to create a new file called `context_processors.py` in the `app` folder.  Add the following code to the file:
+Per the acceptance criteria above there is a requirement to display the due date of the task in a friendly format underneath the name of the task as well as understand if the due date is past due or in the future. To support this requirement, we will need to update the app to pass the current date to the user interface.  We could continue to do this through the flask global module  `g` in a similar way that we pass the other variables, but for the sake of this exercise we wanted to show you another way to pass variables to the user interface.  We will do this through context processors.   To enable this we first need to create a new file called `context_processors.py` in the `app` folder.  Add the following code to the file:
 
 ```python
 from datetime import datetime
@@ -78,7 +78,7 @@ from context_processors import inject_current_date
 <br/>
 
 #### 4. Register the Context Processor with the Application
-Next we will need to register the context processor with the application. Add the following code to the top of the `app.py` file after the `db.init_app(app) with app.app_context(): db.create_all()` lines:
+Next we will need to register the context processor with the application. Add the following code to the `app.py` file after the `db.init_app(app) with app.app_context(): db.create_all()` lines:
 
 ```python
 @app.context_processor

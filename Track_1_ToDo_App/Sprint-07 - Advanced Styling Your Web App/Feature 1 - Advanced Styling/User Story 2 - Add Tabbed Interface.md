@@ -23,8 +23,6 @@ In order to complete this user story you will need to complete the following tas
 ### Open Visual Studio Code
 Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-07%20-%20Advanced%20Styling%20Your%20Web%20App/src/app-s07-f01-us01/) by copying it over into your local directory or Codespace. 
 
-Open Visual Studio Code and open the source code the folder with your completed solution from the previous user story if you prefer you can use the starting reference application from [here]()
-
 <br/>
 
 ### Updating the Web Application Frontend
@@ -101,7 +99,7 @@ We will address these in the next set of steps.
 
 ### Selecting a task by clicking on it in the list
 #### 1. Add a showDetails function to user interface
-Before we remove the buttons, we need to update the application so that we can select a task by clicking on it in the list otherwise there wouldn't be a way to get to the Details, Edit, and Recommendations tabs. Open the `index.html` file and replace the `<li id="task-{{ todo.id }}"...>` with the following code:
+Before we remove the buttons, we need to update the application so that we can select a task by clicking on it in the list otherwise there wouldn't be a way to get to the Details, Edit, and Recommendations tabs. Open the `index.html` file and replace the `<li id="task-{{ todo.id }}" data-id="{{ todo.id }}" class="list-group-item d-flex justify-content-between">` with the following code:
 
 ```html
 <li id="task-{{ todo.id }}" data-id="{{ todo.id }}" class="list-group-item d-flex justify-content-between" onclick="showDetails(this)">
@@ -222,7 +220,7 @@ Note however, that the Details, Edit, and Recommendations buttons are still visi
 #### Removing extra buttons from the main list
 
 #### 1. Remove the Details, Edit, and Recommendations buttons from the main list
-Next, we need to remove the Details, Edit, and Recommendations buttons from the main list. Open the `index.html` file and remove the following code from the `<li id="task-{{ todo.id }}"...>`:
+Next, we need to remove the Details, Edit, and Recommendations buttons from the main list. Open the `index.html` file and remove the following code from the `<li id="task-{{ todo.id }}" data-id="{{ todo.id }}" class="list-group-item d-flex justify-content-between" onclick="showDetails(this)">`:
 
 ```html
 <button type="submit" class="btn btn-success" formaction="{{ url_for('details', id=todo.id) }}" formmethod="GET">Details</button>
@@ -242,7 +240,7 @@ Run the application again and you will see that the Details, Edit, and Recommend
 ### Updating Add button to remove highlighting from previously selected task
 
 #### 1. Add an onclick event to the Add button
-If you add a new task you may notice that the highlighting is not removed from the previously selected task. This is because the highlighted class is not being removed when a new task is created. To fix this, we need to make an update the `index.html` with the following code:
+If you add a new task you may notice that the highlighting is not removed from the previously selected task. This is because the highlighted class is not being removed when a new task is created. To fix this, we need to make an update `<button ...>Add</button>` tag in the `index.html` within the `<form action="/add" method="post" class="my-4">` with the following code:
 
 ```html
 <button type="submit" class="btn btn-success" onclick="clearHighlight()">Add</button>
