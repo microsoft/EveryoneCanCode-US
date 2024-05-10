@@ -40,7 +40,7 @@ Creating a new Codespace is easy, when you know where to look:
 
 1. Navigate to the main page of the GitHub repository for which you want to create a Codespace.  For this exercise you will be using the repository you just created in the previous step. 
 2. Click on the green "Code" button on the top right and switch from the _Local_ to the _Codespaces_ tab.
-3. Click on the plus symbol. GitHub will now create a new Codespace and open it in a new browser window. It might take a few minutes to load but just like that you're done!
+3. Click on the "Create Codespace on main" button. GitHub will now create a new Codespace and open it in a new browser window. It might take a few minutes to load but just like that you're done!
 
 ![Create Codespaces](./images/CreateCodespaces.png)
 
