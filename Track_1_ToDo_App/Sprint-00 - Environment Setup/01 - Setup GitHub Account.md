@@ -34,7 +34,8 @@ GitHub is actually two things: **Git** and **Hub**.
   ![Announcement confirmation page](../content-images/Sprint%2000/github/NoAnnouncements.png)
 
 - To **verify** the account, please follow the instructions.
-  ![Verification page](../content-images/Sprint%2000/github/verification.png)
+
+  ![Verification page](../content-images/Sprint%2000/github/Verification.png)
 
   After verifying your account, you will be given an option to choose if you would like to use the free version or paid version, for this exercise, please choose free version at the bottom of the screen and continue. 
 
