@@ -24,7 +24,7 @@ Open Visual Studio Code (either locally in the project directory that you setup 
 ### Updating the Web Application Frontend
 
 #### 1. Add Bootstrap to the Application
-When it comes to creating a modern web application using modern styling, the bootstrap framework has become one of the most popular choices. We are going to use bootstrap in this project for some basic styling. Go to https://getbootstrap.com/ and get the Include via CDN link. Add this link in between the `<head>` tags in your `index.html` as so:
+When it comes to creating a modern web application using modern styling, the **bootstrap framework** has become one of the most popular choices. We are going to use bootstrap in this project to add some basic styling. Go to https://getbootstrap.com/ and get the Include via CDN link. Add this link in between the `<head>` tags in your `index.html` as so:
 
 ```html
 <head>
@@ -81,6 +81,8 @@ To take advantage of bootstrap we will need to make some changes to our HTML. Re
 ```
     
 The code above uses Bootstrap classes to style the elements on the page. The container class creates a centered container for the content, while the text-center class centers the heading. The list-group and list-group-item classes create a styled list for the to-do items. The form-group and form-control classes style the form elements, and the btn and btn-primary classes style the buttons.
+
+For more information on using bootstrap take a look at [W3 Schools - Bootstrap tutorial](https://www.w3schools.com/bootstrap5/)
 
 <br/>
 
