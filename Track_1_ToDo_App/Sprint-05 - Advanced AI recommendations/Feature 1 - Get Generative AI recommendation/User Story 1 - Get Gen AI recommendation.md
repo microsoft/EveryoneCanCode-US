@@ -15,9 +15,8 @@
 ## 🎓Know Before You Start
 The following resources/videos will help you get a better understanding of some of the concepts that you will use to complete this user story.
 
-- [Python Classes](https://youtu.be/uQ5BZht9L3A?si=kUWY6EL18arVgX80&t=1763) (~11-29 minutes of just the classes portion of this video) <br/>
 - [What is AI Anyway?](https://www.ted.com/talks/mustafa_suleyman_what_is_an_ai_anyway) (~18+ minutes) <br/>
-
+- [Python Classes](https://youtu.be/uQ5BZht9L3A?si=kUWY6EL18arVgX80&t=1763) (~11-29 minutes of just the classes portion of this video) <br/>
 
 
 ## 📋Steps
@@ -27,23 +26,28 @@ In order to complete this user story you will need to complete the following tas
 ### Open Visual Studio Code
 Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/src/app-s04-f01-us01/) by copying it over into your local directory or Codespace. 
 
-<br/>
 
 ### Setup the AI SDK
 
 #### 1. Install the OpenAI Python library
-The first thing we need to do is to install the OpenAI and Semantic Kernel Python libraries. Open a terminal window in Visual Studio Code and run the following command:
+The first thing we need to do is to install the OpenAI and Semantic Kernel Python libraries. You can install it via pip from a terminal window in Visual Studio Code. Open the terminal window by doing the following: hold `ctrl+shift+p`, type 'terminal' and select "View: Toggle Terminal"...this will open a terminal at the bottom of your screen. 
+
+![Open terminal](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/open-vs-terminal.png)
+
+In this bottom screen enter the following command:
 
 ```bash
 pip install openai
 pip install semantic-kernel==0.9.5b1
 ```
 
+It is important that you install the exact version _0.9.5b1_ of the _semantic-kernel_ as newer version of the library have breaking changes that have not been incorporated into this training yet.  
+
 ### Recommendation Engine
 The first step in completing this user story is to create the recommendation engine that will generate AI recommendations based on the task name. The recommendation engine will interact with the AI service to generate recommendations and return them to the web application.
 
 #### 1. Create a Service Enumeration Module 
-This recommendation engine will support both OpenAI and Azure OpenAI protocols.  So in order to make working with that easier we are going to setup a quick enumeration module that allows us to see which service we are using.  To do this we will need to create a new Python file called `services.py` in the same folder as your  `app.py` file. Add the following code to the `services.py` file:
+This recommendation engine will support the [Azure OpenAI API](https://azure.microsoft.com/en-us/products/ai-services/openai-service) implementation, however as one of the potential homework exercises you could implement support for [OpenAI API](https://openai.com/). So in order to make working with that easier we are going to setup a quick enumeration module that allows us to see which service we are using.  To do this, we will need to create a new Python file called `services.py` in the same folder as your  `app.py` file. Add the following code to the `services.py` file:
 
 ```python
 from enum import Enum
@@ -72,40 +76,31 @@ from dotenv import dotenv_values
 ```
 
 This code imports the necessary libraries and modules for the recommendation engine.
-- The `semantic_kernel` module is currently being used for the loading of environment variables in this class, but is a much bigger library that includes many useful functions when developing generative AI applications. 
+- The `semantic_kernel` module is currently being used for the loading of environment variables in this class, but is a much bigger library that includes many useful functions when developing generative AI applications.   You can learn more about the semantic-kernel [here](https://github.com/microsoft/semantic-kernel)
 - The `Service` module is the enumeration module that we just created in the previous step.
 - The `AzureOpenAI` module is used to generate the AI recommendations. 
 - The `dotenv_values` function is used to load environment variables from a `.env` file.
 
 <br/>
 
-#### 2. Load Configuration and Select AI Service
-We now need to have the recommendation engine module load the configuration file and tell the recommendation engine which AI service to use. Add the following code to the `recommendation_engine.py` file right after the imports:
 
-```python
-config = dotenv_values(".env")
-
-#uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
-#False means use OpenAI, True means use Azure OpenAI
-selectedService = Service.AzureOpenAI if config.get("USE_AZURE_OPENAI") == "True" else Service.OpenAI
-```
-
-This code loads the configuration file from the `.env` file and determines which AI service to use based on the `USE_AZURE_OPENAI` variable in the configuration file. If the variable is set to `True`, the Azure OpenAI service is selected. If the variable is set to `False`, the OpenAI service is selected.
-
-<br/>
-
-#### 3. Create the Recommendation Engine Class
+#### 2. Create the Recommendation Engine Class
 Next, we will create the recommendation engine class that will generate the AI recommendations. Add the following code to the end of the `recommendation_engine.py` file:
 
 ```python
 
-deployment, api_key, endpoint = sk.azure_openai_settings_from_dot_env()
-
 class RecommendationEngine:
     
     def __init__(self):
-        
+        config = dotenv_values(".env")
+
+        #uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
+        #False means use OpenAI, True means use Azure OpenAI
+        selectedService = Service.AzureOpenAI if config.get("USE_AZURE_OPENAI") == "True" else Service.OpenAI
+
         if selectedService == Service.AzureOpenAI:
+            deployment, api_key, endpoint = sk.azure_openai_settings_from_dot_env()
+            self.deployment = deployment
             self.client = AzureOpenAI(azure_endpoint = endpoint, 
                         api_key=api_key,  
                         api_version="2024-02-15-preview"
@@ -114,7 +109,7 @@ class RecommendationEngine:
             raise Exception("OpenAI not implemented")    
 ```
 
-This code defines the `RecommendationEngine` class, which initializes the AI service based on the selected service in the configuration file. If the selected service is Azure OpenAI, an instance of the `AzureOpenAI` class is created with the Azure OpenAI key from the configuration file. If the selected service is OpenAI, an exception is raised since the OpenAI service is not implemented yet. 
+This code defines the `RecommendationEngine` class, which initializes the AI service based on the selected service in the `.env` configuration file. It determines which AI service to use based on the `USE_AZURE_OPENAI` variable in the configuration file. If the variable is set to `True`, the Azure OpenAI service is selected and an instance of the`AzureOpenAI` class is created with the Azure OpenAI key from the configuration file. If the variable is set to `False`, an exception is raised since the OpenAI service is not implemented yet.
 
 <br/>
 
@@ -141,7 +136,7 @@ async def get_recommendations(self, keyword_phrase):
                     {"role":"user","content":prompt},]
 
     response = self.client.chat.completions.create(
-                    model = deployment,
+                    model = self.deployment,
                     messages = message_text,
                     temperature=0.14,
                     max_tokens=800,
@@ -164,7 +159,7 @@ async def get_recommendations(self, keyword_phrase):
 ```
 
 > [!NOTE]
-> That when copy/pasting code from the browser into Visual Studio Code, the indentation may not be correct. Make sure to check the indentation of the code after pasting it into Visual Studio Code.
+> That when copy/pasting code from the browser into Visual Studio Code, the indentation may not be correct. Make sure to check the indentation of the code after pasting it into Visual Studio Code.  This method should be at the same level of indentation as the `__init__` method
 
 This code defines the `get_recommendations` method, which generates AI recommendations based on the task name. The method constructs a prompt for the AI model to generate recommendations based on the input keyword. The response from the AI model is parsed to extract the recommendations in JSON format. If an error occurs during parsing, a default error message is returned.
 
