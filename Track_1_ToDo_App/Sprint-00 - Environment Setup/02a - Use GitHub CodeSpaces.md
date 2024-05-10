@@ -10,7 +10,6 @@ You will learn the following:
 ## Table Of Contents
 - [Introduction to GitHub Codespaces](#introduction-to-github-codespaces)
 - [Creating and Stopping a GitHub Codespace](#creating-and-stopping-a-github-codespace)
-- [Installing and using extensions in a Codespace](#installing-and-using-extensions-in-a-codespace)
 
 ## Introduction to GitHub Codespaces
 We will use something called Codespaces, which is a feature provided by GitHub. You can learn more about it [here](https://github.com/features/codespaces).
