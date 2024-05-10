@@ -4,7 +4,8 @@
 1. [GitHub](#github) 
 2. [Python](#Python)
 3. [Flask](#flask--jinga)
-4. [JavaScript](#javascript)
+4. [Bootstrap](#bootstrap)
+5. [JavaScript](#javascript)
 
 ## GitHub
 - [GitHub Docs](https://docs.github.com/en)
@@ -20,6 +21,8 @@
 - [Flask Documentation](https://flask.palletsprojects.com/en/3.0.x/)
 - [Jinja Documentation](https://flask.palletsprojects.com/en/3.0.x/templating/)
 
+## Bootstrap
+- [W3 Schools - Bootstrap tutorial](https://www.w3schools.com/bootstrap5/)
 
 ##  Javascript
 - [Documenation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
