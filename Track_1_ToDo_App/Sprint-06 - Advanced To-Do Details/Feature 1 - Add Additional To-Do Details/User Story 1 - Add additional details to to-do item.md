@@ -103,7 +103,7 @@ def completed_str(self):
 ```
 
 > [!TIP]
-> Please make sure that these two additional methods align with the `__str__(self)` method as they are also methods within the database class.  If you don't align these properly you will get errors later on when trying to run the code as the editor won't giving you any errors now, as it will think these are regular function in the file vs being methods of the database class.  The errors won't occur until you try to access these method on that class.   
+> Please make sure that these two additional methods align with the `__str__(self)` method as they are also methods within the database class.  If you don't align these properly you will NOT get errors right away.  The editor will think you meant to put these in as regular functions in the file vs. being methods of the database class. The errors won't occur until you try to access these method on that class and at that point the differences (in tabbing) would be nuanced and could be hard to find.   Save yourself some time and align these methods properly now!    
 
 
 <br/>
