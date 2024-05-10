@@ -30,7 +30,11 @@ Open Visual Studio Code (either locally in the project directory that you setup 
 <br/>
 
 #### 2. Setup Flask Environment
-To setup the Flask Environment if it is not already installed you can install it via pip from a terminal window in Visual Studio Code: 
+To setup the Flask Environment if it is not already installed you can install it via pip from a terminal window in Visual Studio Code. Open the terminal window by doing the following: hold `ctrl+shift+p`, type 'terminal' and select "View: Toggle Terminal"...this will open a terminal at the bottom of your screen. 
+
+![Open terminal](../images/open-vs-terminal.png)
+
+In this bottom screen enter the following command:
 
 ```
 pip install flask
