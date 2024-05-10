@@ -23,7 +23,11 @@ Open Visual Studio Code (either locally in the project directory that you setup 
 ### Setup SQL Alchemy tookit
 
 #### 1. Install SQL Alchemy
-We will be using the SQL Alchemy toolkit to help us interact with the database. If it is not already installed, you can install it via pip through the Visual Studio Code terminal by running the following command:
+We will be using the SQL Alchemy toolkit to help us interact with the database. If it is not already installed, you can install it via pip from a terminal window in Visual Studio Code. Open the terminal window by doing the following: hold `ctrl+shift+p`, type 'terminal' and select "View: Toggle Terminal"...this will open a terminal at the bottom of your screen. 
+
+![Open terminal](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/open-vs-terminal.png)
+
+In this bottom screen enter the following command:
 
 ```
 pip install flask-sqlalchemy --only-binary=:all:
@@ -76,7 +80,7 @@ The Base class is a simple class that we will use as the base class for our data
 <br/>
 
 #### 4. Create the Todo class
-Now we will create a class to represent the tasks in the database. Add the following code to the end of ```database.py``` file:
+Now we will create a class to represent the tasks in the database. Add the following code to the ```database.py``` file right after the `db = SQLAlchemy(model_class=Base)` statement:
 
 ```python
 class Todo(db.Model):
@@ -94,7 +98,7 @@ The Todo class is a database model that represents a task or to-do item in the d
 #### Updating the Web Application Backend
 
 #### 1. Import the g module from Flask
-First we will need to update the ```app.py``` file to include ```g``` module from Flask.  This will be used in a later step to pass information to the HTML page during rendering.  Simply replace the ```from flask import Flask, render_template, request, redirect, url_for``` line with the following code:
+First, we will need to update the ```app.py``` file to include ```g``` module from Flask.  This will be used in a later step to pass information to the HTML page during rendering.  Simply replace the ```from flask import Flask, render_template, request, redirect, url_for``` line with the following code:
 
 ```python
 from flask import Flask, render_template, request, redirect, url_for, g
@@ -146,6 +150,7 @@ try:
         for line in file:
             todo_list.append(line.strip())
 except FileNotFoundError:
+    print("No saved items found")
     pass
 ```
 
@@ -228,7 +233,14 @@ Now that we are saving our tasks to the database we no longer need to save them 
 ### Updating the Web Application Frontend
 
 #### 1. Update the user interface for displaying tasks
-Finally, you will need to update the ```index.html``` file to use the tasks from the database instead of the todo_list. Replace the code between the ```<ol>``` tags in the ```index.html``` file with the following code:
+Finally, you will need to update the ```index.html``` file to use the tasks from the database instead of the todo_list. 
+
+
+Replace the code between the ```<ol>``` tags in the ```index.html``` file 
+
+![replace html](../images/replace_html_jinga_template.png)
+
+with the following code:
 
 ```html
 <form method="post">
@@ -255,15 +267,13 @@ The code above uses Jinja templating to loop through the tasks stored in the g o
 You will also need to remove the following code from the ```index.html``` file as we no longer will be using a form to remove tasks but rather the remove buttons added above.
 
 ```html
-        <div class="col-6">
-            <form action="/remove" method="post" class="my-4">
-                <div class="form-group">
-                    <label for="item_number">Remove task number:</label>
-                    <input type="number" name="item_number" min="1" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-danger">Remove</button>
-            </form>
-        </div>
+<form action="/remove" method="post" class="my-4">
+    <div class="form-group">
+        <label for="item_number">Remove task number:</label>
+        <input type="number" name="item_number" min="1" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-danger">Remove</button>
+</form>
 ```
 
 <br/>
@@ -271,7 +281,7 @@ You will also need to remove the following code from the ```index.html``` file a
 #### 3. Run the application
 Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
 
-Test it out by adding a task and then removing a task.
+Test it out by adding a task and then removing a task.  Note that your existing to-do items from the file storage have not been migrated over.  If this was a production application, we would have wanted to automate moving those items to the new storage system however since this is a application that is in development we chose to just start with a fresh database. 
 
 ![Database Integration](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/images/DatabaseIntegration-S3-F1-US1-01.png)
 
