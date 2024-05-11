@@ -13,12 +13,11 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks:
+In order to complete this user story, you will need to complete the following tasks:
 
 ### Open Visual Studio Code
 
-Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/) by copying it over into your local directory or Codespace. 
-
+Open Visual Studio Code (either locally in the project directory you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint-01 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us02/) by copying it over into your local directory or Codespace.
 
 ### Setup SQL Alchemy tookit
 
@@ -42,7 +41,7 @@ pip install flask-sqlalchemy --only-binary=:all:
 In order to store our tasks in a database, we will need to perform the following steps:
 
 #### 1. Create Database model
-We will now need to create a class that we can use to store the tasks in the database. Create a new file called ```database.py``` in the same folder as your ```app.py``` file.
+We will now need to create a class we can use to store the tasks in the database. Create a new file called ```database.py``` in the same folder as your ```app.py``` file.
 
 ![Database Integration](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/images/DatabaseFile-S3-F1-US1-01.png)
 
@@ -64,9 +63,8 @@ The flask_sqlalchemy package provides an easy way to interact with a database us
 
 <br/>
 
-
 #### 3. Create the database base class
-We will first create the base class for our database and declare the ```db``` variable to hold the database instance. Add the following code to the ```database.py``` file right after the import statements:
+Create the base class for our database and declare the ```db``` variable to hold the database instance. Add the following code to the ```database.py``` file right after the import statements:
 
 ```python
 class Base(DeclarativeBase):
@@ -75,7 +73,7 @@ class Base(DeclarativeBase):
 db = SQLAlchemy(model_class=Base)
 ```
 
-The Base class is a simple class that we will use as the base class for our database models. The db variable is an instance of the SQLAlchemy class that we will use to interact with the database.
+The Base class is a simple class we will use as the base class for our database models. The db variable is an instance of the SQLAlchemy class we will use to interact with the database.
 
 <br/>
 
@@ -91,20 +89,20 @@ class Todo(db.Model):
         return self.name
 ```
 
-The Todo class is a database model that represents a task or to-do item in the database. It has two columns: id, which is the primary key for the task, and name, which is the name of the task. The __str__ method is a special method that returns a string representation of the task, which we will use to display the task in the web app.
+The Todo class is a database model representing a to-do item in the database. It has two columns: id, which is the primary key for the task, and name, which is the name of the to-do item. The __str__ method is a special method returning a string representation of the task we will use to display the to-do item in the web app.
 
 <br/>
 
 #### Updating the Web Application Backend
 
 #### 1. Import the g module from Flask
-First, we will need to update the ```app.py``` file to include ```g``` module from Flask.  This will be used in a later step to pass information to the HTML page during rendering.  Simply replace the ```from flask import Flask, render_template, request, redirect, url_for``` line with the following code:
+We will need to update the ```app.py``` file to include ```g``` module from Flask.  This will be used in a later step to pass information to the HTML page during rendering. Simply replace the ```from flask import Flask, render_template, request, redirect, url_for``` line with the following code:
 
 ```python
 from flask import Flask, render_template, request, redirect, url_for, g
 ```
 
-The g object is a special object provided by Flask that is used to store data that is shared between different parts of the application during a single request. We will use it to store the list of tasks that we retrieve from the database.
+The g object is a special object provided by Flask used to store data shared between different parts of the application during a single request. We will use it to store the list of to-do items we retrieve from the database.
 
 <br/>
 
@@ -131,7 +129,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(basedir, 'to
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 ```
 
-The SQLALCHEMY_DATABASE_URI configuration variable specifies the location of the database file. In this case, we are using a SQLite database, which is a lightweight database that stores data in a single file. The SQLALCHEMY_TRACK_MODIFICATIONS configuration variable is set to False to disable tracking modifications, which can improve performance.
+The SQLALCHEMY_DATABASE_URI configuration variable specifies the location of the database file. We are using a SQLite database, which is a lightweight database to store data in a single file. The SQLALCHEMY_TRACK_MODIFICATIONS configuration variable is set to False to disable tracking modifications and therefore improve performance.
 
 >[!TIP]
 >You can try to use GitHub Copilot to update your app.py file with a prompt such as *update this to use the ToDo class instead of a text file*
@@ -139,19 +137,18 @@ The SQLALCHEMY_DATABASE_URI configuration variable specifies the location of the
 <br/>
 
 #### 4. Updating the Web Application Backend to use Database
-We will now need to remove the file initialization code from the ```app.py``` file as it will no longer be needed because the items will now be stored in a database.  DELETE the following lines from app.py:
+Remove the file initialization code from the ```app.py``` file as it will no longer be needed because the items will now be stored in a database.  DELETE the following lines from app.py:
     
 ```python
 todo_list = []
 
-# Load the to-do list from a file. This will create the to-do list file if it does not exist (that is what r+ is for - see here for other options: [https://www.freecodecamp.org/news/file-handling-in-python/](https://www.freecodecamp.org/news/file-handling-in-python/))
+# load the to-do list from a file. This will create the to-do list file if it does not exist (that is what r+ is for - see here for other options: [https://www.freecodecamp.org/news/file-handling-in-python/](https://www.freecodecamp.org/news/file-handling-in-python/))
 try:
     with open("todo_list.txt", 'r+') as file:
         for line in file:
             todo_list.append(line.strip())
 except FileNotFoundError:
     print("No saved items found")
-    pass
 ```
 
 and replace it with: 
@@ -167,6 +164,7 @@ def load_data_to_g():
     g.todos = todos
     g.todo = None
 ```
+
 - The `db.init_app(app)` function initializes the database with the Flask app instance. 
 - The `with app.app_context():` block creates a context for the application, which is required to interact with the database. 
 - The `db.create_all()` function creates the database tables based on the database models defined in the database module.
@@ -188,30 +186,30 @@ This code removes the todo_list variable as the data will now be passed via the 
 <br/>
 
 #### 6. Update Add route to work with Database
-Next, we will need to make our `add_todo()` function work with a database instead of a collection that gets stored in a file.  Replace the ```add_todo()``` function in the ```app.py``` file with the following code:
+We will need to make our `add_todo()` function work with a database instead of a collection stored in a file. Replace the ```add_todo()``` function in the ```app.py``` file with the following code:
 
 ```python
 @app.route("/add", methods=["POST"])
 def add_todo():
-    # Get the data from the form
+    # get the data from the form
     todo = Todo(
         name=request.form["todo"],
     )
 
-    # Add the new ToDo to the list
+    # add the new ToDo to the list
     db.session.add(todo)
     db.session.commit()
     
-    # Add the new ToDo to the list
+    # add the new ToDo to the list
     return redirect(url_for('index'))
 ```
 
-The `add_todo()` function is a route handler that is called when the user submits the add to-do form. It retrieves the to-do item from the form data, creates a new Todo object with the name of the to-do item, adds the object to the database session, and then commits the changes to the database. Finally, it redirects the user back to the index page.
+The `add_todo()` function is a route handler called when the user submits the add to-do form. It retrieves the to-do item from the form data, creates a new Todo object with the name of the to-do item, adds the object to the database session, and then commits the changes to the database. Finally, it redirects the user back to the index page.
 
 <br/>
 
 #### 7. Update the Remove route to work with the database
-We also need to update the remove functionality to work with the database.  Replace your ```remove_todo()``` function with the following code:
+We also need to update the remove functionality to work with the database. Replace your ```remove_todo()``` function with the following code:
 
 ```python
 @app.route('/remove/<int:id>', methods=['GET', "POST"])
@@ -226,15 +224,14 @@ The `remove_todo()` function is a route handler that is called when the user sub
 <br/>
 
 #### 8. Remove the save_todo_list function
-Now that we are saving our tasks to the database we no longer need to save them to a file.  So remove the ```save_todo_list()``` function from the ```app.py``` file: 
+Now that we are saving our tasks to the database we no longer need to save them to a file so remove the ```save_todo_list()``` function from the ```app.py``` file: 
 
 <br/>
 
 ### Updating the Web Application Frontend
 
 #### 1. Update the user interface for displaying tasks
-Finally, you will need to update the ```index.html``` file to use the tasks from the database instead of the todo_list. 
-
+Finally, you will need to update the ```index.html``` file to use the tasks from the database instead of the todo_list.txt file.
 
 Replace the code between the ```<ol>``` tags in the ```index.html``` file 
 
@@ -259,12 +256,12 @@ with the following code:
 </form>
 ```
 
-The code above uses Jinja templating to loop through the tasks stored in the g object and display them in a list. Each task is displayed as a list item with a unique id (which will be used to identify the to-do item that needs to be removed) and a remove button that allows the user to delete the task.
+The code above uses Jinja templating to loop through the tasks stored in the g object and display them in a list. Each task is displayed as a list item with a unique id (which will be used to identify the to-do item that needs to be removed) and a remove button allowing the user to delete the task.
 
 <br/>
 
 #### 2. Remove the form for 'removing' tasks
-You will also need to remove the following code from the ```index.html``` file as we no longer will be using a form to remove tasks but rather the remove buttons added above.
+You will also need to remove the following code from the ```index.html``` file as we will no longer need a form to remove tasks, but rather the remove buttons added above.
 
 ```html
 <form action="/remove" method="post" class="my-4">
@@ -279,31 +276,27 @@ You will also need to remove the following code from the ```index.html``` file a
 <br/>
 
 #### 3. Run the application
-Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the `<ENTER>` key or click the play button in the top-right corner of the Visual Studio Code window. For Codespaces,  just click the play button. This will launch a browser and navigate to the home page (or you can browse to http://localhost:5000).
 
-Test it out by adding a task and then removing a task.  Note that your existing to-do items from the file storage have not been migrated over.  If this was a production application, we would have wanted to automate moving those items to the new storage system however since this is a application that is in development we chose to just start with a fresh database. 
+Test it out by adding a task and then removing a task. Note your existing to-do items from the file storage have not been migrated over. If this was a production application, we likely would have automated moving those items to the database, but since this is an application under development, we chose to just start with a fresh database.
 
 ![Database Integration](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/images/DatabaseIntegration-S3-F1-US1-01.png)
 
 <br/>
 
+Stop the server by pressing `CTRL-C` in the terminal window where the web server is running.
+
+<br/>
+
+<br/>
+
+🎉 Congratulations! You have now updated your web application to store and retrieve todo items from a databaase.
+
+<br/>
+
 > [!NOTE]
->To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
-
-<br/>
-
-<br/>
-
-🎉 Congratulations! You have now updated your web application to store and retrieve the todo items from a databaase. 
-
-<br/>
-
-> [!NOTE]
-> 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/src/app-s03-f01-us01/).
+> 📄For the full source code for this exercise, please see [here](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/src/app-s03-f01-us01/).
 
 <br/>
 
 [🔼 Home ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story** (in previous sprint)](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%202%20-%20Basic%20Styling/User%20Story%202%20-%20Personalize%20Website.md) | [**Next user story** (in next sprint) ▶](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/Feature%201%20-%20Add%20Voice/User%20Story%201%20-%20Add%20Voice.md)
-
-
-
