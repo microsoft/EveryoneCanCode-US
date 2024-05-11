@@ -91,6 +91,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 todo_file = os.path.join(basedir, "todo_list.txt")
 ```
 
+`__file__` is another special variable that represents the current file - the app.py in our application.
+
 <br/>
 
 #### 5. Load the to-do list from the file
