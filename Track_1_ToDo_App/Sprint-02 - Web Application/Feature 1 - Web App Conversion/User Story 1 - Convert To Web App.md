@@ -173,10 +173,9 @@ This code will create a basic HTML page displaying the to-do list items in an or
 #### 9. Run the Application
 Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the `<ENTER>` key or simply click the play button in the top-right corner of the Visual Studio Code window. For Codespaces, just click the play button. This will launch a browser and navigate to the home page (or you can browse to http://localhost:5000).
 
-You can add tasks to a to-do_list.txt file to see them display on the page.
+[OPTIONAL] You can add tasks to a todo_list.txt file to see them display on the page.
 
-> [!NOTE]
->To stop the server, simply hit `CTRL-C` in the terminal window where the web server is running.
+Stop the server by pressing `CTRL-C` in the terminal window where the web server is running.
 
 <br/>
 
