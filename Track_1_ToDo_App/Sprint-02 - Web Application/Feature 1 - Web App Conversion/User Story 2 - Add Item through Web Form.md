@@ -95,7 +95,7 @@ def save_todo_list():
             file.write(todo + "\n")
 ```
 
-You should notice the swiggly, yellow line in the previous step should have disappeared as this function has now been defined.
+The squiggly, yellow line in the previous step should have disappeared as this function has now been defined.
 
 <br/>
 
