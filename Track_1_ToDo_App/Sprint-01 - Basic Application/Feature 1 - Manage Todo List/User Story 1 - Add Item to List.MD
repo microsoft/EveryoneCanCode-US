@@ -61,7 +61,7 @@ Every program needs a starting point. Create a new file named `app.py` in the ro
 
 ![CreateNewFile](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/NewFile-S01-F01-US01-01.png)
 
-then, in the text field that appears, enter the name of the file `app.py` and press enter.
+then, in the text field that appears, enter the name of the file `app.py` and press `<ENTER>`.
 
 ![CreateNewFile](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/newFile-S01-F01-US01-02.png)
 
@@ -109,7 +109,7 @@ This code will loop through the `todo_list` and print each item to the console. 
 <br/>
 
 #### 6. Run the application 
-Now let's see this application in action. Open a terminal window within visual studio code by holding down ctrl+shift+p then typing 'terminal' and selecting 'View: toggle terminal'. In the terminal window that opens at the bottom run the application by typing `python app.py` and pressing the enter key. You could also simply click the play button on the top right corner of the Visual Studio Code window.
+Now let's see this application in action. Open a terminal window within visual studio code by holding down ctrl+shift+p then typing 'terminal' and selecting 'View: toggle terminal'. In the terminal window that opens at the bottom run the application by typing `python app.py` and pressing the `<ENTER>` key. You could also simply click the play button on the top right corner of the Visual Studio Code window.
 
 ![RunApplication01](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US01-01.png)
 
@@ -168,7 +168,7 @@ This code creates a while loop to run over an over again until the user wishes t
 <br/>
 
 #### 2. Run the application with the menu
-Now let's see this application in action with the menu system in place. Open the terminal in Visual Studio Code and run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
+Now let's see this application in action with the menu system in place. Open the terminal in Visual Studio Code and run the application by typing `python app.py` and pressing the `<ENTER>` key or simply click the play button in the top right corner of the Visual Studio Code window.
 
 ![RunApplication02](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US01-02.png)
 
@@ -181,7 +181,7 @@ Here's what my application looks like after adding a few items to the list:
 
 ![RunApplication03](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US01-03.png)
 
-🎉 Hooray! You have now added a user-friendly command-line interface to the application and finished Sprint 1 - Feature 1, User Story 1. You can now add items from the to-do list by entering the item name and pressing the enter key.
+🎉 Hooray! You have now added a user-friendly command-line interface to the application and finished Sprint 1 - Feature 1, User Story 1. You can now add items from the to-do list by entering the item name and pressing the `<ENTER>` key.
 
 <br/>
 
