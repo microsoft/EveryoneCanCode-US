@@ -83,7 +83,7 @@ Don't worry. We will add it in the next step.
 <br/>
 
 #### 2. Add Function to Save To-Do List
-To complete the back-end web server functionality, we need the ability to save these tasks to our file so they persist between sessions (similar to the save functionlity we had in Sprint-01). Implement a function to write tasks to the file. Please add the code below right after the `add_todo()` function:
+To complete the back-end web server functionality, we need the ability to save these tasks to our file so they persist between sessions (similar to the save functionality we had in Sprint-01). Implement a function to write tasks to the file. Please add the code below right after the `add_todo()` function:
 
 >[!TIP]
 >You can use GitHub Copilot to create this with a prompt such as *Add a route to save todo list items*
