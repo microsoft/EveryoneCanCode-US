@@ -69,7 +69,7 @@ This code will add a modal dialog to the application. The modal dialog will have
 <br/>
 
 #### 3. Update the remove button to show the modal dialog
-We need to update the remove button to show the modal dialog when the delete button is clicked. Open the `app.js` file replace the `<button type='submit'...>Remove</button>` with the following code:
+We need to update the remove button to show the modal dialog when the delete button is clicked. Open the `index.html` file replace the `<button type='submit'...>Remove</button>` with the following code:
 
 ```html
 <a type="button" class="btn btn-danger delete-btn" data-bs-toggle="modal" data-bs-target="#confirmModal" data-url="{{ url_for('remove_todo', id=todo.id) }}" data-taskname="{{ todo.name }}"">Remove</a>
