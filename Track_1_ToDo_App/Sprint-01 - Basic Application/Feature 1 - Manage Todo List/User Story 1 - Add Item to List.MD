@@ -31,7 +31,7 @@ In order to complete this user story you will need to complete the following tas
 
 #### 1. Start your Codespace or Open Visual Studio Code locally
 
-If you are using a Codespaces, please go into the repo that you created for this project and start the codespace by directly clicking on the Codespace name.  In the case of the image below, the Codespace is named _symmetrical computing-machine_. Note however, that each Codespace auto-generates a unique name for that code space so your Codespace name will be different.  
+If you are using Codespaces, please go into the repo that you created for this project and start the codespace by directly clicking on the Codespace name.  In the case of the image below, the Codespace is named _symmetrical computing-machine_. Note however, that each Codespace auto-generates a unique name for that code space so your Codespace name will be different.  
 
 ![Start Codespaces](/Track_1_ToDo_App/content-images/github-start-codespace.png)
 
@@ -117,14 +117,14 @@ Now let's see this application in action. Open a terminal window within visual s
 > The picture above assumes a local setup.  If you are running in Codespaces it you should click the play button on the top right corner of the Visual Studio Code window
 
 
-🎉 Congratulations, you now have successfully added a to-do item to the list and created the initial code for this to-do list application.  Note however that this is **not a user-friendly** way to interact with the application as all of the to-do items are "hard-coded" meaning they are written directly in the code.  This also does not meet the acceptance criteria that we have outlined above. In the next step you will be adding a user-friendly command-line interface to the application.
+🎉 Congratulations, you now have successfully added several to-do items to the list and created the initial code for this to-do list application.  Note however that this is **not a user-friendly** way to interact with the application as all of the to-do items are "hard-coded" meaning they are written directly in the code.  This also does not meet the acceptance criteria we have outlined above. In the next step you will be adding a user-friendly command-line interface to the application.
 
 <br/>
 
 ### Update the application to be interactive
 
 #### 1. Add a menu to the application
-In order to create the user-friendly version of this application, we will need to create a basic menu structure that will allow the user to add an item to the to-do list. First, we need to update the code by first removing all the previous 'todo_list.append' statements and the 'for' loop statements to get rid of the 'hard-coded' sample to-do items. 
+In order to create the user-friendly version of this application, we will need to create a basic menu structure to allow the user to add an item to the to-do list. First, we need to update the code by first removing all the previous 'todo_list.append' statements and the 'for' loop statements to remove the 'hard-coded' sample to-do items. 
 
 ![RemoveCode](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/EditCode-S1-F1-US01-01.png)
 
@@ -160,15 +160,15 @@ while True:
     #user selected something else
     print("Invalid choice")
 ```
-This code creates a while loop that will continue to run over an over again until the user selects to exit the program by typing "x" or "X".  For each iteration of the while loop, 
-- it will first loop through the collection of to-do items and print them out
-- it will display the menu 
-- it will accept input from the user on which menu item to perform and will then execute the corresponding code related to that menu item. 
+This code creates a while loop that will continue to run over an over again until the user wishes to exit the program by typing "x" or "X".  In each iteration of the while loop it will...
+- first loop through the collection of to-do items and print them out
+- display the menu 
+- accept input from the user on which menu item to perform and will then execute the corresponding code related to the menu item. 
 
 <br/>
 
 #### 2. Run the Application with the Menu
-Now let's see this application in action with the menu system in place. Open the terminal in Visual Studio code and run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
+Now let's see this application in action with the menu system in place. Open the terminal in Visual Studio Code and run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
 
 ![RunApplication02](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US01-02.png)
 
