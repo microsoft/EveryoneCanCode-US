@@ -7,7 +7,7 @@ This sprint is designed to help students build a basic To-Do application that ca
 > **🎓 Know before you start**
 > - [Development 101]()
 > - [What is Python?](https://www.youtube.com/watch?v=7XOhibxgBlQ&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=2) (3:10 min)
-> - [Python Extention for Visual Studio Code](https://www.youtube.com/watch?v=CXZYvNRIAKM&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=4) (2:49 min)
+> - [Python Extension for Visual Studio Code](https://www.youtube.com/watch?v=CXZYvNRIAKM&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=4) (2:49 min)
 > 
 
 **📕Feature: Manage To-Do List**
