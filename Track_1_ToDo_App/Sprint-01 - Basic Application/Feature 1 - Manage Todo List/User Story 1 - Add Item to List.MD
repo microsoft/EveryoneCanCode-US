@@ -35,7 +35,7 @@ If you are using a Codespaces, please go into the repo that you created for this
 
 ![Start Codespaces](/Track_1_ToDo_App/content-images/github-start-codespace.png)
 
-This will take you directly into a online visual studio code environment.
+This will take you directly into an online Visual Studio Code environment.
 
 ![online visual studio code](/Track_1_ToDo_App/content-images/github-start-codespace-02.png)
 
