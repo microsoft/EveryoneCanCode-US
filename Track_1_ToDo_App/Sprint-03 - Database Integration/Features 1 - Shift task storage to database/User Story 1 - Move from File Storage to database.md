@@ -248,7 +248,7 @@ with the following code:
                     <div class="title" id="title-{{ todo.id }}">{{ todo.name }}</div>
                 </div>
                 <span>
-                    <button type="submit" class="btn btn-danger" formaction="{{ url_for("remove_todo", id=todo.id) }}">Remove</button>
+                    <button type="submit" class="btn btn-danger" formaction="{{ url_for('remove_todo', id=todo.id) }}">Remove</button>
                 </span>
             </li>
         {% endfor %}
