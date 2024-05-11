@@ -15,7 +15,7 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks:
+In order to complete this user story, you will need to complete the following tasks:
 
 ### Open Visual Studio Code
 Open Visual Studio Code (either locally in the project directory you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint-01 or if you prefer, you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us03/) by copying it over into your local directory or Codespace.
