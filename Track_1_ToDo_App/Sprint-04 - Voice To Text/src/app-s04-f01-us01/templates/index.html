@@ -22,15 +22,17 @@
                         {% for todo in g.todos %}
                             <li id="task-{{ todo.id }}" data-id="{{ todo.id }}" class="list-group-item d-flex justify-content-between">
                                 <div class="task">
-                                        <div class="title" id="title-{{ todo.id }}">{{ todo.name }}</div>
+                                    <div class="title" id="title-{{ todo.id }}">{{ todo.name }}</div>
                                 </div>
-                            <span>
-                                <button type="submit" class="btn btn-danger" formaction="{{ url_for('remove_todo', id=todo.id) }}">Remove</button>
-                            </span>
-                        </li>
+                                <span>
+                                    <button type="submit" class="btn btn-danger" formaction="{{ url_for('remove_todo', id=todo.id) }}">Remove</button>
+                                </span>
+                            </li>
                         {% endfor %}
                     </ol>
-                </form>            </div>
+                </form>
+            </div>
+        </div>
         <div class="row">
             <div class="col-6">
                 <form action="/add" method="post" class="my-4">
