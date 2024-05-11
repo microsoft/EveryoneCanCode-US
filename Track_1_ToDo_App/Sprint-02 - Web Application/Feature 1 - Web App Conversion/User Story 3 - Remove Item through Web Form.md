@@ -7,7 +7,7 @@
 
 ## 🎯Acceptance Criteria:
 - The web app should provide a form for users to input data.  
-- The web form should capture the task number of the item that the user would like to remove.
+- The web form should capture the task number of the item the user would like to remove.
 - The application should remove the task from the list when the form is submitted.
 - The interface should look something like this:
 
@@ -18,17 +18,16 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks:
+In order to complete this user story, you will need to complete the following tasks:
 
 ### Open Visual Studio Code
-Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us02/) by copying it over into your local directory or Codespace. 
-
+Open Visual Studio Code (either locally in the project directory you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint-01 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us02/) by copying it over into your local directory or Codespace.
 
 ### Updating the Web Application Frontend
-First we need to update the web application's user interface to allow the user to remove items via the web page.
+We need to update the web application's user interface to allow the user to remove items via the web page.
 
 #### 1. Update the user interface
-We now need to update the `index.html` to add a basic form to allow a user to remove tasks.  This form will call the backend server functionality when the user hits the 'Remove' button . Your HTML should be updated to look like this:
+Update the `index.html` to add a basic form to allow a user to remove tasks. This form will call the backend server functionality when the user hits the 'Remove' button. Your HTML should be updated to look like this:
 
 ```html
 <!DOCTYPE html>
@@ -57,14 +56,13 @@ We now need to update the `index.html` to add a basic form to allow a user to re
 </html>
 ```
 
-The code above creates a second form that allows users to input a task number representing the to-do item that you would like to remove. When the form is submitted, a POST request is sent to the `/remove` URL, which triggers the remove_todo function in the Python code.
-
+The code above creates a second form to allow users to input a task number representing the to-do item they would like to remove. When the form is submitted, a POST request is sent to the `/remove` URL, which triggers the remove_todo function in the Python code.
 
 ### Updating the Web Application Backend
-Similar to the steps in the last sprint to enable the server to handle new to-items, we need to update the python code to enable the backend server to handle the removal of to-do items via the `/remove` URL.
+Similar to the steps in the last sprint to enable the server to handle new to-do items, we need to update the Python code to enable the backend server to handle the removal of to-do items via the `/remove` URL.
 
 #### 1. Add a Remove Route
-First, we need to add a remove route to enable a user to remove tasks. Add the following code just below the add route code:
+Add a remove route to enable a user to remove tasks. Add the following code just below the add route code:
 
 >[!TIP]
 >You can use GitHub Copilot to add this function with a prompt such as *add a route to remove item based on item number*
@@ -79,13 +77,12 @@ def remove_todo():
     return redirect(url_for("index"))
 ```
 
-The code above creates a new route that listens for POST requests from the `/remove` URL. When a POST request is received, the function remove_todo is called. This function retrieves the value of the "item_number" form field from the request, converts it to an integer, and then removes the task at the specified index from the todo_list.  Note again, that python collections are zero-based while this list is one-based, so we need to subtract 1 from the item_number to get the correct index. The save_todo_list function is then called to save the updated list to the file, and the user is redirected back to the index page.
+The code above creates a new route listening for POST requests from the `/remove` URL. When a POST request is received, the function remove_todo is called. This function retrieves the value of the "item_number" form field from the request, converts it to an integer, and then removes the task at the specified index from the todo_list. Note again, Python collections are zero-based while our displayed list is one-based, so we need to subtract 1 from the item_number to get the correct index. The save_todo_list function is then called to save the updated list to the file, and the user is redirected back to the index page.
 
 <br/>
 
-
 #### 2. Run the Application
-Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000). 
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or click the play button in the top right corner of the Visual Studio Code window. For Codespaces, just click the play button. This will launch a browser and show the home page (or you can browse to http://localhost:5000). 
 
 Test it out by adding a task and then removing a task.
 
@@ -95,8 +92,7 @@ Your application should look something like this:
 
 <br/>
 
-> [!NOTE]
->To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+Stop the server by pressing `CTRL-C` in the terminal window where the web server is running.
 
 <br/>
 
@@ -105,9 +101,6 @@ Your application should look something like this:
 <br/>
 
 > [!NOTE]
-> 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us03/).
-
+> 📄For the full source code for this exercise, please see [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us03/).
 
 [🔼 Home ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story**](User%20Story%202%20-%20Add%20Item%20through%20Web%20Form.md) | [**Next user story** ▶](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%202%20-%20Basic%20Styling/User%20Story%201%20-%20Add%20Basic%20Styling%20to%20the%20Web%20App.md)
-
-
