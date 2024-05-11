@@ -9,7 +9,7 @@
 - The web app should integrate a voice recognition system for task input.
 - Users should be able to activate voice input through a designated button or command.
 - The system should accurately transcribe voice commands into text for task creation.
-- The interface should look something like this  (note the arrow shows the addition of the voice button):
+- The interface should look something like this (note the arrow shows the addition of the voice button):
 
     ![Voice Button](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/images/App_With_Voice_Button.png)
 
@@ -18,18 +18,17 @@ no resources at this time
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks
+In order to complete this user story, you will need to complete the following tasks
 
 ### Open Visual Studio Code
-Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/src/app-s03-f01-us01/) by copying it over into your local directory or Codespace. 
+Open Visual Studio Code (either locally in the project directory you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint-01 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/src/app-s03-f01-us01/) by copying it over into your local directory or Codespace. 
 
 <br/>
-
 
 ### Add Voice Recognition to the Web App
 
 > [!NOTE]
-> **💻 Note for Mac M1 Users** - If you are using a Mac M1 device, please note that you will need to use Chrome or Safari as the voice-to-text mechanism used here is not supported in Edge on Mac M1 devices.
+> **💻 Note for Mac M1 Users** - If you are using a Mac M1 device, please note you will need to use Chrome or Safari as the voice-to-text mechanism used here is not supported in Edge on Mac M1 devices.
 
 #### 1. Update user interface to include voice recognition button
 We are going to use the Web Speech API to add voice recognition to the web app. This API is built into modern web browsers and allows you to interact via your voice.  
@@ -70,12 +69,12 @@ with the following code:
 </form>
 ```
 
-This code adds a button to the form that will allow the user to activate the microphone and then speak using your voice to add a task. The `captureVoice()` function that is called when the user clicks on the microsoft button and is a JavaScript function that will help enable this functionality and will be covered in the next step.
+This code adds a button to the form allowing the user to activate the microphone and then speak using their voice to add a to-do item. The `captureVoice()` function is called when the user clicks on the Microsoft button. It is a JavaScript function that enables this functionality and will be covered in the next step.
 
 <br/>
 
 #### 2. Add Javascript to support voice recognition
-You will now need to create a Javascript file to help with the automation of capturing the voice from the browser.  Create a new file called `app.js` in the `static/js` folder of your application.  If these folders do not exist you will need to create them first. 
+You will now need to create a Javascript file to capture the user's voice from the browser. Create a new file called `app.js` in the `static/js` folder of your application. If these folders do not exist, you will need to create them first. 
 
 <br/>
 Add the following code to the `app.js` file:
@@ -117,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
 ```
 
 This code will add the necessary Javascript to the web app to allow the user to activate the microphone and use your voice to add the task name. 
-- The `captureVoice()` function will start the speech recognition process
+- The `captureVoice()` function will start the speech recognition process.
 - The `recognition.onresult` function will capture the voice input and display it in the input field. 
 - The `recognition.onspeechend` function will stop the speech recognition process when the user stops speaking. 
 - The `recognition.onnomatch` and `recognition.onerror` functions will handle errors that may occur during the speech recognition process. 
@@ -134,26 +133,23 @@ Link the Javascript file to the HTML document by adding the following code withi
 <br/>
 
 #### 4. Run the Application
-Now you can test the voice recognition feature by running the web app and clicking on the microphone button. Then use your voice to add a task via the microphone and see it appear in the input field. Then click the "Add" button to add the task to the list. The App should look something like this  (note the arrow shows the addition of the voice button):
+Test the voice recognition feature by running the web app and clicking on the microphone button. Then use your voice to add a to-do item via the microphone and see it appear in the input field. Click the "Add" button to add the to-do item to the list. The app should look something like this (note the arrow shows the addition of the voice button):
 
 ![Voice Button](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/images/App_With_Voice_Button.png)
 
-
 > [!NOTE]
-> You may get a pop-up window that asks you whether or not your browser and/or your Codespace has permission to use your microphone, please select `Allow` if you want to test the microphone functionality.
-> 
-> To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+> You may get a pop-up window asking you whether or not your browser and/or your Codespace has permission to use your microphone, please select `Allow` if you want to test the microphone functionality.
+
+Stop the server by pressing `CTRL-C` in the terminal window where the web server is running.
 
 <br/>
 
-<br/>
 🎉 Congratulations! You have now added voice recognition to your web app, allowing users to add tasks via voice commands. This feature will provide a convenient way for users to input tasks without typing.
 
 <br/>
-<br/>
 
 > [!NOTE]
-> 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/src/app-s04-f01-us01/).
+> 📄For the full source code for this exercise, please see [here](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/src/app-s04-f01-us01/).
 
 <br/>
 
