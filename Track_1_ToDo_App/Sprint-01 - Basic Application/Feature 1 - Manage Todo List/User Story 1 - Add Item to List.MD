@@ -160,7 +160,7 @@ while True:
     # user selected something else
     print("Invalid choice")
 ```
-This code creates a while loop that will continue to run over an over again until the user wishes to exit the program by typing "x" or "X".  In each iteration of the while loop it will...
+This code creates a while loop to run over an over again until the user wishes to exit the program by typing "x" or "X".  In each iteration of the while loop it will...
 - first loop through the collection of to-do items and print them to the screen
 - display the menu 
 - accept input from the user on which menu item to perform and will then execute the corresponding code related to the menu item. 
@@ -173,9 +173,9 @@ Now let's see this application in action with the menu system in place. Open the
 ![RunApplication02](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US01-02.png)
 
 > [!NOTE]
-> The picture above assumes a local setup.  If you are running in Codespaces it you should click the play button on the top right corner of the Visual Studio Code window
+> The picture above assumes a local setup. If you are running in Codespaces, you should click the play button on the top-right corner of the Visual Studio Code window.
 
-Now you should see a menu structure where you can interact with the system. Pressing 'a' or 'A' (and hitting `<ENTER>`) will allow you to add an item to the list. Please experiment by adding a few to-do list items (Note you will also have to hit `<ENTER>` after typing in your to-do list item name to have it accept the input and add it to the list).  Remember that you will need to press 'x' or 'X' (and hitting `<ENTER>`) to exit the program.
+You should see a menu structure where you can interact with the application. Pressing 'a' or 'A' (and hitting `<ENTER>`) allows you to add an item to the list. Please experiment by adding a few to-do items to your list. (Note you will also have to hit `<ENTER>` after typing in your to-do list item name to have it accept the input and add it to the list). Remember you will need to press 'x' or 'X' (and hitting `<ENTER>`) to exit the program.
 
 Here's what my application looks like after adding a few items to the list:
 
