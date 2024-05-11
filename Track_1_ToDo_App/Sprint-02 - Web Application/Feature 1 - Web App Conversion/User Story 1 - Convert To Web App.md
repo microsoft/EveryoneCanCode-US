@@ -88,7 +88,7 @@ Since this app will be running as a web application, we want to make sure we loa
 
 ```python
 basedir = os.path.abspath(os.path.dirname(__file__))
-todo_file = os.path.join(basedir, 'todo_list.txt')
+todo_file = os.path.join(basedir, "todo_list.txt")
 ```
 
 <br/>
