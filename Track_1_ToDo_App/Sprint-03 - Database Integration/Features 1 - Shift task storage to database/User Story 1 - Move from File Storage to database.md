@@ -216,7 +216,7 @@ We also need to update the remove functionality to work with the database. Repla
 def remove_todo(id):
     db.session.delete(Todo.query.filter_by(id=id).first())
     db.session.commit()
-    return redirect(url_for('index'))
+    return redirect(url_for("index"))
 ```
 
 The `remove_todo()` function is a route handler that is called when the user submits the remove to-do form. It retrieves the item number from the form data, queries the database for the to-do item with the corresponding id, deletes the item from the database session, and then commits the changes to the database. Finally, it redirects the user back to the index page.
