@@ -144,7 +144,7 @@ todo_list = []
 
 # load the to-do list from a file. This will create the to-do list file if it does not exist (that is what r+ is for - see here for other options: [https://www.freecodecamp.org/news/file-handling-in-python/](https://www.freecodecamp.org/news/file-handling-in-python/))
 try:
-    with open("todo_list.txt", 'r+') as file:
+    with open("todo_list.txt", "r+") as file:
         for line in file:
             todo_list.append(line.strip())
 except FileNotFoundError:
