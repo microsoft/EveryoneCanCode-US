@@ -18,8 +18,7 @@ no resources at this time
 In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
-Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us03/) by copying it over into your local directory or Codespace. 
-
+Open Visual Studio Code (either locally in the project directory you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint-01 or if you prefer, you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f01-us03/) by copying it over into your local directory or Codespace.
 
 ### Updating the Web Application Frontend
 
@@ -34,7 +33,7 @@ When it comes to creating a modern web application using modern styling, the **b
 ```
 
 > [!NOTE]
-> Bootstrap is a popular CSS framework that provides a wide range of styles and components for building modern web applications. By including the Bootstrap CSS file in your HTML, you can easily apply these styles to your web app.
+> Bootstrap is a popular CSS framework providing a wide range of styles and components for building modern web applications. By including the Bootstrap CSS file in your HTML, you can easily apply these styles to your web app.
 
 <br/>
 
@@ -87,19 +86,15 @@ For more information on using bootstrap take a look at [W3 Schools - Bootstrap t
 <br/>
 
 #### 3 Run the Application
-Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000). 
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the `<ENTER>` key or click the play button in the top-right corner of the Visual Studio Code window. For Codespaces, just click the play button. This will launch a browser and navigate to the home page (or you can browse to http://localhost:5000). 
 
 It should now look something like this:
     
 ![outcome](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/outcome-S02-f02-US01.png)
 
-
 <br/>
 
-> [!NOTE]
->To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
-
-<br/>
+Stop the server by pressing `CTRL-C` in the terminal window where the web server is running.
 
 <br/>
 🎉 Congratulations! You have now updated your web application to have some basic styling. This will serve as a foundation for the rest of the workshops.
@@ -107,10 +102,6 @@ It should now look something like this:
 <br/>
 
 > [!NOTE]
-> 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us01/).
-
+> 📄For the full source code for this exercise, please see [here](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/src/app-s02-f02-us01/).
 
 [🔼 Home ](/Track_1_ToDo_App/README.md) | [**◀ Previous user story**](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/Feature%201%20-%20Web%20App%20Conversion/User%20Story%203%20-%20Remove%20Item%20through%20Web%20Form.md) | [**Next user story** ▶](User%20Story%202%20-%20Personalize%20Website.md)
-
-
-
