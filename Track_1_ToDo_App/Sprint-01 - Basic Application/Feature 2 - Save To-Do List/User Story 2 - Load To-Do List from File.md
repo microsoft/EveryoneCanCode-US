@@ -12,25 +12,24 @@
 - if there is no file, then the program should load an empty collection
 
 ## 🎓Know Before You Start
-The following resources/videos will help you get a better understanding of some of the basic Python concepts that you will use to complete this user story.
-- [Working with Files](https://youtu.be/uQ5BZht9L3A?t=5812) (~ 1 min) - Same video as from previous user story <br/>
+The following resources/videos will help you get a better understanding of some of the basic Python concepts you will use to complete this user story.
+- [Working with Files](https://youtu.be/uQ5BZht9L3A?t=5812) (~ 1 min) - same video from previous user story <br/>
 - [Exception Handling](https://www.youtube.com/watch?v=HQqqNBZosn8&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=17) (12:53 min) <br/>
 - [Exception Handling Demo](https://www.youtube.com/watch?v=LrRh-V-hYEc&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=18) (3:57 min) <br/>
-    
 
 ## 📋Steps
 
-In order to complete this user story you will need to complete the following tasks:
+In order to complete this user story, you will need to complete the following tasks:
 
 ### Start your Codespace or Open Visual Studio Code locally
 <details>
 <summary>click <b>here</b> if you are running in Codespaces</summary>
 
-If you are using a Codespaces, please go into the repo that you created for this project and start the codespace by directly clicking on the Codespace name.  In the case of the image below, the Codespace is named _symmetrical computing-machine_. Note however, that each Codespace auto-generates a unique name for that code space so your Codespace name will be different.  
+If you are using Codespaces, please go into the repo you created for this project and start the Codespace by directly clicking on the Codespace name. In the case of the image below, the Codespace is named _symmetrical computing-machine_. Each Codespace auto-generates a unique name for that instance so your Codespace name will be different.  
 
 ![Start Codespaces](/Track_1_ToDo_App/content-images/github-start-codespace.png)
 
-This will take you directly into a online visual studio code environment.
+This will take you directly into a online Visual Studio Code environment.
 
 ![online visual studio code](/Track_1_ToDo_App/content-images/github-start-codespace-02.png)
 </details>
@@ -58,8 +57,8 @@ Open the `app.py` file in the root of your project folder.
 
 ### Updating the code base for new functionality
 
-#### 1. Update code to load to-do list from file on start
-The first change that we will need to make to the code is to update the logic for the start of the program. We will need to add code that will load the to-do list from a file when the program starts.  Add the following code to the beginning of the program, right after the `todo_list = []` statement:
+#### 1. Update code to load the to-do list from a file on application start
+The first change we will make is to update the logic for the start of the program. We will add code to load the to-do list from a file when the program starts. Add the following code to the beginning of the program - right after the `todo_list = []` statement:
 
 ![insertcode](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/InsertCode-S1-F2-US02-01.png)
 
@@ -76,19 +75,19 @@ except FileNotFoundError:
     pass
 ```
 
-This code will open a file named `todo_list.txt` in the current directory and read each line from the file.  The `r` parameter in the `open` function tells Python to open the file in read mode.  The `for` loop will iterate through each line in the file and add it to the `todo_list`.  The `strip` function is used to remove any leading or trailing whitespace from the line before adding it to the `todo_list`.  If the file does not exist, the `except FileNotFoundError` block will catch the error and the program will first print a message letting the user know that it didn't find any previously saved items and then continue without loading any items. As an example, if you are running the program for the very first time, that file would not have been created so the exception would get thrown and in this case we want the program to continue to execute.
+This code will open a file named `todo_list.txt` in the current directory and read each line from the file. The `r` parameter in the `open` function tells Python to open the file in read mode. The `for` loop will iterate through each line in the file and add it to the `todo_list`.  The `strip` function is used to remove any leading or trailing whitespace from the line before adding it to the `todo_list`. If the file does not exist, the `except FileNotFoundError` block will catch the error and the program will first print a message letting the user know it didn't find any previously saved items and then continue without loading any items. As an example, if you are running the program for the very first time, the file will not have been created so the exception would get thrown and we want the program to continue to execute.
 
 <br/>
 
 #### 2. Run the application
-Now let's see this application in action. Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
+Now let's see this application in action. Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the `<ENTER>` key or simply click the play button in the top-right corner of the Visual Studio Code window.
 
-- When you start the program you should automatically see the list of to-do items that were previously saved in the file.
+- When you start the program you should automatically see the list of to-do items previously saved in the file.
 
 <br/>
 
  > [!NOTE]
- > 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/src/app-s01-f02-us02/app.py)
+ > 📄For the full source code for this exercise, please see [here](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/src/app-s01-f02-us02/app.py)
 
 
 <br/>
