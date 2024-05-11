@@ -131,43 +131,43 @@ In order to create the user-friendly version of this application, we will need t
 and replace it with the following code.
 
 ```python
-#continue to loop and display menu until user selects to exit the program
+# continue to loop and display menu until the user selects to exit the program
 while True:
-    print() # Add a couple of blank lines
+    print() # add a couple of blank lines
     print()
-    print("To-do list: ") # Print the title of the list
-    for todo in todo_list: # Loop through existing to-do items
+    print("To-do list: ") # print the title of the list
+    for todo in todo_list: # loop through existing to-do items
         print(todo)
 
     # Print the menu
-    print() # Add a of blank lines
+    print() # add a blank line
     print("Actions:")
     print("A - Add to-do item")
     print("X - Exit")
     choice = input("Enter your choice (A or X): ")
-    choice = choice.upper() #converts the choice to uppercase
+    choice = choice.upper() # converts the choice to uppercase
 
-    #user selected 'a' or 'A' - To Add an item to the list
+    # user selected 'a' or 'A' to add an item to the list
     if choice == "A":
         todo = input("Enter the to-do item: ") 
         todo_list.append(todo)
-        continue  #tells the program to go back to the start of the loop
+        continue  # tells the program to go back to the start of the loop
 
-    #user selected 'x' or 'X' to exit program
+    # user selected 'x' or 'X' to exit the program
     if choice == "X":
-        break #tells the program to exit the loop
+        break # tells the program to exit the loop
 
-    #user selected something else
+    # user selected something else
     print("Invalid choice")
 ```
 This code creates a while loop that will continue to run over an over again until the user wishes to exit the program by typing "x" or "X".  In each iteration of the while loop it will...
-- first loop through the collection of to-do items and print them out
+- first loop through the collection of to-do items and print them to the screen
 - display the menu 
 - accept input from the user on which menu item to perform and will then execute the corresponding code related to the menu item. 
 
 <br/>
 
-#### 2. Run the Application with the Menu
+#### 2. Run the application with the menu
 Now let's see this application in action with the menu system in place. Open the terminal in Visual Studio Code and run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
 
 ![RunApplication02](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US01-02.png)
