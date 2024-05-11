@@ -16,7 +16,7 @@
 ## 🎓Know Before You Start
 The following resources/videos will help you get a better understanding of some of the basic Python concepts that you will use to complete this user story.
 - [Formatting Strings](https://www.youtube.com/watch?v=bQQqxysLIGE&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=11) (4:08 min) <br/>
-- [Understanding Collections in Python](https://www.youtube.com/watch?v=beA8IsY3mQs&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=25) (11:26 min) - Same video as previous user story<br/>
+- [Understanding Collections in Python](https://www.youtube.com/watch?v=beA8IsY3mQs&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=25) (11:26 min) - same video as previous user story<br/>
 - [Demo: Collections in Python](https://www.youtube.com/watch?v=4PaSlXNjawM&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=26) (4:01 min) - same video as previous user story<br/>
      
 
@@ -26,11 +26,11 @@ The following resources/videos will help you get a better understanding of some 
 <details>
 <summary>click <b>here</b> if you are running in Codespaces</summary>
 
-If you are using a Codespaces, please go into the repo that you created for this project and start the codespace by directly clicking on the Codespace name.  In the case of the image below, the Codespace is named _symmetrical computing-machine_. Note however, that each Codespace auto-generates a unique name for that code space so your Codespace name will be different.  
+If you are using a Codespaces, please go into the repo that you created for this project and start the codespace by directly clicking on the Codespace name. In the image below, the Codespace is named _symmetrical computing-machine_. Note however, each Codespace auto-generates a unique name for each instance so your Codespace name will be different.  
 
 ![Start Codespaces](/Track_1_ToDo_App/content-images/github-start-codespace.png)
 
-This will take you directly into a online visual studio code environment.
+This will take you directly into a online Visual Studio Code environment.
 
 ![online visual studio code](/Track_1_ToDo_App/content-images/github-start-codespace-02.png)
 </details>
@@ -59,11 +59,11 @@ Open the `app.py` file in the root of your project folder.
 ### Updating the code base for new functionality
 
 #### 1. Add a new menu option to remove an item from the list
-The first change that we will need to make to the application will be to add a new menu option that will allow the user to remove an item from the list. Update your menu structure to include the "R - Remove to-do item" option. You menu structure should now look like this:
+The first change we will make to the application will be to add a new menu option allowing the user to remove an item from the list. Update your menu structure to include the "R - Remove to-do item" option. Your menu structure should look like this:
 
 ```python
-# Print the menu
-print() # Add a couple of blank lines
+# print the menu
+print() # add a couple of blank lines
 print("Actions:")
 print("A - Add to-do item")
 print("R - Remove to-do item")     #<--- ***HERE***
@@ -73,20 +73,20 @@ choice = choice.upper() #converts the choice to uppercase
 ```
 
 > [!TIP]
-> Be aware that Python programs depend on spacing/tabs to determine the structure of the code. If you are copying and pasting the code above, make sure that the spacing is correct.  You may have to indent this code
+> Python programs depend on spacing/tabs to determine the structure of the code. If you are copying and pasting the code above, make sure the spacing is correct. You may have to indent this code
 as this code is part of the while loop
 
 <br/>
 
 #### 2. Identifying items in the list
-Next, we need a way to identify a to-do item so that we can remove it from the list.  The easiest way to do this is to add a line number to each item that identifies that item in the list. This will allow the user to select an item from the list by providing a line number.  To do this, we will need to update our code to print out the line number for each item in the list.   Replace the code that prints out the list at the top of the while loop 
+We need a way to identify a to-do item so we can remove it from the list. The easiest way to do this is to add a line number to each item identifying that item in the list. The user will use this number to specify the to-do item to remove. We will need to update our code to print out the line number for each item in the list. Replace the code that prints out the list at the top of the while loop.
 
 ![replacecode](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/EditCode-S1-F1-US02-01.png)
 
 with the following code.
 
 > [!TIP]
-> If you simply do not want to copy/paste the code below.  You can use GitHub Copilot to adjust this method. Use a prompt such as: *adjust this for loop to print item number next to each item*   
+> If you do not want to copy/paste the code below, you can use GitHub Copilot to adjust this method. Use a prompt such as: *adjust this for loop to print item number next to each item*   
 
 ```python
 print("To-do list: ") # Print the title of the list
@@ -96,12 +96,12 @@ for todo in todo_list: # Loop through existing to-do items
     item_number += 1
 ```
 
-This code will print out the list of items in the collection along with the line number of each item.  Note the use of the `item_number` variable to keep track of the line number of each item in the list. This will allow the user to select the item they would like to delete.  Also note the use of the `f-string` to customize what we are printing to the terminal. Using the `f-string` allows us to easily insert the `item_number` and `todo` variables into the string that we are printing by using `{}` around the variable names.  This is a very powerful feature of Python and allows you to easily create strings that are customized to the data that you are working with.
+This code will print a list of items in the collection along with the line number of each item. Note the use of the `item_number` variable to keep track of the line number of each item in the list. This will allow the user to select the item they would like to delete. Also note the use of the `f-string` to customize what we are printing to the terminal. Using the `f-string` allows us to easily insert the `item_number` and `todo` variables into the string we are printing by using `{}` around the variable names. This is a very powerful feature of Python and allows you to easily create strings customized to the data you are working with.
 
 <br/>
 
 #### 3. Add code to remove an item from the list
-Finally, you will need to add the code that will allow the user to remove an item from the list. Add the following code right below the code to add an item.
+Finally, add the code to allow the user to remove an item from the list. Add the following code right below the code to add an item.
 
 ![addcode](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/EditCode-S1-F1-US02-02.png)
 
@@ -119,31 +119,31 @@ if choice == "R":
     continue
 ```
 
-Note that the `pop` method on the collection allows you to remove an item from the collection by providing the index of the item that you would like to remove.  In this case, we are using the `item_number` variable that the user provided to remove the item from the list. Since python collections are zero-based (i.e., their first index is 0) and our list displays items starting at 1 so we need to adjust the menu number by subtracting 1 from it to match where the item is stored in the collection. 
+Note the `pop` method on the collection which allows you to remove an item from the collection by providing the index of the item that you would like to remove. We are using the `item_number` variable the user provided to remove the item from the list. Since Python collections are zero-based (i.e., their first index is 0) and our list displays items starting at 1, we need to adjust the menu number by subtracting 1 from it to match where the item is stored in the collection.
 
-Also, note that we are checking to make sure that the `item_number` is within the range of the list before we attempt to remove the item (i.e., `item_number` is greater than zero or less than or equal to the length of the current list).  If the `item_number` is not within the range of the list, we print an error message to the user and continue to the next iteration of the loop.  
+We are checking to make sure the `item_number` is within the range of the list before we attempt to remove the item (i.e., `item_number` is greater than zero or less than or equal to the length of the current list). If the `item_number` is not within the range of the list, we print an error message to the user and continue to the next iteration of the loop.
 
 <br/>
 
 #### 4. Run the Application
-Now let's see this application in action. Open the terminal within Visual Studio code and run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
+Let's see this version of the application in action. Open the terminal within Visual Studio Code and run the application by typing `python app.py` and pressing the `<ENTER>` key or simply click the play button in the top right corner of the Visual Studio Code window.
 
-Please experiment by adding a few to-do list items and then try to remove an item. When selecting "r" or "R" you will be prompted to enter the number of the item you would like to remove (as seen in the picture below). Remember that you will need to press 'x' or 'X' to exit the program.
+Please experiment by adding a few to-do list items and then try to remove an item. When selecting "r" or "R", you will be prompted to enter the number of the item you would like to remove (as seen in the picture below). Remember to press 'x' or 'X' to exit the program.
 
 ![RunApplication01](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/images/RunApp-S1-F1-US02-01.png)
 
 > [!NOTE]
-> The picture above assumes a local setup.  If you are running in Codespaces it you should click the play button on the top right corner of the Visual Studio Code window
+> The picture above assumes a local setup.  If you are running in Codespaces, you should click the play button on the top right corner of the Visual Studio Code window
 
-🎉 Congratulations you can now mark the "Complete first python application" officially off your list! You have completed Sprint 1 - Feature 1, User Story 2.
+🎉 Congratulations! You can now mark the "Complete first python application" officially off your list! You have completed Sprint 1 - Feature 1, User Story 2.
 
 > [!NOTE]
-> Note that if you run the application multiple times, you will see that the items that you added in the previous run are no longer there. This is because the list is stored in memory and is not saved to a file. We will be adding a feature in the next user story to save these to-do list items to a local file.
+> If you run the application multiple times, you will see the items you added in previous runs are no longer there. This is because the list is stored in memory and is not saved to a file. We will be adding a feature in the next user story to save these to-do list items to a local file.
 
 <br/>
 
 > [!NOTE]    
-> 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/src/app-s01-f01-us02/app.py).
+> 📄For the full source code for this exercise, please see [here](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/src/app-s01-f01-us02/app.py).
 
 <br/>
 
