@@ -69,7 +69,7 @@ with the following code:
 </form>
 ```
 
-This code adds a button to the form allowing the user to activate the microphone and then speak using their voice to add a to-do item. The `captureVoice()` function is called when the user clicks on the Microsoft button. It is a JavaScript function that enables this functionality and will be covered in the next step.
+This code adds a button to the form allowing the user to activate the microphone and then speak using their voice to add a to-do item. The `captureVoice()` function is called when the user clicks on the microphone button. It is a JavaScript function that enables this functionality and will be covered in the next step.
 
 <br/>
 
