@@ -212,7 +212,7 @@ The `add_todo()` function is a route handler called when the user submits the ad
 We also need to update the remove functionality to work with the database. Replace your ```remove_todo()``` function with the following code:
 
 ```python
-@app.route('/remove/<int:id>', methods=['GET', "POST"])
+@app.route("/remove/<int:id>", methods=["GET", "POST"])
 def remove_todo(id):
     db.session.delete(Todo.query.filter_by(id=id).first())
     db.session.commit()
