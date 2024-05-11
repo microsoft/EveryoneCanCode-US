@@ -96,7 +96,7 @@ for todo in todo_list: # Loop through existing to-do items
     item_number += 1
 ```
 
-This code will print a list of items in the collection along with the line number of each item. Note the use of the `item_number` variable to keep track of the line number of each item in the list. This will allow the user to select the item they would like to delete. Also note the use of the `f-string` to customize what we are printing to the terminal. Using the `f-string` allows us to easily insert the `item_number` and `todo` variables into the string we are printing by using `{}` around the variable names. This is a very powerful feature of Python and allows you to easily create strings customized to the data you are working with.
+This code will print a list of items in the collection along with the line number of each item. The `item_number` variable keeps track of the line number of each item in the list allowing the user to select the item they would like to delete. Also note the use of the `f-string` to customize what we are printing to the terminal. Using the `f-string` allows us to easily insert the `item_number` and `todo` variables into the string we are printing by using `{}` around the variable names. This is a very powerful feature of Python and allows you to easily create strings customized to the data you are working with.
 
 <br/>
 
@@ -109,7 +109,7 @@ Finally, add the code to allow the user to remove an item from the list. Add the
 > You can use GitHub Copilot to adjust this method instead of just copying and pasting the code below. Use a prompt such as: *create a choice for R which will remove items from the list given item number*
 
 ```python
-#user selected 'r' or 'R' - To Remove an item from the list
+# user selected 'r' or 'R' to remove an item from the list
 if choice == "R":
     item_number = int(input("Enter the number of the item to remove: "))
     if item_number > 0 and item_number <= len(todo_list):
