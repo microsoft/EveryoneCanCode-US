@@ -3,10 +3,10 @@
 
 ## User Story
 
-*As a user, I would like to have my tasks stored in a database so that I can access them from any device with internet connectivity and not have to worry about concurrent users.*
+*As a user, I would like to have my to-do items stored in a database so that I can access them from any device with internet connectivity and not have to worry about concurrent users.*
 
 ## 🎯Acceptance Criteria:
-- The application should store the tasks in a database instead of a file.
+- The application should store the to-do items in a database instead of a file.
 
 ## 🎓Know Before You Start
 no resources at this time
@@ -38,10 +38,10 @@ pip install flask-sqlalchemy --only-binary=:all:
 <br/>
 
 ### Creating Database Integration Class
-In order to store our tasks in a database, we will need to perform the following steps:
+In order to store our to-do items in a database, we will need to perform the following steps:
 
 #### 1. Create Database model
-We will now need to create a class we can use to store the tasks in the database. Create a new file called ```database.py``` in the same folder as your ```app.py``` file.
+We will now need to create a class we can use to store the to-do items in the database. Create a new file called ```database.py``` in the same folder as your ```app.py``` file.
 
 ![Database Integration](/Track_1_ToDo_App/Sprint-03%20-%20Database%20Integration/images/DatabaseFile-S3-F1-US1-01.png)
 
@@ -78,7 +78,7 @@ The Base class is a simple class we will use as the base class for our database 
 <br/>
 
 #### 4. Create the Todo class
-Now we will create a class to represent the tasks in the database. Add the following code to the ```database.py``` file right after the `db = SQLAlchemy(model_class=Base)` statement:
+Now we will create a class to represent the to-do items in the database. Add the following code to the ```database.py``` file right after the `db = SQLAlchemy(model_class=Base)` statement:
 
 ```python
 class Todo(db.Model):
@@ -168,7 +168,7 @@ def load_data_to_g():
 - The `db.init_app(app)` function initializes the database with the Flask app instance. 
 - The `with app.app_context():` block creates a context for the application, which is required to interact with the database. 
 - The `db.create_all()` function creates the database tables based on the database models defined in the database module.
-- The `load_data_to_g()` function is a `before_request` handler that runs before each request to the application. It retrieves all the tasks from the database and stores them in the g object, which is shared between different parts of the application during a single request. This allows us to access the list of tasks in the database from different parts of the application.
+- The `load_data_to_g()` function is a `before_request` handler that runs before each request to the application. It retrieves all of the to-do items from the database and stores them in the g object, which is shared between different parts of the application during a single request. This allows us to access the list of to-do items in the database from different parts of the application.
 
 <br/>
 
@@ -224,14 +224,14 @@ The `remove_todo()` function is a route handler that is called when the user sub
 <br/>
 
 #### 8. Remove the save_todo_list function
-Now that we are saving our tasks to the database we no longer need to save them to a file so remove the ```save_todo_list()``` function from the ```app.py``` file: 
+Now that we are persisting our to-do items to a database we no longer need to save them to a file so remove the ```save_todo_list()``` function from the ```app.py``` file: 
 
 <br/>
 
 ### Updating the Web Application Frontend
 
-#### 1. Update the user interface for displaying tasks
-Finally, you will need to update the ```index.html``` file to use the tasks from the database instead of the todo_list.txt file.
+#### 1. Update the user interface for displaying to-do items
+Finally, you will need to update the ```index.html``` file to use the to-do items from the database instead of the todo_list.txt file.
 
 Replace the code between the ```<ol>``` tags in the ```index.html``` file 
 
@@ -256,12 +256,12 @@ with the following code:
 </form>
 ```
 
-The code above uses Jinja templating to loop through the tasks stored in the g object and display them in a list. Each task is displayed as a list item with a unique id (which will be used to identify the to-do item that needs to be removed) and a remove button allowing the user to delete the task.
+The code above uses Jinja templating to loop through the to-do items stored in the g object and display them in a list. Each task is displayed as a list item with a unique id (which will be used to identify the to-do item that needs to be removed) and a remove button allowing the user to delete the task.
 
 <br/>
 
-#### 2. Remove the form for 'removing' tasks
-You will also need to remove the following code from the ```index.html``` file as we will no longer need a form to remove tasks, but rather the remove buttons added above.
+#### 2. Remove the form for 'removing' to-do items
+You will also need to remove the following code from the ```index.html``` file as we will no longer need a form to remove to-do items, but rather the remove buttons added above.
 
 ```html
 <form action="/remove" method="post" class="my-4">
