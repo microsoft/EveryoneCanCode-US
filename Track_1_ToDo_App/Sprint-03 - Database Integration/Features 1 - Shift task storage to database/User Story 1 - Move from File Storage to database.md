@@ -119,14 +119,14 @@ from database import db, Todo
 You will now need to update the app initialization code to include the database configuration. In the ```app.py``` file, replace this line 
 
 ```python
-todo_file = os.path.join(basedir, 'todo_list.txt')
+todo_file = os.path.join(basedir, "todo_list.txt")
 ```
 
 with the following code:
 
 ```python
-app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(basedir, 'todos.db')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(basedir, "todos.db")
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 ```
 
 The SQLALCHEMY_DATABASE_URI configuration variable specifies the location of the database file. We are using a SQLite database, which is a lightweight database to store data in a single file. The SQLALCHEMY_TRACK_MODIFICATIONS configuration variable is set to False to disable tracking modifications and therefore improve performance.
