@@ -1,14 +1,14 @@
-# User Story: Voice Enabled Task Addition - Step-by-Step
+# User Story: Voice Enabled To-Do Item Addition - Step-by-Step
 ⏲️ _Est. time to complete: 30 min._ ⏲️
 
 ## User Story
 
-*As a user, I want to add tasks to the web app using voice commands, so I can quickly input tasks without typing.*
+*As a user, I want to add to-do items to the web app using voice commands, so I can quickly input to-do items without typing.*
 
 ## 🎯Acceptance Criteria:
-- The web app should integrate a voice recognition system for task input.
+- The web app should integrate a voice recognition system for to-do item input.
 - Users should be able to activate voice input through a designated button or command.
-- The system should accurately transcribe voice commands into text for task creation.
+- The system should accurately transcribe voice commands into text for to-do item creation.
 - The interface should look something like this (note the arrow shows the addition of the voice button):
 
     ![Voice Button](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/images/App_With_Voice_Button.png)
@@ -55,7 +55,7 @@ with the following code:
         <br />
     </div>
     <span class="input-group-text">
-        <input type="text" id="todo" name="todo" class="form-control" placeholder="Add a new task">
+        <input type="text" id="todo" name="todo" class="form-control" placeholder="Add a new to-do item">
                     
         <button type="button" class="btn btn-outline-secondary" onclick="captureVoice()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  class="bi bi-mic" viewBox="0 0 16 16">
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-This code will add the necessary Javascript to the web app to allow the user to activate the microphone and use your voice to add the task name. 
+This code will add the necessary Javascript to the web app to allow the user to activate the microphone and use your voice to add the to-do item name. 
 - The `captureVoice()` function will start the speech recognition process.
 - The `recognition.onresult` function will capture the voice input and display it in the input field. 
 - The `recognition.onspeechend` function will stop the speech recognition process when the user stops speaking. 
@@ -144,7 +144,7 @@ Stop the server by pressing `CTRL-C` in the terminal window where the web server
 
 <br/>
 
-🎉 Congratulations! You have now added voice recognition to your web app, allowing users to add tasks via voice commands. This feature will provide a convenient way for users to input tasks without typing.
+🎉 Congratulations! You have now added voice recognition to your web app, allowing users to add to-do items via voice commands. This feature will provide a convenient way for users to input to-do items without typing.
 
 <br/>
 
