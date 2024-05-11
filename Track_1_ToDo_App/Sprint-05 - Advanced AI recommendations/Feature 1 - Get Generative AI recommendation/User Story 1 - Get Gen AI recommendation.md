@@ -2,52 +2,50 @@
 ⏲️ _Est. time to complete: 40 min._ ⏲️
 
 ## User Story
-*As a user, I want to receive AI-generated recommendations on how to complete a task when I click on it.*
+*As a user, I want to receive AI-generated recommendations on how to complete a to-do item when I click on it.*
 
 ## 🎯Acceptance Criteria:
-- The web app should leverage AI to analyze task name and provide relevant recommendations.
-- Recommendations should be displayed in a separate section on the task details page.
-- Recommendations could include suggested steps, related resources, or tips to complete the task effectively as well as a link to the resource.
+- The web app should leverage AI to analyze a to-do item and provide relevant recommendations.
+- Recommendations should be displayed in a separate section on the to-do item details page.
+- Recommendations could include suggested steps, related resources, or tips to complete the to-do item effectively as well as a link to the resource.
 - The interface should look something like this:
 
     ![Recommendations](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/images/outcome-S05-F01-US01.png)
 
 ## 🎓Know Before You Start
-The following resources/videos will help you get a better understanding of some of the concepts that you will use to complete this user story.
+The following resources/videos will help you get a better understanding of some of the concepts you will use to complete this user story.
 
 - [What is AI Anyway?](https://www.ted.com/talks/mustafa_suleyman_what_is_an_ai_anyway) (~18+ minutes) <br/>
 - [Python Classes](https://youtu.be/uQ5BZht9L3A?si=kUWY6EL18arVgX80&t=1763) (~11-29 minutes of just the classes portion of this video) <br/>
-
 
 ## 📋Steps
 
 In order to complete this user story you will need to complete the following tasks:
 
 ### Open Visual Studio Code
-Open Visual Studio Code (either locally in the project directory that you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint 1 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/src/app-s04-f01-us01/) by copying it over into your local directory or Codespace. 
-
+Open Visual Studio Code (either locally in the project directory you setup or through your Codespace). Visual Studio Code should have your completed solution from the end of Sprint-01 or if you prefer you can use the starting reference application from [here](/Track_1_ToDo_App/Sprint-04%20-%20Voice%20To%20Text/src/app-s04-f01-us01/) by copying it over into your local directory or Codespace.
 
 ### Setup the AI SDK
 
 #### 1. Install the OpenAI Python library
-The first thing we need to do is to install the OpenAI and Semantic Kernel Python libraries. You can install it via pip from a terminal window in Visual Studio Code. Open the terminal window by doing the following: hold `ctrl+shift+p`, type 'terminal' and select "View: Toggle Terminal"...this will open a terminal at the bottom of your screen. 
+Install the OpenAI and Semantic Kernel Python libraries. You can install both via pip from a terminal window in Visual Studio Code. Open the terminal window by pressing `ctrl+shift+p`, type 'terminal' and select "View: Toggle Terminal"...this will open a terminal at the bottom of your screen. 
 
 ![Open terminal](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/open-vs-terminal.png)
 
-In this bottom screen enter the following command:
+In this bottom screen, enter the following commands:
 
 ```bash
 pip install openai
 pip install semantic-kernel==0.9.5b1
 ```
 
-It is important that you install the exact version _0.9.5b1_ of the _semantic-kernel_ as newer version of the library have breaking changes that have not been incorporated into this training yet.  
+It is important you install the exact version _0.9.5b1_ of the _semantic-kernel_ as newer versions of the library have breaking changes not yet incorporated into this training.
 
 ### Recommendation Engine
-The first step in completing this user story is to create the recommendation engine that will generate AI recommendations based on the task name. The recommendation engine will interact with the AI service to generate recommendations and return them to the web application.
+The first step in completing this user story is to create the recommendation engine that will generate AI recommendations based on the todo item. The recommendation engine will interact with the AI service to generate recommendations and return them to the web application.
 
 #### 1. Create a Service Enumeration Module 
-This recommendation engine will support the [Azure OpenAI API](https://azure.microsoft.com/en-us/products/ai-services/openai-service) implementation, however as one of the potential homework exercises you could implement support for [OpenAI API](https://openai.com/). So in order to make working with that easier we are going to setup a quick enumeration module that allows us to see which service we are using.  To do this, we will need to create a new Python file called `services.py` in the same folder as your  `app.py` file. Add the following code to the `services.py` file:
+This recommendation engine will support the [Azure OpenAI API](https://azure.microsoft.com/en-us/products/ai-services/openai-service) implementation, however as one of the potential homework exercises you could implement support for [OpenAI API](https://openai.com/). In order to make working with OpenAI easier, we are going to setup a quick enumeration module allowing us to see which service we are using. To do this, we will need to create a new Python file called `services.py` in the same folder as your  `app.py` file. Add the following code to the `services.py` file:
 
 ```python
 from enum import Enum
@@ -57,14 +55,14 @@ class Service(Enum):
     AzureOpenAI = "azureopenai"
 ```
 
-This code defines an enumeration class called `Service` that contains the different AI services that can be used for generating recommendations.  For this example, we will be using the Azure OpenAI service.
+This code defines an enumeration class called `Service` containing different AI services used for generating recommendations. For this example, we will be using the Azure OpenAI service.
 
 <br/>
 
 #### Create the Recommendation Engine
 
 #### 1. Create the Recommendation Engine Module
-We need to create the recommendation engine that will generate AI recommendations based on the task name. To do this, we need to create a new Python file called `recommendation_engine.py` in the same folder as your  `app.py` file. Add the following code to the `recommendation_engine.py` file:
+We need to create a recommendation engine to generate AI recommendations based on the to-do item. We need to create a new Python file called `recommendation_engine.py` in the same folder as your  `app.py` file. Add the following code to the `recommendation_engine.py` file:
 
 ```python
 import json
@@ -76,26 +74,23 @@ from dotenv import dotenv_values
 ```
 
 This code imports the necessary libraries and modules for the recommendation engine.
-- The `semantic_kernel` module is currently being used for the loading of environment variables in this class, but is a much bigger library that includes many useful functions when developing generative AI applications.   You can learn more about the semantic-kernel [here](https://github.com/microsoft/semantic-kernel)
-- The `Service` module is the enumeration module that we just created in the previous step.
+- The `semantic_kernel` module is currently being used for the loading of environment variables in this class, but is a much bigger library with many useful functions when developing generative AI applications. You can learn more about the semantic-kernel [here](https://github.com/microsoft/semantic-kernel)
+- The `Service` module is the enumeration module we created in the previous step.
 - The `AzureOpenAI` module is used to generate the AI recommendations. 
 - The `dotenv_values` function is used to load environment variables from a `.env` file.
 
 <br/>
 
-
 #### 2. Create the Recommendation Engine Class
-Next, we will create the recommendation engine class that will generate the AI recommendations. Add the following code to the end of the `recommendation_engine.py` file:
+Next, we will create the recommendation engine class to generate AI recommendations. Add the following code to the end of the `recommendation_engine.py` file:
 
 ```python
-
-class RecommendationEngine:
-    
+class RecommendationEngine:    
     def __init__(self):
         config = dotenv_values(".env")
 
-        #uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
-        #False means use OpenAI, True means use Azure OpenAI
+        # uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
+        # false means use OpenAI, True means use Azure OpenAI
         selectedService = Service.AzureOpenAI if config.get("USE_AZURE_OPENAI") == "True" else Service.OpenAI
 
         if selectedService == Service.AzureOpenAI:
@@ -114,14 +109,13 @@ This code defines the `RecommendationEngine` class, which initializes the AI ser
 <br/>
 
 #### 3. Create the Get Recommendations Method
-Next, we will create a method in the `RecommendationEngine` class to generate AI recommendations based on the task name. Add the following code to the `recommendation_engine.py` file as a method of the `RecommendationEngine` class:
+Next, we will create a method in the `RecommendationEngine` class to generate AI recommendations based on the to-do item. Add the following code to the `recommendation_engine.py` file as a method of the `RecommendationEngine` class:
 
 ```python
 async def get_recommendations(self, keyword_phrase):
     prompt = f"""Please return 5 recommendations based on the input string: '{keyword_phrase}' using correct JSON syntax that contains a title and a hyperlink back to the supporting website. RETURN ONLY JSON AND NOTHING ELSE"""
     system_prompt = """You are an administrative assistant bot who is good at giving 
-        recommendations for tasks that need to be done by referencing website links that can provide 
-        assistance to helping complete the task. 
+        recommendations for to-do items that need to be completed by referencing website links that can provide assistance to helping complete the to-do item. 
 
         If there are not any recommendations simply return an empty collection. 
 
@@ -159,24 +153,24 @@ async def get_recommendations(self, keyword_phrase):
 ```
 
 > [!NOTE]
-> That when copy/pasting code from the browser into Visual Studio Code, the indentation may not be correct. Make sure to check the indentation of the code after pasting it into Visual Studio Code.  This method should be at the same level of indentation as the `__init__` method
+> When copy/pasting code from the browser into Visual Studio Code, the indentation may not be correct. Make sure to check the indentation of the code after pasting it into Visual Studio Code. This method should be at the same level of indentation as the `__init__` method
 
 This code defines the `get_recommendations` method, which generates AI recommendations based on the task name. The method constructs a prompt for the AI model to generate recommendations based on the input keyword. The response from the AI model is parsed to extract the recommendations in JSON format. If an error occurs during parsing, a default error message is returned.
 
 There are a few things to note in the code above:
-- The `system_prompt` variable contains the instructions for the AI model on how to generate recommendations. This text is used to guide the AI model in generating the recommendations.  For this scenario we are using the following system_prompt
+- The `system_prompt` variable contains the instructions for the AI model on how to generate recommendations. This text is used to guide the AI model in generating the recommendations. For this scenario we are using the following system_prompt
 
 ```text
 You are an administrative assistant bot who is good at giving recommendations 
-for tasks that need to be done by referencing website links that can provide 
-assistance to helping complete the task.
+for to-do items that need to be complete by referencing website links that can provide 
+assistance to helping complete the to-do item.
 ```
 
-- The `prompt` variable contains the input string that the AI model will use to generate recommendations. The `keyword_phrase` parameter is used to construct the prompt and should be the task name.  For this scenario we are using the following prompt:
+- The `prompt` variable contains the input string the AI model will use to generate recommendations. The `keyword_phrase` parameter is used to construct the prompt and should be the to-do item. For this scenario we are using the following prompt:
         
 ```text
 Please return 5 recommendations based on the input string: '{keyword_phrase}' 
-using correct JSON syntax that contains a title and a hyperlink back to the 
+using correct JSON syntax containing a title and a hyperlink back to the 
 supporting website. RETURN ONLY JSON AND NOTHING ELSE
 ```
 - The combination of the `system_prompt` and `prompt` variables is used to create the `message_text` variable, which is passed to the AI model to generate recommendations.
@@ -186,7 +180,7 @@ supporting website. RETURN ONLY JSON AND NOTHING ELSE
 <br/>
 
 #### 4. Create configuration settings for Azure OpenAI
-We now need to add the `.env` file to our project.  This file will contain all of the keys and secrets needed to properly configure the Azure OpenAI service. Create a `.env` file in the root of your repo.  This file will be used to store the configuration settings for the Azure OpenAI service and should look something like this: 
+We now need to add the `.env` file to our project. This file will contain all of the keys and secrets needed to properly configure the Azure OpenAI service. Create a `.env` file in the root of your repo. This file will be used to store the configuration settings for the Azure OpenAI service and should look something like this: 
 
 ```text
 USE_AZURE_OPENAI=True
@@ -195,7 +189,7 @@ AZURE_OPENAI_API_KEY=<api_key>
 AZURE_OPENAI_ENDPOINT=<endpoint>
 ```
 
-This environment file sets the `USE_AZURE_OPENAI` variable to `True` to use the Azure OpenAI service. The `AZURE_OPENAI_DEPLOYMENT_NAME`, `AZURE_OPENAI_API_KEY`, and `AZURE_OPENAI_ENDPOINT` variables are used to configure the Azure OpenAI service. Replace `<deployment_name>`, `<api_key>`, and `<endpoint>` with the appropriate values for your Azure OpenAI service (you will be given these by one of the coaches during this event or if you are running through these excersises outside of the event, you can pull these values from the Azure portal after you setup the service). 
+This environment file sets the `USE_AZURE_OPENAI` variable to `True` to use the Azure OpenAI service. The `AZURE_OPENAI_DEPLOYMENT_NAME`, `AZURE_OPENAI_API_KEY`, and `AZURE_OPENAI_ENDPOINT` variables are used to configure the Azure OpenAI service. Replace `<deployment_name>`, `<api_key>`, and `<endpoint>` with the appropriate values for your Azure OpenAI service (you will be given these by one of the coaches during this event or if you are running through these excercises outside of the event, you can pull these values from the Azure portal after you setup the service). 
 
 > [!IMPORTANT]
 > The .env file has to be in the root of your repository or the `sk.azure_openai_settings_from_dot_env()` will not find it
@@ -203,7 +197,7 @@ This environment file sets the `USE_AZURE_OPENAI` variable to `True` to use the 
 <br/>
 
 #### 5. Build Unit Test for Recommendation Engine
-Given that this functionality is complex we will want to be able to test the code outside of the larger application.  A quick way to do this is to add a test function in the same file and if the developer "runs" this file instead of the app.py file, they will get the recommendation engine test function to run.   To do this we need to add the following code to the end of the file `recommendation_engine.py` to test the recommendation engine:
+This functionality is a bit complex so we will want to be able to test the code outside of the larger application. A quick way to do this is to add a test function in the same file and if the developer "runs" this file instead of the app.py file, they will get the recommendation engine test function to run. To do this we need to add the following code to the end of the file `recommendation_engine.py` to test the recommendation engine:
 
 ```python
 async def test_recommendation_engine():
@@ -223,7 +217,7 @@ This code defines a test function `test_recommendation_engine` that creates an i
 <br/>
 
 #### 6. Test the Recommendation Engine
-Open the terminal and navigate to the folder where your `recommendation_engine.py` file is located. Run the application by typing `python recommendation_engine.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window when in the `recommendation_engine.py` file.  For Codespaces, the easiest path is to just click the play button.   This will run the test function within the terminal window.
+Open the terminal and navigate to the folder where your `recommendation_engine.py` file is located. Run the application by typing `python recommendation_engine.py` and pressing the `<ENTER>` key or click the play button in the top-right corner of the Visual Studio Code window when in the `recommendation_engine.py` file. For Codespaces, just click the play button. This will run the test function within the terminal window.
 
 You should see results that are similar to this:
 ![Recommendation Engine Test](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/images/recommendation_engine_test-S5-F1-US1-01.png)
@@ -233,10 +227,10 @@ Feel free to modify the input keyword phrase in the `test_recommendation_engine`
 <br/>
 
 ### Integrate Recommendation Engine into Web Application
-Now that we have tested that our recommendation engine is working properly we will integrate the recommendation engine into the web application. 
+We have tested our recommendation engine is working properly so we will integrate the recommendation engine into the web application.
 
 #### 1. Install Flask Asynchronous Support
-First, we need to make sure that we have asynchronous support in our flask application. Open a terminal window in Visual Studio Code and run the following command:
+First, we need to ensure we have asynchronous support in our Flask application. Open a terminal window in Visual Studio Code and run the following command:
 
 ```bash
 pip install 'flask[async]'
@@ -253,12 +247,12 @@ We need to update our model to hold the recommendations.  Open the `database.py`
 recommendations = []   
 ```
 
-This code adds a new transient column to the `Todo` model called `recommendations`. This column will hold the collection of recommendations that come back from the recommendation engine, but it will not be stored in the database.   
+This code adds a new transient column to the `Todo` model called `recommendations`. This column will hold the collection of recommendations returned by the recommendation engine, but it will not be stored in the database.   
 
 <br/>
 
 #### 3. Import Recommendation Engine into Application
-We now need integrate the recommendation engine into the application.  Open the `app.py` file in the source folder of your application. Add the following module import to the `app.py` file right after the `from database...` statement to make the recommendation engine accessible to the flask application.
+We now need integrate the recommendation engine into the application. Open the `app.py` file in the source folder of your application. Add the following module import to the `app.py` file right after the `from database...` statement to make the recommendation engine accessible to the flask application.
 
 ```python
 from recommendation_engine import RecommendationEngine
@@ -267,33 +261,33 @@ from recommendation_engine import RecommendationEngine
 <br/>
 
 #### 4. Create Recommendation Route to handle recommendations
-Now we will integrate the recommendation engine into the web application. Open the `app.py` file in the source folder of your application. Add the following code right after the `remove_todo()` function to the `app.py` file to create the backend functionality that the web app will use to get AI recommendations based on the task name:
+To integrate the recommendation engine into the web application, open the `app.py` file in the source folder of your application. Add the following code right after the `remove_todo()` function to the `app.py` file to create the backend functionality the web app will use to get AI recommendations based on the to-do item:
 
 ```python
-# Show AI recommendations
-@app.route('/recommend/<int:id>', methods=['GET'])
+# show AI recommendations
+@app.route("/recommend/<int:id>", methods=["GET"])
 async def recommend(id):
     recommendation_engine = RecommendationEngine()
     g.todo = db.session.query(Todo).filter_by(id=id).first()
     g.todo.recommendations = await recommendation_engine.get_recommendations(g.todo.name)
         
-    return render_template('index.html')
+    return render_template("index.html")
 ```    
 
-This code defines a new route `/recommend/<int:id>` that takes the task ID as a parameter. The route initializes the recommendation engine, retrieves the task from the database based on the ID, and generates AI recommendations based on the task name. The recommendations are stored in the task object and rendered in the `index.html` template.
+This code defines a new route `/recommend/<int:id>` that takes the to-do item's ID as a parameter. The route initializes the recommendation engine, retrieves the to-do item from the database based on the ID, and generates AI recommendations based on the to-do item. The recommendations are stored in the Todo object and rendered in the `index.html` template.
 
 <br/>
 
 ### Updating the Web Application FrontEnd
 
 #### 1. Update the User Interface to Display Recommendations
-To display the AI recommendations in the web application, we need to update the user interface to show the recommendations when a user clicks on a task. We will add a button to each task that will trigger the AI recommendations and display them in a separate tab on the right side of the task list.  To accompish this, we will make several changes to the `index.html` file in the `templates` folder of your application.
-- We will add a button to each task that will trigger the AI recommendations for each task
-- We will move our add button into the same col as the list of tasks, so that the add button stays aligned with the task list as the recommendation tab may vary in size. 
-- We will adjust the width of the task list to leave room on the right for the recommendations
-- We will display the recommendations in a separate tab to the right of the list
+To display the AI recommendations in the web application, we need to update the user interface to show the recommendations when a user clicks on a to-do item. We will add a button to each to-do item to trigger AI recommendations and display them in a separate tab on the right side of the to-do item list. To accompish this, we will make several changes to the `index.html` file in the `templates` folder of your application.
+- We will add a button to each to-do item to trigger AI recommendations.
+- We will move our add button into the same column as the list of to-do items, so the add button stays aligned with the to-do item list as the recommendation tab may vary in size.
+- We will adjust the width of the to-do item list to leave room on the right for the recommendations.
+- We will display the recommendations in a separate tab to the right of the list.
 
-For the sake of making these changes easier in this step-by-step guide, instead of walking through each change we will simply ask you to replace the code in the `index.html` file with the code provided below.  This will allow you to see the changes in the web application and understand how the changes were made.
+For the sake of making these changes easier in this step-by-step guide, instead of walking through each change we will simply ask you to replace the code in the `index.html` file with the code provided below. This will allow you to see the changes in the web application and understand how the changes were made.
 
 Open the `index.html` file in the `templates` folder of your application. Replace the entire contents of the `index.html` file with the following code:
 
@@ -337,7 +331,7 @@ Open the `index.html` file in the `templates` folder of your application. Replac
                         <br />
                     </div>
                     <span class="input-group-text">
-                        <input type="text" id="todo" name="todo" class="form-control" placeholder="Add a new task">
+                        <input type="text" id="todo" name="todo" class="form-control" placeholder="Add a new to-do item">
                         
                         <button type="button" class="btn btn-outline-secondary" onclick="captureVoice()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
@@ -377,25 +371,23 @@ Open the `index.html` file in the `templates` folder of your application. Replac
 #### 2. Run the Application
 Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.  For Codespaces, the easiest path is to just click the play button.   This will launch a browser and show the home page (or you can browse to http://localhost:5000).
 
-The application should start and you should be able to see the AI recommendations when you click on the 'Recommendations' button for a task. The recommendations should be displayed in a separate tab on the right side of the task list and look something like this:
+The application should start and you should be able to see the AI recommendations when you click on the 'Recommendations' button for a to-do item. The recommendations should be displayed in a separate tab on the right side of the to-do item list and look something like this:
 
 ![outcome](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/images/outcome-S05-F01-US01.png)
 
 <br/>
 
-> [!NOTE]
->To stop the server simply hit `CTRL-C` in the terminal window where the web server is running.
+Stop the server by pressing `CTRL-C` in the terminal window where the web server is running.
 
 <br/>
 
 <br/>
-🎉 Congratulations! You have now added AI recommendations to your web app, allowing users to get additional information on how to complete their tasks. 
+🎉 Congratulations! You have now added AI recommendations to your web app, allowing users to get additional information on how to complete their to-do items. 
 
 <br/>
 
 > [!NOTE]
 > 📄For the full source code for this exercise please see [here](/Track_1_ToDo_App/Sprint-05%20-%20Advanced%20AI%20recommendations/src/app-s05-f01-us01/).
-
 
 <br/>
 
