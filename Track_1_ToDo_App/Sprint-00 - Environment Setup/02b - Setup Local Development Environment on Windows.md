@@ -15,11 +15,10 @@ You wil learn the following:
 ## Table Of Contents
 
 1. [Install Git](#install-git)
-2. [Clone the Repository](#clone-the-repository)
-3. [Install Visual Studio Code](#install-visual-studio-code)
-4. [Install Python](#install-python)
-5. [Setup Python Virtual Environment](#setup-python-virtual-environment)
-6. [Install Python Libraries](#install-python-libraries)
+2. [Install Visual Studio Code](#install-visual-studio-code)
+3. [Install Python](#install-python)
+4. [Setup Python Virtual Environment](#setup-python-virtual-environment)
+5. [Install Python Libraries](#install-python-libraries)
 
 Depending on the operating system you are using, chose appropriate installation method below. For more details on Git and various installation refer to [Install Git on GitHub](https://github.com/git-guides/install-git)
 
@@ -49,27 +48,7 @@ Following the instruction below to install Git on Windows operating system. For 
 
 - Once the installation complete, uncheck _View release notes_ in the last screen and click _Finish_.
 
-## Clone the Repository
 
-1. From this repo, click on the "Code" button and copy the link to the repository
-   ![Clone Repo](./images/CloneRepo-S0.png)
-
-2. Open a terminal window.  For windows users you can use the command prompt or powershell.  For Mac and Linux users you can use the terminal application.
-
-3. Navigate to the directory where you want to store the project
-
-4. Run the following command to clone the repository:
-
-    ```bash
-    git clone <link_to_this_repo>
-    ```
-
-5. Navigate to the project directory:
-
-    ```bash
-    cd <project directory>
-    ```
-  
 ## Install Visual Studio Code
 
 Follow the instructions below install VS Code on your computer. Visit [Visual Studio Code download page](https://code.visualstudio.com/download) to download latest version of installation package for your computer operating system.
