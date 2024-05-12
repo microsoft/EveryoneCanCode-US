@@ -21,7 +21,7 @@ The following resources/videos will help you get a better understanding of some 
 - [Understanding Conditional Logic](https://www.youtube.com/watch?v=5pPKYWqkoek&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=19) (4:52 min)<br/>
 - [Understanding Collections in Python](https://www.youtube.com/watch?v=beA8IsY3mQs&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=25) (11:26 min)<br/>
 - [Demo: Collections in Python](https://www.youtube.com/watch?v=4PaSlXNjawM&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=26) (4:01 min)<br/>
-- [Loops](https://www.youtube.com/watch?v=9Os0o3wzS_I&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=27) (5:29 min)
+- [Loops](https://www.youtube.com/watch?v=LrOAl8vUFHY&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=27) (5:29 min)
 
 ## 📋Steps
 
