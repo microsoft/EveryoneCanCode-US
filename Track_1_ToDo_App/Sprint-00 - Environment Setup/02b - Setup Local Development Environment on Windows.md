@@ -15,10 +15,10 @@ You wil learn the following:
 ## Table Of Contents
 
 1. [Install Git](#install-git)
-3. [Install Visual Studio Code](#install-visual-studio-code)
-4. [Install Python](#install-python)
-5. [Setup Python Virtual Environment](#setup-python-virtual-environment)
-6. [Install Python Libraries](#install-python-libraries)
+2. [Install Visual Studio Code](#install-visual-studio-code)
+3. [Install Python](#install-python)
+4. [Setup Python Virtual Environment](#setup-python-virtual-environment)
+5. [Install Python Libraries](#install-python-libraries)
 
 Depending on the operating system you are using, chose appropriate installation method below. For more details on Git and various installation refer to [Install Git on GitHub](https://github.com/git-guides/install-git)
 

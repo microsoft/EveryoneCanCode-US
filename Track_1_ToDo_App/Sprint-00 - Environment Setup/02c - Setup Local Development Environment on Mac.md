@@ -15,11 +15,10 @@ You wil learn the following:
 ## Table Of Contents
 
 1. [Install Git](#install-git)
-2. [Clone the Repository](#clone-the-repository)
-3. [Install Visual Studio Code](#install-visual-studio-code)
-4. [Install Python](#install-python)
-5. [Setup Python Virtual Environment](#setup-python-virtual-environment)
-6. [Install Python Libraries](#install-python-libraries)
+2. [Install Visual Studio Code](#install-visual-studio-code)
+3. [Install Python](#install-python)
+4. [Setup Python Virtual Environment](#setup-python-virtual-environment)
+5. [Install Python Libraries](#install-python-libraries)
 
 Depending on the operating system you are using, chose appropriate installation method below. For more details on Git and various installation refer to [Install Git on GitHub](https://github.com/git-guides/install-git)
 
@@ -32,27 +31,6 @@ Most versions of MacOS already have Git installed, and you can activate it throu
 - Open the command prompt "terminal" and type git version to verify Git was installed.
 
 > Note: git-scm is a popular and recommended resource for downloading Git on a Mac. The advantage of downloading Git from git-scm is that your download automatically starts with the latest version of Git. The download source is the same macOS Git Installer as referenced in the steps above.
-
-## Clone the Repository
-
-1. From this repo, click on the "Code" button and copy the link to the repository
-   ![Clone Repo](./images/CloneRepo-S0.png)
-
-2. Open the terminal application.
-
-3. Navigate to the directory where you want to store the project
-  
-4. Run the following command to clone the repository:
-
-    ```bash
-    git clone <link_to_this_repo>
-    ```
-
-5. Navigate to the project directory:
-
-    ```bash
-    cd <project directory>
-    ```
 
 ## Install Visual Studio Code
 
