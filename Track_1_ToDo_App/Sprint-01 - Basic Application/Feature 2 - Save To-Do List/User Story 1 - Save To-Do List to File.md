@@ -77,9 +77,9 @@ This code will open a file named `todo_list.txt` in the current application dire
 <br/>
 
 #### 2. Run the application
-Now let's see this application in action. Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the `<ENTER>` key or simply click the play button in the top right corner of the Visual Studio Code window.
+Now let's see this application in action. Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
 
-- Add a few items to the list and then type 'X' and `<ENTER>` hit to exit the program.
+- Add a few items to the list and then type 'X' and enter hit to exit the program.
 - Within Visual Studio Code, you should see a file named `todo_list.txt` in the same directory as your `app.py` file.
 - Open the `todo_list.txt` file in the same directory as your `app.py` file. You should see the items you added to the list in the file.
 

@@ -79,7 +79,7 @@ This code will open a file named `todo_list.txt` in the current directory and re
 <br/>
 
 #### 2. Run the application
-Now let's see this application in action. Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the `<ENTER>` key or simply click the play button in the top-right corner of the Visual Studio Code window.
+Now let's see this application in action. Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top-right corner of the Visual Studio Code window.
 
 - When you start the program you should automatically see the list of to-do items previously saved in the file.
 
