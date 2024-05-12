@@ -127,7 +127,7 @@ Whether you created your own picture or are using the pre-generated background p
 ![Copy Image](/Track_1_ToDo_App/Sprint-02%20-%20Web%20Application/images/CopyImage-S2-F2-US2-01.png)
 
 #### 3. Update the CSS File to include the Background Picture
-Replace the code in your`styles.css` file with the following code to set the background image of the body:
+Replace the code in your `style.css` file with the following code to set the background image of the body:
 
 ```css
 body {
