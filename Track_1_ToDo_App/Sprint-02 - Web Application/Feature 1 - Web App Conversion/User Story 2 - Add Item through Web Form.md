@@ -100,7 +100,7 @@ The squiggly, yellow line in the previous step should have disappeared as this f
 <br/>
 
 #### 3. Run the Application
-Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the `<ENTER>` key or simply click the play button in the top right corner of the Visual Studio Code window. For Codespaces, just click the play button. This will launch a browser and show the home page (or you can browse to http://localhost:5000).
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window. For Codespaces, just click the play button. This will launch a browser and show the home page (or you can browse to http://localhost:5000).
 
 Test it out by adding a tasks.
     

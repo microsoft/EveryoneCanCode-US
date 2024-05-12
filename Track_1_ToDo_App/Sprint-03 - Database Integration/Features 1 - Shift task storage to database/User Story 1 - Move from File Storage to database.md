@@ -276,7 +276,7 @@ You will also need to remove the following code from the ```index.html``` file a
 <br/>
 
 #### 3. Run the application
-Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the `<ENTER>` key or click the play button in the top-right corner of the Visual Studio Code window. For Codespaces,  just click the play button. This will launch a browser and navigate to the home page (or you can browse to http://localhost:5000).
+Open the terminal and navigate to the folder where your `app.py` file is located. Run the application by typing `python app.py` and pressing the enter key or click the play button in the top-right corner of the Visual Studio Code window. For Codespaces,  just click the play button. This will launch a browser and navigate to the home page (or you can browse to http://localhost:5000).
 
 Test it out by adding a task and then removing a task. Note your existing to-do items from the file storage have not been migrated over. If this was a production application, we likely would have automated moving those items to the database, but since this is an application under development, we chose to just start with a fresh database.
 
