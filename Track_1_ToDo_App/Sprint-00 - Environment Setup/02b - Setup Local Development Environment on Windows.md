@@ -17,8 +17,9 @@ You wil learn the following:
 1. [Install Git](#install-git)
 2. [Install Visual Studio Code](#install-visual-studio-code)
 3. [Install Python](#install-python)
-4. [Setup Python Virtual Environment](#setup-python-virtual-environment)
-5. [Install Python Libraries](#install-python-libraries)
+4. [Clone To-Do Application Repository](#clone-to-do-application-repo)
+5. [Setup Python Virtual Environment](#setup-python-virtual-environment)
+6. [Install Python Libraries](#install-python-libraries)
 
 Depending on the operating system you are using, chose appropriate installation method below. For more details on Git and various installation refer to [Install Git on GitHub](https://github.com/git-guides/install-git)
 
@@ -76,6 +77,28 @@ If you haven't already installed Python locally on your computer, follow instruc
   ![Python installer in downloads folder](../content-images/Sprint%2000/local/python-installation-wizard.png)
 - Once installation is complete, click _Close_.
   ![Python installer in downloads folder](../content-images/Sprint%2000/local/python-installation-complete.png)
+
+## Clone To-Do Application Repo
+We now need to create a local copy of the To-Do Application repository that we created in an earlier step.
+
+1. From the To-Do Application repository on GitHub, click on the "Code" button and copy the link to the repository
+   ![Clone Repo](./images/visual-studio-code-clone-repo-01.png)
+
+2. Open a terminal/console window.  For windows users you can use the command prompt or powershell (i.e., "cmd.exe").  For Mac and Linux users you can use the terminal application.
+
+3. Navigate to the directory where you want to store the project
+
+4. Run the following command to clone the repository:
+
+    ```bash
+    git clone <link_to_this_repo>
+    ```
+
+5. Navigate to the project directory:
+
+    ```bash
+    cd <project directory>
+    ```
 
 ## Setup Python Virtual Environment
 
