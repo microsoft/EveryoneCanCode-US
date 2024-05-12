@@ -33,6 +33,10 @@ Special thanks to the team that has worked on this to make it possible
 ### Core Team
 ![core_team](./content-images/everyone-can-code-core-team.png)
 
+### Content Reviewers
+In addition to the core team, thank you to all of the additional content reviewers.
+
+![content-reviewers](./content-images/everyone-can-code-content-reviewers.png)
 
 ## Contributing
 
