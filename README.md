@@ -27,6 +27,12 @@ This event is perfect for anyone who has ever been curious about coding but wasn
 
 **To get started click [here](./Track_1_ToDo_App/README.md)**
 
+## Contributor Wall of Fame
+Special thanks to the team that has worked on this to make it possible
+
+### Core Team
+![core_team](./content-images/everyone-can-code-core-team.png)
+
 
 ## Contributing
 
