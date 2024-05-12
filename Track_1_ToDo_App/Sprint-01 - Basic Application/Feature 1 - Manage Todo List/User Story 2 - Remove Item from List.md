@@ -126,7 +126,7 @@ We are checking to make sure the `item_number` is within the range of the list b
 <br/>
 
 #### 4. Run the Application
-Let's see this version of the application in action. Open the terminal within Visual Studio Code and run the application by typing `python app.py` and pressing the `<ENTER>` key or simply click the play button in the top right corner of the Visual Studio Code window.
+Let's see this version of the application in action. Open the terminal within Visual Studio Code and run the application by typing `python app.py` and pressing the enter key or simply click the play button in the top right corner of the Visual Studio Code window.
 
 Please experiment by adding a few to-do list items and then try to remove an item. When selecting "r" or "R", you will be prompted to enter the number of the item you would like to remove (as seen in the picture below). Remember to press 'x' or 'X' to exit the program.
 
