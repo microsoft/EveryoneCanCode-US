@@ -55,6 +55,22 @@ To stop a Codespace, follow these steps:
 > [!TIP]
 > You can make your own Codespace development environment by creating a Dev Container and have it run on your own Docker or Kubernetes platform. Check out **[Create a Dev Container](https://code.visualstudio.com/docs/devcontainers/create-dev-container)** to get started. 
 
+## Add Extensions
+
+In this step, you will learn how to add extensions to your Codespace using the example of the GitHub Copilot extension: 
+1. Click on the Extensions icon on the left sidebar. It looks like a square puzzle piece.
+2. In the search bar at the top, type "GitHub Copilot" and press Enter.
+3. Look for the "GitHub Copilot" extension in the search results and click on it.
+4. On the extension page, you will see an "Install" button. Click on it to start the installation process.
+5. Approach your coach to get your free GitHub Copilot voucher.
+6. Congratulations! You have successfully added GitHub Copilot as an extension to your Visual Studio Code.
+
+![Install GitHub Copilot](./images/github_copilot_extension.jpg)
+
+Now, GitHub Copilot will assist you while you write code by providing helpful suggestions and completing code snippets for you. It's like having an AI coding buddy by your side!
+Remember, GitHub Copilot is designed to help you write code faster and more efficiently, but it's always a good idea to understand the code it suggests and make sure it aligns with your intentions. Happy coding with GitHub Copilot!
+
+
 We hope this helps you understand how our project is set up in Codespaces. Happy coding!
 
 
