@@ -25,7 +25,7 @@ This is why we want to encourage everyone to bring their skills and passions to 
 
 This event is perfect for anyone who has ever been curious about coding but wasn't sure where to start. With expert instructors, hands-on activities, and a supportive community, you will be amazed at how much you can accomplish in just a few hours. **No previous code or other technical experience is required.**
 
-📚 [**To get started click here**](./Track_1_ToDo_App/README.md)** 📚
+📚 [**To get started click here**](./Track_1_ToDo_App/README.md) 📚
 
 <br/>
 
