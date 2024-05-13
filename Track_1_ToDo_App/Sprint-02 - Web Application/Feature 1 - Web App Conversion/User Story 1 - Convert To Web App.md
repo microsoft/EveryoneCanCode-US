@@ -96,7 +96,7 @@ todo_file = os.path.join(basedir, "todo_list.txt")
 <br/>
 
 #### 5. Load the to-do list from the file
-We need to make sure we are loading the file from the right directory. Replace the `with open(...)` statement in the file with the following code:
+We need to make sure we are loading the file from the right directory. Replace the `with open("todo_list.txt") as file:` statement in the `app.py` file with the following code:
 
 ```python
 with open(todo_file, "r") as file:
