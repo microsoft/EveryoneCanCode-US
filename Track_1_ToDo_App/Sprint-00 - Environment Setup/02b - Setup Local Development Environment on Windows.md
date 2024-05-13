@@ -69,13 +69,14 @@ Follow the instructions below install VS Code on your computer. Visit [Visual St
 
 If you haven't already installed Python locally on your computer, follow instructions below to install Python.
 
-- Download latest stable release of Python [by clicking here](https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe).
-- Go to the local Downloads folder and click on Python installer file
-  ![Python installer in downloads folder](../content-images/Sprint%2000/local/python-installer.png)
-- Select _Add python.exe to PATH_ check box, then click on _Install Now_.
-  ![Python installer in downloads folder](../content-images/Sprint%2000/local/python-installation-wizard.png)
-- Once installation is complete, click _Close_.
-  ![Python installer in downloads folder](../content-images/Sprint%2000/local/python-installation-complete.png)
+- Open a terminal/console window.  You can use the command prompt or powershell (i.e., "cmd.exe").  
+- Once inside the terminal, type `python`. 
+- This should bring up a window from the Microsoft Store that allows you to install Python:
+</br>
+  ![Windows Store Python](./images/WindowsStore.png)
+- Click the `Get` button and wait for it to finish downloading
+
+If that didn't install Python or bring up the Microsoft Store's Python page, you can also just open the Microsoft Store and search for `Python`. Pick the 3.12 version in the list that shows up.
 
 ## Clone To-Do Application Repo
 We now need to create a local copy of the To-Do Application repository that we created in an earlier step.
