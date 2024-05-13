@@ -73,7 +73,9 @@ If you haven't already installed Python locally on your computer, follow instruc
 - Once inside the terminal, type `python`. 
 - This should bring up a window from the Microsoft Store that allows you to install Python:
 </br>
+
   ![Windows Store Python](./images/WindowsStore.png)
+
 - Click the `Get` button and wait for it to finish downloading
 
 If that didn't install Python or bring up the Microsoft Store's Python page, you can also just open the Microsoft Store and search for `Python`. Pick the 3.12 version in the list that shows up.
