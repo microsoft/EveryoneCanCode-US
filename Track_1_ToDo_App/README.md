@@ -50,7 +50,7 @@ This sprint is designed to help students build a basic To-Do application that ca
 > <details>
 >    <summary>click here for some videos to help get you started</summary>
 >
-> - [Development 101]()
+> - [Development 101](https://www.youtube.com/watch?v=bkEBozq7aYM)
 > - [What is Python?](https://www.youtube.com/watch?v=7XOhibxgBlQ&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=2) (3:10 min)
 > - [Python Extention for Visual Studio Code](https://www.youtube.com/watch?v=CXZYvNRIAKM&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=4) (2:49 min)
 > 
