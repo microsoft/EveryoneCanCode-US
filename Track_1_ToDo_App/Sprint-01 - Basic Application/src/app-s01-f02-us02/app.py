@@ -7,7 +7,7 @@ todo_list = []
 
 # load the to-do list from a file
 try:
-    with open("todo_list.txt") as file:
+    with open("todo_list.txt", "r") as file:
         for line in file:
             todo_list.append(line.strip())
 except FileNotFoundError:
