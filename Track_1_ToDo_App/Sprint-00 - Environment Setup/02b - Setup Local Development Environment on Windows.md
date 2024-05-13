@@ -19,7 +19,6 @@ You wil learn the following:
 3. [Install Python](#install-python)
 4. [Clone To-Do Application Repository](#clone-to-do-application-repo)
 5. [Setup Python Virtual Environment](#setup-python-virtual-environment)
-6. [Install Python Libraries](#install-python-libraries)
 
 Depending on the operating system you are using, chose appropriate installation method below. For more details on Git and various installation refer to [Install Git on GitHub](https://github.com/git-guides/install-git)
 
@@ -148,27 +147,6 @@ We now need to create a local copy of the To-Do Application repository that we c
 
     You should see the name of the virtual environment in the terminal prompt to indicate that the virtual environment is active.
 
-## Install Python Libraries
 
-Code examples in some of the sprints uses following Python libraries. If these modules are not already installed, install these libraries by following the instructions below.  Note however if you have already installed the virtual environment, you can skip this step as the libraries were installed as part of the virtual environment setup.
-
-1. Open Visual Studio Code if it is already not open
-2. Open Terminal window or Create a new terminal window in VS Code
-3. Make sure __*pip*__ package manager installed in VS Code to install Python libraries. If not installed, follow the instructions below.
-
-    - Download [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
-    - Run below command in the VS Code terminal window
-  
-    ```python
-    python <Local folder path>\get-pip.py  
-    ```
-  
-4. Copy the following `requirements.txt` file from [Sprint 0](/Track_1_ToDo_App/Sprint-00%20-%20Environment%20Setup/src/requirements.txt) into your project directory.
-
-5. Now, install the required libraries by running the following command in the terminal window:
-
-    ```python
-    pip install requirements.txt
-    ```
   
 [🔼 Sprint 0 - Home](readme.md) [◀ Previous setup step](01%20-%20Setup%20GitHub%20Account.md) | [Next Sprint ▶](/Track_1_ToDo_App/Sprint-01%20-%20Basic%20Application/README.md)
