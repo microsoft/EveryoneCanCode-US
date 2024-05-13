@@ -25,18 +25,25 @@ This is why we want to encourage everyone to bring their skills and passions to 
 
 This event is perfect for anyone who has ever been curious about coding but wasn't sure where to start. With expert instructors, hands-on activities, and a supportive community, you will be amazed at how much you can accomplish in just a few hours. **No previous code or other technical experience is required.**
 
-**To get started click [here](./Track_1_ToDo_App/README.md)**
+📚 [**To get started click here**](./Track_1_ToDo_App/README.md)** 📚
+
+<br/>
+
+## Reporting issues and feedback
+Please use the  [Issues](https://github.com/microsoft/EveryoneCanCode-US/issues) tab to report any bugs, documentation issues and/or overall feedback.
 
 ## Contributor Wall of Fame
 Special thanks to the team that has worked on this to make it possible
 
-### Core Team
+### Core + Extended Team
 ![core_team](./content-images/everyone-can-code-core-team.png)
 
 ### Content Reviewers
-In addition to the core team, thank you to all of the additional content reviewers.
+In addition to the core and extended teams, thanks to all of the additional content reviewers.
 
 ![content-reviewers](./content-images/everyone-can-code-content-reviewers.png)
+
+
 
 ## Contributing
 
