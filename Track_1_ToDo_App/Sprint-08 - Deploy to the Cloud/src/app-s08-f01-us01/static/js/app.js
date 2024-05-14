@@ -138,10 +138,13 @@ document.addEventListener("DOMContentLoaded", function() {
         nameInput.value = "Your microphone is activated, speak to record voice";
     };
 
-    recognition.onresult = function (event) {
+    recognition.onresult = function(event) {
         const transcript = event.results[0][0].transcript;
         const recognizedText = transcript.endsWith('.') ? transcript.slice(0, -1) : transcript;
         nameInput.value = recognizedText;
+    
+        const addButton = document.querySelector("button[id='addButton']");
+        addButton.disabled = false;
     };
 
     recognition.onspeechend = function () {
