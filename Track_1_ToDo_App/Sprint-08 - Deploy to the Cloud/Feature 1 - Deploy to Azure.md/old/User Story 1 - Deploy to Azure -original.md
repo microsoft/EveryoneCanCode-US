@@ -25,7 +25,7 @@ In order to complete this user story you will need to complete the following tas
 #### 1. Login in to the Azure Portal
 To use Azure we will first need to login with our Azure credentials.  If you are part of the event, you will be given Azure credentials by your coach.  If you are doing this exercise outside of the event you can sign-up for Azure [here](https://azure.microsoft.com/en-us/) and then provide those credentials when completing this exercise.
 
-![Azure Portal Home](../images/az-portal-login.png)
+![Azure Portal Home](../../images/az-portal-login.png)
 
 > [!NOTE]
 > If you are not part of the 2 day Everyone Can Code Event, you can use your Azure credentials or you can sign up [here to get started](https://azure.microsoft.com/en-us/free/).
@@ -34,15 +34,15 @@ To use Azure we will first need to login with our Azure credentials.  If you are
 #### 2. Setup Azure Sql Database
 Choose **create a resource** option from the home page
 
-![Azure create a resource](../images/az-portal-createres.png)
+![Azure create a resource](../../images/az-portal-createres.png)
 
 Search for **sql database** in the search box
 
-![Azure Portal Resource Search](../images/az-portal-search.png)
+![Azure Portal Resource Search](../../images/az-portal-srch-sql.png)
 
 Select SQL Database option to go to the create screen
 
-![Azure SQL Database option](../images/az-portal-sql-option.png)
+![Azure SQL Database option](../../images/az-portal-sql-option.png)
 
 On the create screen, select create and then complete the form as follows, keeping defaults for everything except the following:
 
@@ -57,12 +57,12 @@ On the create screen, select create and then complete the form as follows, keepi
 > [!NOTE]
 > if you are participating in the event both your resource group and server should already have been pre-created so you simply need to just select it from the drop-down
 
-![Azure SQL Server Create](../images/az-portal-sql-srv.png)
+![Azure SQL Server Create](../../images/az-portal-sql-srv.png)
 
 * **Backup Storage Redundance:** Change to *Locally-redundant backup storage* 
 
 Click *Review and Create* and then *Create* to start getting your database provisioned.
-![Azure DB Review and Createa](../images/az-portal-sql-review.png)
+![Azure DB Review and Createa](../../images/az-portal-sql-review.png)
 
 
 ### Setting up an Azure Web App Service
@@ -72,7 +72,7 @@ Now that we have setup the database we have to create the Azure Web App Service 
 
 Go back the home page of your Azure Portal and click *Create a Resource* again. This time, enter *Web App* in the search box and choose the Web App option.
 
-![Azure Web App Option](../images/az-portal-web-app-option.png)
+![Azure Web App Option](../../images/az-portal-web-app-option.png)
 
 On the next screen hit create. Complete the form as follows, changing the following items and keeping defaults for all others:
 
@@ -83,7 +83,7 @@ On the next screen hit create. Complete the form as follows, changing the follow
 
 Hit *Review and Create* and the *Create* to provision your Web App
 
-![Create Web App Form](../images/az-portal-create-web-app.png)
+![Create Web App Form](../../images/az-portal-create-web-app.png)
 
 ### Deploy App To Azure
 
@@ -183,7 +183,7 @@ The new code will use the environment variables to pull the values for the OpenA
 
 Go back to the browser, navigate to the Azure Portal and find your Web App you deployed earlier. Open the web app and navigate to the Settings->Environment Variables section
 
-![Web App Environment Variables](../images/az-portal-webapp-env.png)
+![Web App Environment Variables](../../images/az-portal-webapp-env.png)
 
 Under App Settings add the following settings and the values you have used prior
 - AZURE_OPENAI_KEY: (use key from prior sprints)
@@ -193,7 +193,7 @@ Under App Settings add the following settings and the values you have used prior
 
 And then switch to the connection strings section and add the following connection string, replacing the password with the one you used when you created your SQL Database.
 
-![SQL DB Connection String](../images/sql-db-conn-string.png)
+![SQL DB Connection String](../../images/sql-db-conn-string.png)
 
 #### 5. Install Azure CLI
 
@@ -244,7 +244,7 @@ az account show
 az account set --subscription <SubscriptionID>
 ```
 
-![Show current account](../images/az-account-show.png)
+![Show current account](../../images/az-account-show.png)
 
 #### 7. Deploy the Web App
 Run the following command to deploy the web app (replace xxx and yyy with the values from earlier when you created the web app.)
@@ -259,21 +259,21 @@ az webapp up --name xxx --resource-group yyy
 
 Login to Azure Portal to view Azure App Service just deployed and configure, and search for App Services as shown below.
 
-  ![Search for App Service in Azure Portal](../images/auzre-portal-search-app-service.png)
+  ![Search for App Service in Azure Portal](../../images/auzre-portal-search-app-service.png)
 
 #### 2. Location Azure App Service
 
 Locate the App Service just deployed by identifying with the name and click on the name to open service overview.
 
-  ![Search for App Service in Azure Portal](../images/auzre-portal-app-service-list.png)
+  ![Search for App Service in Azure Portal](../../images/auzre-portal-app-service-list.png)
 
 #### 3. Access Application in Web Browser
 
 Click on the _Browse_ or _Default domain name_ in the App Service overview page. Web page will open in a different tab, and if everything is working expected you should be able to view web page as shown below.
 
-  ![Search for App Service in Azure Portal](../images/auzre-portal-app-service-overview.png)
+  ![Search for App Service in Azure Portal](../../images/auzre-portal-app-service-overview.png)
 
-  ![Search for App Service in Azure Portal](../images/azure-web-app-todo.png)
+  ![Search for App Service in Azure Portal](../../images/azure-web-app-todo.png)
 
 > [!WARNING]
 > Please note that **your to-do application** once deployed to the cloud **is running on the public internet and is accessible by anyone that has the URL to view and/or edit  information.  So please do not put personal items in your to-do list**.   We would **highly recommend that you setup security on the website** if you would like to continue to run it and use the to-do list functionality. 
