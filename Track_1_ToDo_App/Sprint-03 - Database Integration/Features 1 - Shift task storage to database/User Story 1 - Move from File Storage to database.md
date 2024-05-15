@@ -264,13 +264,15 @@ The code above uses Jinja templating to loop through the to-do items stored in t
 You will also need to remove the following code from the ```index.html``` file as we will no longer need a form to remove to-do items, but rather the remove buttons added above.
 
 ```html
-<form action="/remove" method="post" class="my-4">
-    <div class="form-group">
-        <label for="item_number">Remove task number:</label>
-        <input type="number" name="item_number" min="1" class="form-control">
-    </div>
-    <button type="submit" class="btn btn-danger">Remove</button>
-</form>
+<div class="col-6">
+    <form action="/remove" method="post" class="my-4">
+        <div class="form-group">
+            <label for="item_number">Remove task number:</label>
+            <input type="number" name="item_number" min="1" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-danger">Remove</button>
+    </form>
+</div>
 ```
 
 <br/>
