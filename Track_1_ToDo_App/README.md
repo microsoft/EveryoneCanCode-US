@@ -155,7 +155,11 @@ This sprint is designed to help students add advanced styling to the To-Do appli
 This sprint is designed to help students deploy the To-Do application to the cloud.  The sprint will walk students through deploying the To-Do application to the Microsoft Azure cloud.
 
 **📕Feature: Deploy to Azure**
-1. [**📖 Deploy To-Do App to Azure**](/Track_1_ToDo_App/Sprint-08%20-%20Deploy%20to%20the%20Cloud/Feature%201%20-%20Deploy%20to%20Azure.md/User%20Story%201%20-%20Deploy%20to%20Azure.md)
+1.  If you are in the "_Everyone Can Code Event_" then please follow this user story: 
+    - [**📖 Deploy To-Do App to Azure - Shared Subscription**](/Track_1_ToDo_App/Sprint-08%20-%20Deploy%20to%20the%20Cloud/Feature%201%20-%20Deploy%20to%20Azure.md/User%20Story%201%20-%20Deploy%20to%20Azure%20-original.md)
+
+    If you are doing this exercise with your own subscription then please follow this user story:
+    - [**📖 Deploy To-Do App to Azure - Own Subscription**](/Track_1_ToDo_App/Sprint-08%20-%20Deploy%20to%20the%20Cloud/Feature%201%20-%20Deploy%20to%20Azure.md/User%20Story%201%20-%20Deploy%20to%20Azure.md)
 
 > [!CAUTION]
 > Please note that once **your to-do application** is deployed to the cloud it **is running on the public internet and is accessible by anyone that has the URL to view and/or edit the information.  So, please do not put personal items in your to-do list**.   We would also **highly recommend that you setup security on the website**. You can enable this through the next user story.

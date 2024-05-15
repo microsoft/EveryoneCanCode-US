@@ -1,4 +1,4 @@
-# User Story: Deploy to Azure Step-by-Step
+# User Story: Deploy to Azure (Your own subscription) Step-by-Step
 ⏲️ _Est. time to complete: 60 min._ ⏲️
 
 ## User Story
