@@ -38,7 +38,7 @@ Choose **create a resource** option from the home page
 
 Search for **sql database** in the search box
 
-![Azure Portal Resource Search](../../images/az-portal-search.png)
+![Azure Portal Resource Search](../../images/az-portal-srch-sql.png)
 
 Select SQL Database option to go to the create screen
 
