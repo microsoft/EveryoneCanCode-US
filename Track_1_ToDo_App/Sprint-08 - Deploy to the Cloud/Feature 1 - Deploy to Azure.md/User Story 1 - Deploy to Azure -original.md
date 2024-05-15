@@ -23,12 +23,28 @@ In order to complete this user story you will need to complete the following tas
 ### Setup Your Azure Cloud Environment
 
 #### 1. Login in to the Azure Portal
-To use Azure we will first need to login with our Azure credentials.  If you are part of the event, you will be given Azure credentials by your coach.  If you are doing this exercise outside of the event you can sign-up for Azure [here](https://azure.microsoft.com/en-us/) and then provide those credentials when completing this exercise.
+To use Azure, we first need to login with our Azure credentials. Go to [**https://portal.azure.com**](https://portal.azure.com)
+
+If you are part of the _Everyone Can Code_ event, you will be given Azure credentials by your coach.  If you are doing this exercise outside of the event you can sign-up for Azure [here](https://azure.microsoft.com/en-us/) and then provide those credentials when completing this exercise.
+
+After logging in you may get prompted with an _Action Required_ dialogue similar to the one below:
+
+![Security Information](../images/az-portal-security-information.png)
+
+For this event, you an simply select **Ask Later**, however if this was an account you created, we would highly recommend you fill out the additional security information. 
+
+You may also get a second dialogue asking you if you would like to "Stay signed in?".  You can simply say _Yes_ to that as well.
+
+That will likely take you to the Azure Welcome page:
+
+![Azure Welcome](../images/az-portal-welcome-to-azure.png)
+
+You can either hit _Cancel_ or go through the _Getting Started_ pages.   In either case you should land on the home page for the azure portal which will look something like this:
 
 ![Azure Portal Home](../images/az-portal-login.png)
 
 > [!NOTE]
-> If you are not part of the 2 day Everyone Can Code Event, you can use your Azure credentials or you can sign up [here to get started](https://azure.microsoft.com/en-us/free/).
+> If you are not part of the 2 day Everyone Can Code Event, you can use your own Azure credentials or you can sign up [here to get started](https://azure.microsoft.com/en-us/free/).
 <br/>
 
 #### 2. Setup Azure Sql Database
