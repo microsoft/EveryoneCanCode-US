@@ -181,7 +181,7 @@ Let's add a custom favicon to the web app. You can create a custom favicon using
 You will need to update the `index.html` file to include the favicon. Add the following code to the `<head>` tag in your `index.html` file:
 
 ```html
-<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.ico') }}">
+<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 ```
 
 This code links the favicon image to the HTML document, allowing you to display a custom icon in the browser tab. The `url_for('static', filename='images/favicon.png')` function generates the URL for the favicon image based on the file name provided.
