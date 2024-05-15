@@ -184,7 +184,7 @@ You will need to update the `index.html` file to include the favicon. Add the fo
 <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 ```
 
-This code links the favicon image to the HTML document, allowing you to display a custom icon in the browser tab. The `url_for('static', filename='images/favicon.png')` function generates the URL for the favicon image based on the file name provided.
+This code links the favicon image to the HTML document, allowing you to display a custom icon in the browser tab. The `url_for('static', filename='images/favicon.ico')` function generates the URL for the favicon image based on the file name provided.
 
 <br/>
 
