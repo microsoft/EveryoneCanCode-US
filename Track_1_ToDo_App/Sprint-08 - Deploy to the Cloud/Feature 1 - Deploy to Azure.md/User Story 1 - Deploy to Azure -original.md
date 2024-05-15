@@ -25,7 +25,7 @@ In order to complete this user story you will need to complete the following tas
 #### 1. Login in to the Azure Portal
 To use Azure we will first need to login with our Azure credentials.  If you are part of the event, you will be given Azure credentials by your coach.  If you are doing this exercise outside of the event you can sign-up for Azure [here](https://azure.microsoft.com/en-us/) and then provide those credentials when completing this exercise.
 
-![Azure Portal Home](../../images/az-portal-login.png)
+![Azure Portal Home](../images/az-portal-login.png)
 
 > [!NOTE]
 > If you are not part of the 2 day Everyone Can Code Event, you can use your Azure credentials or you can sign up [here to get started](https://azure.microsoft.com/en-us/free/).
@@ -34,15 +34,15 @@ To use Azure we will first need to login with our Azure credentials.  If you are
 #### 2. Setup Azure Sql Database
 Choose **create a resource** option from the home page
 
-![Azure create a resource](../../images/az-portal-createres.png)
+![Azure create a resource](../images/az-portal-createres.png)
 
 Search for **sql database** in the search box
 
-![Azure Portal Resource Search](../../images/az-portal-srch-sql.png)
+![Azure Portal Resource Search](../images/az-portal-srch-sql.png)
 
 Select SQL Database option to go to the create screen
 
-![Azure SQL Database option](../../images/az-portal-sql-option.png)
+![Azure SQL Database option](../images/az-portal-sql-option.png)
 
 On the create screen, select create and then complete the form as follows, keeping defaults for everything except the following:
 
@@ -57,12 +57,12 @@ On the create screen, select create and then complete the form as follows, keepi
 > [!NOTE]
 > if you are participating in the event both your resource group and server should already have been pre-created so you simply need to just select it from the drop-down
 
-![Azure SQL Server Create](../../images/az-portal-sql-srv.png)
+![Azure SQL Server Create](../images/az-portal-sql-srv.png)
 
 * **Backup Storage Redundance:** Change to *Locally-redundant backup storage* 
 
 Click *Review and Create* and then *Create* to start getting your database provisioned.
-![Azure DB Review and Createa](../../images/az-portal-sql-review.png)
+![Azure DB Review and Createa](../images/az-portal-sql-review.png)
 
 
 ### Setting up an Azure Web App Service
@@ -72,7 +72,7 @@ Now that we have setup the database we have to create the Azure Web App Service 
 
 Go back the home page of your Azure Portal and click *Create a Resource* again. This time, enter *Web App* in the search box and choose the Web App option.
 
-![Azure Web App Option](../../images/az-portal-web-app-option.png)
+![Azure Web App Option](../images/az-portal-web-app-option.png)
 
 On the next screen hit create. Complete the form as follows, changing the following items and keeping defaults for all others:
 
@@ -83,28 +83,11 @@ On the next screen hit create. Complete the form as follows, changing the follow
 
 Hit *Review and Create* and the *Create* to provision your Web App
 
-![Create Web App Form](../../images/az-portal-create-web-app.png)
+![Create Web App Form](../images/az-portal-create-web-app.png)
 
-### Deploy App To Azure
+### Update Application Logic
 
-Go to your source code in Visual Studio Code. We will need to make some minor adjustments to the app to prepare it for deploying to Azure.
-
-#### 1. Create requirements.txt file to install Python modules
-
-To deploy this application to Azure the Python code in this application depends on other Python modules. These modules are not readily available when you create a new Web Application in Azure App Service. To deploy these dependent modules you need to prepare a requirements.txt file, which is then used by Azure App Service to deploy these modules to run the application. Create a top level file (at the same level as your app.py file) called requirements.txt and add the following to it.
-
-```python
-openai
-flask
-flask[async]
-flask_sqlalchemy
-sqlalchemy
-semantic-kernel==0.9.5b1
-pyodbc
-fastapi
-```
-
-#### 2. Update code to use Azure App Service database connection string environment variable
+#### 1. Update code to use Azure App Service database connection string environment variable
 
 Open `app.py` file, find these lines of code near the top of the file:
 
@@ -136,9 +119,10 @@ else:
 
 Pay attention to the _SQLAZURECONNSTR_AZURE_SQL_CONNECTIONSTRING_ environment variable is in this code snippet. The prefix **SQLAZURECONNSTR_** indicates it is a Azure SQL database connection string environment variable. You will create this environment variable later steps.
 
-#### 3. Update recommendations engine code to use Azure App Service environment variables
+#### 2. Update recommendations engine code to use Azure App Service environment variables
+We also want to update to use environment variables for all of the OpenAI configuration information. 
 
-Open _recommendation_engine.py_ file and replace the following code:
+1. Open `recommendation_engine.py` file and replace the following imports:
 
 ```python
 import json
@@ -147,16 +131,9 @@ import semantic_kernel as sk
 from services import Service
 from openai import AzureOpenAI
 from dotenv import dotenv_values
-
-config = dotenv_values(".env")
-
-#uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
-#False means use OpenAI, True means use Azure OpenAI
-selectedService = Service.AzureOpenAI if config.get("USE_AZURE_OPENAI") == "True" else Service.OpenAI
-deployment, api_key, endpoint = sk.azure_openai_settings_from_dot_env()
 ```
 
-with this new code:
+with these imports:
 
 ```python
 import os
@@ -164,26 +141,41 @@ import json
 import asyncio
 from services import Service
 from openai import AzureOpenAI
-
-deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME", '')
-api_key = os.environ.get("AZURE_OPENAI_API_KEY", '')
-endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", '')
-use_open_ai = os.environ.get("USE_AZURE_OPENAI", 'True')
-
-#uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
-#False means use OpenAI, True means use Azure OpenAI
-selectedService = Service.AzureOpenAI if use_open_ai == "True" else Service.OpenAI
 ```
 
-The new code will use the environment variables to pull the values for the OpenAI service verus using a `.env` file.  Environment variables provide a more secure way of holding these values in the app service.
+These changes get rid of the `os`, `semantic_kernel`, and `dotev` modules
+
+
+2. Replace the `def __init__(self)` function with the following code:
+
+```python
+    def __init__(self):
+        self.deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME", '')
+        api_key = os.environ.get("AZURE_OPENAI_API_KEY", '')
+        endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", '')
+        use_open_ai = os.environ.get("USE_AZURE_OPENAI", 'True')
+
+        #uses the USE_AZURE_OPENAI variable from the .env file to determine which AI service to use
+        #False means use OpenAI, True means use Azure OpenAI
+        selectedService = Service.AzureOpenAI if use_open_ai == "True" else Service.OpenAI
+        if selectedService == Service.AzureOpenAI:
+            self.client = AzureOpenAI(azure_endpoint = endpoint, 
+                        api_key=api_key,  
+                        api_version="2024-02-15-preview"
+                        )
+        else:
+            raise Exception("OpenAI not implemented")     
+```
+
+This updates the code to get information from the enivronment variables instead of the `.env` file. 
 
 
 
-#### 4. Add Azure Web App Config Settings
+#### 3. Add Azure Web App Config Settings
 
 Go back to the browser, navigate to the Azure Portal and find your Web App you deployed earlier. Open the web app and navigate to the Settings->Environment Variables section
 
-![Web App Environment Variables](../../images/az-portal-webapp-env.png)
+![Web App Environment Variables](../images/az-portal-webapp-env.png)
 
 Under App Settings add the following settings and the values you have used prior
 - AZURE_OPENAI_KEY: (use key from prior sprints)
@@ -193,93 +185,93 @@ Under App Settings add the following settings and the values you have used prior
 
 And then switch to the connection strings section and add the following connection string, replacing the password with the one you used when you created your SQL Database.
 
-![SQL DB Connection String](../../images/sql-db-conn-string.png)
+![SQL DB Connection String](../images/sql-db-conn-string.png)
 
-#### 5. Install Azure CLI
+### Deploying to Azure
+Go to your source code in your Codespace. We will need to make some minor adjustments to the app to prepare it for deploying to Azure.
 
-The easiest way to deploy your app is via the Azure CLI. To get started, we will first need to install the Azure CLI to help us deploy this application to the cloud.  If you are not familiar with the Azure CLI you can learn more at the following link: [What is the Azure CLI?](https://learn.microsoft.com/en-us/cli/azure/what-is-azure-cli)
+#### 1. Create requirements.txt file to install Python modules
 
-- If you are running in a **Codespace and/or Linux**, you should run the following command:
+To deploy this application to Azure the Python code in this application depends on other Python modules. These modules are not readily available when you create a new Web Application in Azure App Service. To deploy these dependent modules you need to prepare a requirements.txt file, which is then used by Azure App Service to deploy these modules to run the application. Create a top level file (at the same level as your app.py file) called requirements.txt and add the following to it.
 
-  ```bash
-  curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-  ```
-
-  You can also reference [Install the Azure CLI on Linux](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt) for more information.
-
-- If you are running on **Windows**, you should run the following installers:
-  - [MSI for Azure CLI Windows 32-bit](https://aka.ms/installazurecliwindows)
-  - [MSI for Azure CLI Windows 64-bit](https://aka.ms/installazurecliwindowsx64)
-
-  You can also reference [Install Azure CLI on Windows](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli) for more information.
-
-- If you are running on **macOS**, you can install via Homebrew:
-
-  ```
-  brew update && brew install azure-cli
-  ```
-
-  You can also reference [Install Azure CLI on macOS](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos) for more information.
-
-In VS Code, open new terminal window and run the command below to login to Azure resource management. A browser window will be opened and redirected to Microsoft Entra ID to complete login to Azure resource management.
-
-- If running on your **local machine**:
-
-  ```powershell
-  az login
-  ```
-- If running in **Codespaces**
-
-  ```powershell
-  az login --use-device-code
-  ```
-
-  Then follow the instructions in the terminal window to log into a browser and provide the **code** that is displayed.
-
-#### 6. Set default subscription to deploy Azure resources
-Once the login is complete run the command below to verify your tenant and subscriptions. If this command shows more than one subscription, copy the subscription ID of the subscription that you would like to deploy your application to and set as default subscription for Azure SQL Database.
-
-```powershell
-az account show
-az account set --subscription <SubscriptionID>
+```python
+openai
+flask
+flask[async]
+flask_sqlalchemy
+sqlalchemy
+semantic-kernel==0.9.5b1
+pyodbc
+fastapi
 ```
 
-![Show current account](../../images/az-account-show.png)
 
-#### 7. Deploy the Web App
-Run the following command to deploy the web app (replace xxx and yyy with the values from earlier when you created the web app.)
+#### 2. Install **Azure Tools** extension
+In order to help us deploy our code to Azure from within **Visual Studio Code** we will need to install a Visual Studio Code extension
 
-```powershell
-az webapp up --name xxx --resource-group yyy
-```
+![Azure Tools Extension](../images/visual-studio-code-azure-tools-extension.png)
 
-### See the application in action
+1. Click on the Extension box on the left pane (or hit CTRL+SHIFT+X)
+2. In the search box type in "azure" and the **Azure Tools** extension should be one of the top items returned in the search
+3. Click on the _Install_ button to install this extension
 
-#### 1. Login to Azure Portal
+#### 3. Log into extension
 
-Login to Azure Portal to view Azure App Service just deployed and configure, and search for App Services as shown below.
+![Login to Azure Tools](../images/visual-studio-code-azure-tools-login.png)
 
-  ![Search for App Service in Azure Portal](../../images/auzre-portal-search-app-service.png)
+1. Click on the Azure tools extension
+2. Click on the _Sign in to Azure..._ link
+3. You will then be presented with a dialogue box.   Click on _Allow_ to allow the "Azure resources" extension to sign into Microsoft.
 
-#### 2. Location Azure App Service
+![Extension wants to use Azure](../images/visual-studio-code-azure-tools-login-02.png)
 
-Locate the App Service just deployed by identifying with the name and click on the name to open service overview.
+4. A browser window should open up on your desktop and will give you the ability to login.  Please use the credentials that you were given by the coach.
 
-  ![Search for App Service in Azure Portal](../../images/auzre-portal-app-service-list.png)
+![Login](../images/visual-studio-code-azure-tools-login-03.png)
 
-#### 3. Access Application in Web Browser
+5. Once logged you should see a heirachy of Azure subscriptions and services.  Click into your subscription and find the App Service name that you just created.  In this case my Web App service is named `fjctodo3`
+
+![services](../images/visual-studio-code-azure-tools-extension-02.png)
+
+
+#### 4. Add Environment Variables
+Using this new extension we will update some of the environment variables for our Web App to be able to function.
+
+1. Right click on the _Applicatin Settings_ under the Web App that you just created and select the _Upload Local Settings..._ menu item
+
+![Application Settings](../images/azure-tools-upload-setting-01.png)
+
+2. You should then pick the `.env` file that we setup in an earlier step.
+
+![Application Settings 2](../images/azure-tools-upload-setting-02.png)
+
+This will bring in all of the Azure OpenAI keys into the environment variables for the web server. 
+
+#### 5. Deploy code base to Web App
+We are now ready to move our application to the cloud.  
+
+1. Right click on the Web App Service and select the _Deploy to Web App..._ menu option
+
+![Deploy 1](../images/visual-studio-code-azure-tools-extension-04.png)
+
+2. Pick the root directory of your project.  
+
+![Deploy 2](../images/visual-studio-code-deploy-app-01.png)
+
+
+#### 6. Access Application in Web Browser
 
 Click on the _Browse_ or _Default domain name_ in the App Service overview page. Web page will open in a different tab, and if everything is working expected you should be able to view web page as shown below.
 
-  ![Search for App Service in Azure Portal](../../images/auzre-portal-app-service-overview.png)
+  ![Search for App Service in Azure Portal](../images/auzre-portal-app-service-overview.png)
 
-  ![Search for App Service in Azure Portal](../../images/azure-web-app-todo.png)
+  ![Search for App Service in Azure Portal](../images/azure-web-app-todo.png)
 
-> [!WARNING]
-> Please note that **your to-do application** once deployed to the cloud **is running on the public internet and is accessible by anyone that has the URL to view and/or edit  information.  So please do not put personal items in your to-do list**.   We would **highly recommend that you setup security on the website** if you would like to continue to run it and use the to-do list functionality. 
+> [!CAUTION]
+> Please note that once **your to-do application** is deployed to the cloud it **is running on the public internet and is accessible by anyone that has the URL to view and/or edit the information.  So, please do not put personal items in your to-do list**.   We would also **highly recommend that you setup security on the website**. You can enable this through the next user story.
 
 <br/>
-🎉 Congratulations! You have now successfully deployed your to-do application to the Azure cloud.
+🎉 Congratulations! You have now successfully deployed your to-do application to the Azure cloud.  In the next exercise we will setup authentication.
 
 <br/>
 
