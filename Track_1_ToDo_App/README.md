@@ -82,7 +82,7 @@ This sprint is designed to help students build a web application by evolving the
 > **🎓 Know before you start**
 > <details>
 >    <summary>click here for some videos to help get you started</summary>
->   - **to-do**: Web Apps Explained - Basics of Building a Web App\>
+>   - [Introduction to Web Apps](https://youtu.be/DE3OQyzPeEw)
 > </details>
 >
 <br/>
