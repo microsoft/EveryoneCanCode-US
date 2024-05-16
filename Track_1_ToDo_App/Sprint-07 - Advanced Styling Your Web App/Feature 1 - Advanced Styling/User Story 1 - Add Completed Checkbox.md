@@ -17,7 +17,7 @@
 
 
 ## 🎓Know Before You Start
-no resources at this time
+- [Advanced Web Styling](https://youtu.be/DE3OQyzPeEw)
 
 ## 📋Steps
 
