@@ -9,7 +9,7 @@
 - The application should store the to-do items in a database instead of a file.
 
 ## 🎓Know Before You Start
-no resources at this time
+- [Introduction to Databases](https://youtu.be/-tz2AgRqpYM)
 
 ## 📋Steps
 
